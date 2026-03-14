@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    min-height: 100vh;
+    margin: 0;
+  }
+}
+
+:root {
+  --color-primary: 330 65% 55%;
+  --color-primary-hover: 330 65% 45%;
+  --color-surface: 240 20% 98%;
+  --color-surface-dark: 240 15% 12%;
+  --color-text: 240 10% 15%;
+  --color-text-muted: 240 5% 40%;
+}
+
+.dark {
+  --color-surface: 240 15% 12%;
+  --color-surface-dark: 240 20% 6%;
+  --color-text: 240 10% 95%;
+  --color-text-muted: 240 5% 65%;
+}
+
+@layer components {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
