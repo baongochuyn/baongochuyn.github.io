@@ -186,7 +186,8 @@ export const contact = {
   title: 'Me contacter',
   subtitle: "N'hésitez pas à me contacter pour toute demande !",
   email: 'huynhbaongoc.hbn@gmail.com',
-  emailLabel: 'Email',
+  linkedin: 'https://www.linkedin.com/in/bao-ngoc-huynh/',
+  github: 'https://github.com/baongochuyn',
 };
 
 export const nav = {

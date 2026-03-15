@@ -52,13 +52,13 @@ function SpeechBubble({
   const isRight = side === 'right';
   return (
     <div
-      className={`absolute top-1/2 -translate-y-1/2 z-30 w-[min(92vw,400px)] max-h-[min(85vh,480px)] rounded-2xl border-2 border-pink-400/60 bg-slate-800 shadow-xl p-5 ${
-        isRight ? 'left-full ml-4' : 'right-full mr-4'
+      className={`absolute top-1/2 -translate-y-1/2 z-30 w-[min(80vw,270px)] max-h-[min(80vh,400px)] rounded-xl border-2 border-pink-400/60 bg-slate-800 shadow-xl p-3 ${
+        isRight ? 'left-full ml-2' : 'right-full mr-2'
       }`}
     >
       <div className="text-left">
-        <h3 className="text-pink-400 font-semibold text-base mb-3">{title}</h3>
-        <p className="text-slate-300 text-sm md:text-base leading-relaxed text-justify">{content}</p>
+        <h3 className="text-pink-400 font-semibold text-sm mb-1.5">{title}</h3>
+        <p className="text-slate-300 text-xs md:text-sm leading-relaxed">{content}</p>
       </div>
       {/* Đuôi: trái cột → đuôi phải; phải cột → đuôi trái */}
       <div
@@ -204,7 +204,7 @@ export default function Introduction() {
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-1 tracking-tight whitespace-nowrap">
               {profile.name}
             </h1>
-            <p className="text-base md:text-lg text-pink-400 font-medium mb-1">
+            <p className="text-sm md:text-base text-pink-400 font-medium mb-1 whitespace-nowrap">
               {profile.role}
             </p>
             <p className="text-slate-400 text-sm md:text-base">
