@@ -39,20 +39,34 @@ const NODE_ICONS: Record<string, (className: string) => JSX.Element> = {
   ),
 };
 
-// Bong bóng thoại — bên trái hoặc phải tùy cột (tránh overlap)
+// Bong bóng thoại — bên trái/phải; position: top = canh đầu với nút trên, center = giữa, bottom = canh đáy với nút dưới
 function SpeechBubble({
   title,
   content,
   side,
+  position,
 }: {
   title: string;
   content: string;
   side: 'left' | 'right';
+  position: 'top' | 'center' | 'bottom';
 }) {
   const isRight = side === 'right';
+  const bubbleAlign =
+    position === 'top'
+      ? 'top-0'
+      : position === 'bottom'
+        ? 'bottom-0'
+        : 'top-1/2 -translate-y-1/2';
+  const tailAlign =
+    position === 'top'
+      ? 'top-0 translate-y-1/2'
+      : position === 'bottom'
+        ? 'bottom-0 -translate-y-1/2'
+        : 'top-1/2 -translate-y-1/2';
   return (
     <div
-      className={`absolute top-1/2 -translate-y-1/2 z-30 w-[min(80vw,270px)] max-h-[min(80vh,400px)] rounded-xl border-2 border-pink-400/60 bg-slate-800 shadow-xl p-3 ${
+      className={`absolute ${bubbleAlign} z-30 w-[min(80vw,270px)] max-h-[min(80vh,400px)] rounded-xl border-2 border-pink-400/60 bg-slate-800 shadow-xl p-3 ${
         isRight ? 'left-full ml-2' : 'right-full mr-2'
       }`}
     >
@@ -60,9 +74,8 @@ function SpeechBubble({
         <h3 className="text-pink-400 font-semibold text-sm mb-1.5">{title}</h3>
         <p className="text-slate-300 text-xs md:text-sm leading-relaxed">{content}</p>
       </div>
-      {/* Đuôi: trái cột → đuôi phải; phải cột → đuôi trái */}
       <div
-        className={`absolute top-1/2 w-3 h-3 bg-slate-800 border-pink-400/60 -translate-y-1/2 rotate-45 ${
+        className={`absolute ${tailAlign} w-3 h-3 bg-slate-800 border-pink-400/60 rotate-45 ${
           isRight
             ? 'right-full translate-x-1/2 border-b-2 border-l-2'
             : 'left-full -translate-x-1/2 border-t-2 border-r-2'
@@ -160,6 +173,7 @@ export default function Introduction() {
                         title={item.key}
                         content={item.full}
                         side="left"
+                        position={idx === 0 ? 'top' : idx === 1 ? 'center' : 'bottom'}
                       />
                     )}
                     <button
@@ -226,6 +240,7 @@ export default function Introduction() {
                         title={item.key}
                         content={item.full}
                         side="right"
+                        position={idx === 3 ? 'top' : idx === 4 ? 'center' : 'bottom'}
                       />
                     )}
                     <button
