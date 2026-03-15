@@ -13,9 +13,6 @@ export default function TechnicalSkills() {
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
           Compétences techniques
         </h2>
-        <p className="text-slate-400 text-center text-sm mb-10 max-w-lg mx-auto">
-          Cliquez sur une compétence pour voir le détail.
-        </p>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
           {technicalSkills.map((skill) => (

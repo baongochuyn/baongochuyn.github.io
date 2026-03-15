@@ -23,14 +23,11 @@ export default function Projects() {
   const { openProject, openSkillById } = useModal();
 
   return (
-    <section id="projets" className="py-16 px-4 scroll-mt-20 bg-slate-900/30">
+    <section id="projets" className="py-16 px-4 scroll-mt-20 bg-slate-900/50 relative">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
           Projets
         </h2>
-        <p className="text-slate-400 text-center text-sm mb-10">
-          Cliquez sur un projet pour le détail. Les compétences en rose ouvrent la fiche compétence.
-        </p>
 
         <div className="space-y-4">
           {projects.map((project) => {

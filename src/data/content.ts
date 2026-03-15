@@ -9,14 +9,14 @@ export const profile = {
 
 export const presentation = {
   title: 'Présentation',
-  paragraphs: [
-    `Étudiante en ingénierie du logiciel, actuellement en quatrième année à l'ESIEA, je m'investis pleinement dans l'apprentissage et la mise en pratique des technologies web et logicielles. Depuis septembre 2023, j'effectue mon alternance chez Bluesoft, où je travaille sur des projets en développement full stack. Cette expérience en entreprise me permet d'appliquer mes compétences techniques sur des cas réels tout en continuant à apprendre dans un cadre professionnel exigeant.`,
-    `Pourquoi l'informatique ? Parce que c'est l'avenir ! Mon intérêt pour l'informatique est né d'une fascination pour la technologie et son pouvoir de transformation. J'ai toujours été attirée par l'innovation et les outils numériques qui nous facilitent la vie au quotidien. C'est cette envie de comprendre, de créer et de contribuer à des projets concrets qui m'a poussée à me tourner vers le développement. Pouvoir résoudre des problèmes réels par le code, construire des interfaces efficaces, et optimiser des processus me passionne profondément.`,
-    `Mon parcours académique est un peu atypique. Avant de rejoindre l'univers du développement, j'ai obtenu une licence en langues et cultures coréennes à l'Université de Hué, au Vietnam. J'ai eu la chance de voyager, d'étudier un an en Corée du Sud, puis de m'installer en France où j'ai appris le français à la Sorbonne Nouvelle Paris 3. Cette expérience multiculturelle m'a appris à être flexible, à m'adapter à des environnements nouveaux et à apprendre constamment — des qualités qui me servent tous les jours dans mon métier.`,
-    `Aujourd'hui, je me décrirais comme une personne curieuse, rigoureuse et passionnée. J'accorde beaucoup d'importance à la qualité de mon code : lisibilité, propreté, performance. Je suis aussi à l'aise en autonomie que dans un travail d'équipe, et je m'investis toujours avec enthousiasme dans les projets auxquels je participe. J'aime comprendre le besoin métier, proposer des solutions concrètes et voir mon travail avoir un impact réel.`,
-    `Mon objectif à court terme est de consolider mes compétences sur des technologies comme .NET, React ou encore les bases de données SQL. Je m'intéresse aussi de plus en plus à l'architecture logicielle, aux tests, et aux pratiques de développement modernes comme le CI/CD ou l'utilisation de services externes. À long terme, je souhaite devenir une développeuse full stack capable de concevoir des solutions innovantes, robustes et utiles, dans des environnements techniques exigeants.`,
-    `Ce qui me motive chaque jour, c'est de progresser, d'apprendre et de relever de nouveaux défis. Pour moi, l'informatique n'est pas seulement un domaine d'étude : c'est une véritable passion que j'ai envie de cultiver toute ma vie.`,
-  ],
+  items: [
+    { icon: 'user', key: 'Qui suis-je ?', full: `Étudiante en ingénierie du logiciel, actuellement en quatrième année à l'ESIEA, je m'investis pleinement dans l'apprentissage et la mise en pratique des technologies web et logicielles. Depuis septembre 2023, j'effectue mon alternance chez Bluesoft, où je travaille sur des projets en développement full stack. Cette expérience en entreprise me permet d'appliquer mes compétences techniques sur des cas réels tout en continuant à apprendre dans un cadre professionnel exigeant.` },
+    { icon: 'code', key: 'Pourquoi l\'informatique ?', full: `Pourquoi l'informatique ? Parce que c'est l'avenir ! Mon intérêt pour l'informatique est né d'une fascination pour la technologie et son pouvoir de transformation. J'ai toujours été attirée par l'innovation et les outils numériques qui nous facilitent la vie au quotidien. C'est cette envie de comprendre, de créer et de contribuer à des projets concrets qui m'a poussée à me tourner vers le développement. Pouvoir résoudre des problèmes réels par le code, construire des interfaces efficaces, et optimiser des processus me passionne profondément.` },
+    { icon: 'path', key: 'Un parcours atypique', full: `Mon parcours académique est un peu atypique. Avant de rejoindre l'univers du développement, j'ai obtenu une licence en langues et cultures coréennes à l'Université de Hué, au Vietnam. J'ai eu la chance de voyager, d'étudier un an en Corée du Sud, puis de m'installer en France où j'ai appris le français à la Sorbonne Nouvelle Paris 3. Cette expérience multiculturelle m'a appris à être flexible, à m'adapter à des environnements nouveaux et à apprendre constamment — des qualités qui me servent tous les jours dans mon métier.` },
+    { icon: 'work', key: 'Ma façon de travailler', full: `Aujourd'hui, je me décrirais comme une personne curieuse, rigoureuse et passionnée. J'accorde beaucoup d'importance à la qualité de mon code : lisibilité, propreté, performance. Je suis aussi à l'aise en autonomie que dans un travail d'équipe, et je m'investis toujours avec enthousiasme dans les projets auxquels je participe. J'aime comprendre le besoin métier, proposer des solutions concrètes et voir mon travail avoir un impact réel.` },
+    { icon: 'target', key: 'Objectifs court et long terme', full: `Mon objectif à court terme est de consolider mes compétences sur des technologies comme .NET, React ou encore les bases de données SQL. Je m'intéresse aussi de plus en plus à l'architecture logicielle, aux tests, et aux pratiques de développement modernes comme le CI/CD ou l'utilisation de services externes. À long terme, je souhaite devenir une développeuse full stack capable de concevoir des solutions innovantes, robustes et utiles, dans des environnements techniques exigeants.` },
+    { icon: 'heart', key: 'Ce qui me motive', full: `Ce qui me motive chaque jour, c'est de progresser, d'apprendre et de relever de nouveaux défis. Pour moi, l'informatique n'est pas seulement un domaine d'étude : c'est une véritable passion que j'ai envie de cultiver toute ma vie.` },
+  ] as const,
 };
 
 export const projects = [
@@ -185,7 +185,7 @@ export const softSkills = [
 export const contact = {
   title: 'Me contacter',
   subtitle: "N'hésitez pas à me contacter pour toute demande !",
-  email: '', // à compléter plus tard
+  email: 'huynhbaongoc.hbn@gmail.com',
   emailLabel: 'Email',
 };
 

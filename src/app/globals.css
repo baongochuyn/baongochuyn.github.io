@@ -33,4 +33,75 @@
   .text-balance {
     text-wrap: balance;
   }
+
+  /* Fond accueil style IT / techno */
+  .bg-accueil-tech {
+    background-color: rgb(15 23 42);
+    background-image:
+      linear-gradient(rgba(148 163 184 / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148 163 184 / 0.03) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+  @media (min-width: 768px) {
+    .bg-accueil-tech::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(ellipse 80% 50% at 50% 50%, rgba(244 114 182 / 0.04) 0%, transparent 70%);
+      pointer-events: none;
+    }
+  }
+
+  /* Animation légère pour les courbes accueil */
+  @keyframes path-flow {
+    to {
+      stroke-dashoffset: -8;
+    }
+  }
+  .animate-path-flow {
+    animation: path-flow 3s linear infinite;
+  }
+
+  /* Accueil: typing code phía sau bên trái — như đang gõ từng chữ */
+  @keyframes type-reveal {
+    0% { clip-path: inset(0 100% 0 0); }
+    65% { clip-path: inset(0 0 0 0); }
+    100% { clip-path: inset(0 100% 0 0); }
+  }
+  @keyframes cursor-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+  }
+  .code-typing-line {
+    display: block;
+    overflow: hidden;
+    animation: type-reveal 20s steps(28) infinite;
+  }
+  .code-typing-line:nth-child(1) { animation-delay: 0.2s; }
+  .code-typing-line:nth-child(2) { animation-delay: 2.8s; }
+  .code-typing-line:nth-child(3) { animation-delay: 5.4s; }
+  .code-typing-line:nth-child(4) { animation-delay: 8s; }
+  .code-typing-line:nth-child(5) { animation-delay: 10.6s; }
+  .code-typing-line:nth-child(6) { animation-delay: 13.2s; }
+  .code-typing-line:nth-child(7) { animation-delay: 15.8s; }
+  .code-typing-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: rgb(34 197 94);
+    opacity: 0.7;
+    animation: cursor-blink 0.8s step-end infinite;
+    vertical-align: text-bottom;
+    margin-left: 2px;
+  }
+  /* "..." đang gõ */
+  @keyframes typing-dots {
+    0%, 33% { opacity: 0.3; }
+    34%, 66% { opacity: 0.6; }
+    67%, 100% { opacity: 1; }
+  }
+  .code-typing-dots {
+    display: inline;
+    animation: typing-dots 1.2s ease-in-out infinite;
+  }
 }

@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { nav } from '@/data/content';
 
 const links = [
-  { href: '#accueil', label: nav.accueil },
-  { href: '#presentation', label: nav.apropos },
+  { href: '#accueil', label: nav.apropos },
   { href: '#projets', label: nav.projets },
   { href: '#competences-techniques', label: nav.competencesTechniques },
   { href: '#competences-humaines', label: nav.competencesHumaines },
@@ -32,7 +31,7 @@ export default function Header() {
         </button>
         <ul className={`absolute md:static top-full left-0 right-0 md:flex md:flex-row gap-1 bg-slate-900 md:bg-transparent border-t md:border-0 border-slate-700 py-3 md:py-0 px-4 ${open ? 'flex flex-col' : 'hidden'}`}>
           {links.map(({ href, label }) => (
-            <li key={href}>
+            <li key={label}>
               <a
                 href={href}
                 className="block py-2 md:py-1 px-3 rounded-lg text-slate-400 hover:text-pink-400 hover:bg-slate-800 transition-colors text-sm font-medium cursor-pointer"

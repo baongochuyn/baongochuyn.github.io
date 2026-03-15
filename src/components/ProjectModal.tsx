@@ -64,10 +64,10 @@ export default function ProjectModal({
             </svg>
           </button>
         </div>
-        <div className="px-6 py-5 overflow-y-auto text-slate-200 leading-relaxed">
+        <div className="px-6 py-5 overflow-y-auto text-slate-200 leading-relaxed text-justify">
           <div className="space-y-4">
             {project.content.map((paragraph, i) => (
-              <p key={i}>
+              <p key={i} className="text-justify">
                 <TextWithSkillLinks onSkillClick={onOpenSkill}>{paragraph}</TextWithSkillLinks>
               </p>
             ))}

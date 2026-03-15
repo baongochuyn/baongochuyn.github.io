@@ -13,9 +13,6 @@ export default function SoftSkills() {
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
           Compétences humaines
         </h2>
-        <p className="text-slate-400 text-center text-sm mb-10">
-          Cliquez pour voir le détail.
-        </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {softSkills.map((skill) => (
