@@ -7,7 +7,7 @@ export const competencyRadarAxes: RadarAxis[] = [
   { id: 'dotnet', label: '.NET', value: 4.0, kind: 'tech' },
   { id: 'sql', label: 'SQL', value: 4, kind: 'tech' },
   { id: 'react', label: 'React', value: 4.1, kind: 'tech' },
-  { id: 'javascript', label: 'JavaScript', value: 3.7, kind: 'tech' },
+  { id: 'javascript', label: 'JavaScript', value: 3.9, kind: 'tech' },
   { id: 'entity-framework', label: 'Entity Framework', value: 3.9, kind: 'tech' },
   { id: 'autonomie', label: 'Autonomie', value: 4.0, kind: 'soft' },
   { id: 'curiosite', label: 'Curiosité', value: 4.3, kind: 'soft' },

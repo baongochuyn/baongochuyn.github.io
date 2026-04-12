@@ -14,11 +14,12 @@ export default function SoftSkills() {
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          {softSkills.map((skill) => (
+          {softSkills.map((skill: { id: string; title: string }) => (
             <Link
               key={skill.id}
               id={`soft-${skill.id}`}
               href={hrefWithBase(`/competences-humaines/${skill.id}`)}
+              prefetch
               className="flex items-center gap-4 p-5 rounded-xl bg-slate-800 border border-slate-700 hover:border-pink-500/60 hover:bg-slate-700/80 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-slate-900 text-left scroll-mt-24"
             >
               <span className="w-11 h-11 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">

@@ -1,7 +1,9 @@
 'use client';
 
+import { useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { profile } from '@/data/content';
 import { hrefWithBase } from '@/lib/site';
 
@@ -51,6 +53,13 @@ function CodeLines({ lines }: { lines: string[] }) {
 const CODE_INNER_MAX = 'max-w-[26rem]';
 
 export default function Hero() {
+  const router = useRouter();
+  const presentationHref = hrefWithBase('/presentation');
+
+  useEffect(() => {
+    router.prefetch(presentationHref);
+  }, [router, presentationHref]);
+
   return (
     <section
       id="accueil"
@@ -89,7 +98,8 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
-                href={hrefWithBase('/presentation')}
+                href={presentationHref}
+                prefetch
                 className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-medium hover:bg-pink-600 transition-colors"
               >
                 À propos &amp; parcours
@@ -136,7 +146,8 @@ export default function Hero() {
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <Link
-                href={hrefWithBase('/presentation')}
+                href={presentationHref}
+                prefetch
                 className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-medium hover:bg-pink-600 transition-colors"
               >
                 À propos &amp; parcours

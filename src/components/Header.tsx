@@ -16,7 +16,7 @@ type NavKey =
   | 'synthese'
   | 'contact';
 
-const links: Array<{ key: NavKey; href: string; label: string; external?: true }> = [
+const links: Array<{ key: NavKey; href: string; label: string }> = [
   { key: 'accueil', href: '/#accueil', label: nav.accueil },
   { key: 'realisations', href: '/#realisations', label: nav.realisations },
   { key: 'competences-techniques', href: '/#competences-techniques', label: nav.competencesTechniques },
@@ -34,8 +34,16 @@ const homeSections: Array<{ id: string; key: NavKey }> = [
   { id: 'contact', key: 'contact' },
 ];
 
-function keyFromPathname(pathname: string): NavKey {
-  if (pathname.includes('/presentation')) return 'accueil';
+let pendingNavKey: NavKey | null = null;
+
+function keyFromHash(hash: string): NavKey | null {
+  const clean = hash.replace(/^#/, '');
+  const found = homeSections.find((section) => section.id === clean);
+  return found ? found.key : null;
+}
+
+function keyFromPathname(pathname: string): NavKey | null {
+  if (pathname.includes('/presentation')) return null;
   if (pathname.includes('/realisations/')) return 'realisations';
   if (pathname.includes('/competences-techniques/')) return 'competences-techniques';
   if (pathname.includes('/competences-humaines/')) return 'competences-humaines';
@@ -51,10 +59,29 @@ function isHomePath(pathname: string): boolean {
   ].some((segment) => pathname.includes(segment));
 }
 
+function initialActiveKey(pathname: string): NavKey | null {
+  if (pendingNavKey) {
+    const next = pendingNavKey;
+    pendingNavKey = null;
+    return next;
+  }
+
+  if (!isHomePath(pathname)) {
+    return keyFromPathname(pathname);
+  }
+
+  if (typeof window !== 'undefined') {
+    const hashKey = keyFromHash(window.location.hash);
+    if (hashKey) return hashKey;
+  }
+
+  return 'accueil';
+}
+
 export default function Header() {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
-  const [activeKey, setActiveKey] = useState<NavKey>('accueil');
+  const [activeKey, setActiveKey] = useState<NavKey | null>(() => initialActiveKey(pathname));
   const lockActiveUntilRef = useRef(0);
 
   const onHome = useMemo(() => isHomePath(pathname), [pathname]);
@@ -67,6 +94,13 @@ export default function Header() {
 
     const updateActiveByScroll = () => {
       if (Date.now() < lockActiveUntilRef.current) return;
+
+      // Priority to hash during route transitions like /presentation -> /#realisations.
+      const hashKey = keyFromHash(window.location.hash);
+      if (hashKey) {
+        setActiveKey(hashKey);
+        return;
+      }
 
       const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
       if (nearBottom) {
@@ -105,6 +139,7 @@ export default function Header() {
           className="text-sm sm:text-base md:text-lg font-semibold text-white hover:text-pink-400 transition-colors cursor-pointer truncate max-w-[min(100%,14rem)] sm:max-w-none tracking-tight"
           onClick={() => {
             setOpen(false);
+            pendingNavKey = 'accueil';
             setActiveKey('accueil');
             lockActiveUntilRef.current = Date.now() + 700;
           }}
@@ -127,41 +162,24 @@ export default function Header() {
             open ? 'flex' : 'hidden'
           } md:flex`}
         >
-          {links.map(({ key, href, label, external }) => (
+          {links.map(({ key, href, label }) => (
             <li key={label} className="shrink-0">
-              {external ? (
-                <Link
-                  href={hrefWithBase(href)}
-                  className={`block py-2 md:py-1.5 px-2 md:px-2.5 rounded-lg transition-colors text-xs sm:text-sm font-medium cursor-pointer whitespace-nowrap ${
-                    activeKey === key
-                      ? 'text-pink-400 bg-slate-800/80'
-                      : 'text-slate-300 hover:text-pink-400 hover:bg-slate-800/80'
-                  }`}
-                  onClick={() => {
-                    setOpen(false);
-                    setActiveKey(key);
-                    lockActiveUntilRef.current = Date.now() + 700;
-                  }}
-                >
-                  {label}
-                </Link>
-              ) : (
-                <a
-                  href={hrefWithBase(href)}
-                  className={`block py-2 md:py-1.5 px-2 md:px-2.5 rounded-lg transition-colors text-xs sm:text-sm font-medium cursor-pointer whitespace-nowrap ${
-                    activeKey === key
-                      ? 'text-pink-400 bg-slate-800/80'
-                      : 'text-slate-300 hover:text-pink-400 hover:bg-slate-800/80'
-                  }`}
-                  onClick={() => {
-                    setOpen(false);
-                    setActiveKey(key);
-                    lockActiveUntilRef.current = Date.now() + 700;
-                  }}
-                >
-                  {label}
-                </a>
-              )}
+              <Link
+                href={hrefWithBase(href)}
+                className={`block py-2 md:py-1.5 px-2 md:px-2.5 rounded-lg transition-colors text-xs sm:text-sm font-medium cursor-pointer whitespace-nowrap ${
+                  activeKey === key
+                    ? 'text-pink-400 bg-slate-800/80'
+                    : 'text-slate-300 hover:text-pink-400 hover:bg-slate-800/80'
+                }`}
+                onClick={() => {
+                  setOpen(false);
+                  pendingNavKey = key;
+                  setActiveKey(key);
+                  lockActiveUntilRef.current = Date.now() + 700;
+                }}
+              >
+                {label}
+              </Link>
             </li>
           ))}
         </ul>

@@ -96,7 +96,7 @@ export function TextWithSkillLinks({
     <>
       {segments.map((seg, i) =>
         seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'skill')} className={linkClass}>
+          <Link key={i} href={toRouteHref(seg.href, 'skill')} prefetch className={linkClass}>
             {seg.value}
           </Link>
         ) : (
@@ -117,7 +117,7 @@ export function TextWithProjectLinks({
     <>
       {segments.map((seg, i) =>
         seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'project')} className={linkClass}>
+          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
             {seg.value}
           </Link>
         ) : (

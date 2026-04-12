@@ -20,16 +20,19 @@ export const projects: Project[] = [
         paragraphs: [
           `DiaPyl est une application développée pour TDF (Télédiffusion de France), visant à analyser la solidité des pylônes lors de l’ajout de nouvelles installations (antennes).`,
           `Avant ce projet, cette analyse était réalisée à l’aide d’un fichier Excel complexe utilisé depuis plus de 15 ans, devenu difficile à maintenir et peu adapté à un usage moderne.`,
-          `L’objectif était de remplacer cet outil par une application fiable, d’améliorer la précision des analyses et de faciliter l’utilisation pour les ingénieurs.`,
+          `L’objectif était de :`,
+          `remplacer cet outil par une application fiable`,
+          `améliorer la précision des analyses`,
+          `faciliter l’utilisation pour les ingénieurs.`,
         ],
       },
       {
         title: 'Étapes de réalisation',
         paragraphs: [
-          `Prise de connaissance de l’outil existant, compréhension des besoins métier et identification des cas critiques.`,
-          `Mon rôle principal a été centré sur la qualité logicielle : définition de scénarios de test (ajout, modification, suppression d’antennes), identification des cas limites et structuration des campagnes de test.`,
-          `Automatisation des tests avec NUnit : création de tests unitaires et d’intégration pour valider les fonctions critiques.`,
-          `Amélioration continue : complétion des tests existants, adaptation des scénarios lors des évolutions et remontée des anomalies au chef de projet.`,
+          `1. Prise de connaissance et compréhension : analyse du fonctionnement de l’outil existant, compréhension des besoins métier, identification des cas critiques.`,
+          `2. Mise en place de la stratégie de test : définition de scénarios de test couvrant différents cas (ajout, modification, suppression d’antennes), identification des cas limites et structuration des campagnes de test.`,
+          `3. Automatisation des tests : utilisation de NUnit pour créer des tests unitaires, vérification du comportement des fonctions critiques, mise en place de tests d’intégration.`,
+          `4. Amélioration continue : complétion des tests existants, adaptation des scénarios lors des évolutions, remontée des anomalies au chef de projet.`,
         ],
       },
       {
@@ -65,16 +68,19 @@ export const projects: Project[] = [
         title: 'Contexte et objectif',
         paragraphs: [
           `DiagElec est une application développée pour TDF (Télédiffusion de France), dont l’objectif est de permettre aux techniciens de réaliser des diagnostics électriques directement sur le terrain de manière numérique.`,
-          `Dans un contexte d’augmentation des besoins énergétiques (notamment avec la 5G), l’enjeu était de permettre une évaluation rapide et fiable des installations, une centralisation des données et une réduction des erreurs humaines.`,
+          `Dans un contexte d’augmentation des besoins énergétiques (notamment avec la 5G), il était essentiel de disposer d’un outil permettant :`,
+          `une évaluation rapide et fiable des installations`,
+          `une centralisation des données`,
+          `une réduction des erreurs humaines.`,
         ],
       },
       {
         title: 'Étapes de réalisation',
         paragraphs: [
-          `Intégration au projet et montée en compétence sur React : analyse du code existant, compréhension de l’architecture front-end et développement de premières fonctionnalités.`,
-          `Développement de l’interface utilisateur : création de composants interactifs avec Material UI, gestion de l’état avec useState et useContext, mise à jour dynamique de l’interface selon les actions utilisateur.`,
-          `Structuration du front-end : amélioration de la structure des composants, meilleure gestion des données entre modules et cohérence de l’interface pour une meilleure maintenabilité.`,
-          `Contribution aux tests backend avec NUnit (tests unitaires et tests d’intégration) pour vérifier la communication entre les modules.`,
+          `1. Intégration au projet et montée en compétence : analyse du code existant, compréhension de l’architecture front-end et développement de premières fonctionnalités.`,
+          `2. Développement de l’interface utilisateur : création de composants interactifs avec Material UI (menus déroulants, formulaires), gestion de l’état avec useState et useContext, mise à jour dynamique de l’interface selon les actions utilisateur.`,
+          `3. Structuration du front-end : amélioration de la structure des composants, meilleure gestion des données entre modules, cohérence de l’interface pour une meilleure maintenabilité.`,
+          `4. Contribution aux tests backend : tests unitaires et tests d’intégration avec NUnit pour vérifier la communication entre les modules.`,
         ],
       },
       {
@@ -112,13 +118,16 @@ export const projects: Project[] = [
         title: 'Contexte et objectif',
         paragraphs: [
           `CityBoard est une plateforme web développée pour la BU Kaliva, visant à centraliser des informations utiles du quotidien (météo, transports, perturbations en temps réel) dans un tableau de bord personnalisable.`,
-          `Objectifs : simplifier l’accès à l’information, proposer une interface personnalisable via des widgets et offrir une expérience fluide et performante.`,
+          `L’objectif principal était de :`,
+          `simplifier l’accès à l’information`,
+          `proposer une interface personnalisable via des widgets`,
+          `offrir une expérience fluide et performante.`,
         ],
       },
       {
         title: 'Conception et réalisation',
         paragraphs: [
-          `Participation à l’analyse des besoins utilisateurs, à l’ergonomie de l’interface et à la conception des maquettes.`,
+          `1. Compréhension du besoin et participation à la conception : analyse des besoins utilisateurs, réflexion sur l’ergonomie de l’interface, participation à la conception des maquettes.`,
           `Développement backend en ASP.NET Core 8 : logique métier des widgets, préférences utilisateurs, endpoints API et intégration de données externes (API PRIM).`,
           `Traitement des APIs externes : analyse des structures de données, extraction des informations pertinentes et transformation pour le front-end.`,
           `Optimisation des performances via cache mémoire (MemoryCache) pour limiter les appels API et améliorer significativement les temps de réponse.`,
@@ -127,6 +136,7 @@ export const projects: Project[] = [
           `Sécurité et accès : contribution à l’intégration OAuth 2.0 (Google).`,
           `Internationalisation : participation à la gestion multi-langues (i18n/ICU).`,
           `Mise en place de tests unitaires et d’intégration pour améliorer la stabilité.`,
+          `Gain estimé : réduction notable du nombre d’appels API et amélioration significative du temps de réponse (mesurée lors de tests internes).`,
         ],
       },
       {
@@ -162,7 +172,11 @@ export const projects: Project[] = [
         title: 'Contexte et objectif',
         paragraphs: [
           `BOOST est un logiciel métier développé pour TDF (Télédiffusion de France), utilisé pour suivre les étapes d’un projet : création, estimation des coûts, planification des interventions et validation finale.`,
-          `Objectifs : améliorer la fiabilité du logiciel, corriger les anomalies existantes et faire évoluer l’application via de nouvelles fonctionnalités.`,
+          `Cet outil est utilisé quotidiennement par plusieurs équipes (techniciens, logisticiens, planificateurs) et représente un élément central dans la gestion opérationnelle des projets.`,
+          `L’objectif principal de ma mission était de :`,
+          `améliorer la fiabilité du logiciel`,
+          `corriger les anomalies existantes`,
+          `faire évoluer l’application en ajoutant de nouvelles fonctionnalités.`,
         ],
       },
       {
@@ -204,8 +218,8 @@ export const projects: Project[] = [
         title: 'Contexte et objectif',
         paragraphs: [
           `Kalicolis est une application mobile développée pour la BU Kaliva, visant à faciliter l’envoi de colis entre particuliers via des trajets existants.`,
-          `Le principe permet de réduire les coûts, d’optimiser les trajets et de proposer une approche plus écologique.`,
-          `Objectifs : application simple à utiliser, fiable et performante.`,
+          `Le principe est simple : une personne effectuant un trajet peut transporter un colis pour une autre, permettant ainsi de réduire les coûts, d’optimiser les trajets et de proposer une solution plus écologique.`,
+          `L’objectif du projet était de concevoir une application simple à utiliser, fiable et performante.`,
         ],
       },
       {

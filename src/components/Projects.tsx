@@ -1,5 +1,6 @@
 'use client';
 
+import { useRef } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { projects } from '@/data/content';
@@ -23,6 +24,13 @@ const SKILL_LABEL_TO_ID: Record<string, string> = {
 
 export default function Projects() {
   const router = useRouter();
+  const prefetchedRef = useRef<Set<string>>(new Set());
+
+  const prefetchRoute = (href: string) => {
+    if (prefetchedRef.current.has(href)) return;
+    prefetchedRef.current.add(href);
+    router.prefetch(href);
+  };
 
   return (
     <section id="realisations" className="pt-12 pb-16 px-4 scroll-mt-20 bg-slate-900/50 relative">
@@ -45,10 +53,17 @@ export default function Projects() {
                 <div
                   role="link"
                   tabIndex={0}
-                  onClick={() => router.push(projectHref)}
+                  onMouseEnter={() => prefetchRoute(projectHref)}
+                  onFocus={() => prefetchRoute(projectHref)}
+                  onTouchStart={() => prefetchRoute(projectHref)}
+                  onClick={() => {
+                    prefetchRoute(projectHref);
+                    router.push(projectHref);
+                  }}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
+                      prefetchRoute(projectHref);
                       router.push(projectHref);
                     }
                   }}
@@ -67,6 +82,7 @@ export default function Projects() {
                             <span key={label + i}>
                               <Link
                                 href={hrefWithBase(`/competences-techniques/${skillId}`)}
+                                prefetch
                                 onClick={(e) => e.stopPropagation()}
                                 className="text-pink-400 hover:text-pink-300 hover:underline cursor-pointer font-medium"
                               >

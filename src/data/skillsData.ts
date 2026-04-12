@@ -31,17 +31,22 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Niveau de maîtrise',
         paragraphs: [
           `Aujourd’hui, je me situe à un niveau confirmé en C#, comme validé dans ma matrice de compétences.`,
-          `Je suis capable de développer des fonctionnalités backend complètes, structurer une logique métier, manipuler des données et écrire du code maintenable pour une équipe.`,
+          `Je suis capable de :`,
+          `développer des fonctionnalités backend complètes`,
+          `structurer une logique métier`,
+          `manipuler des données et gérer les interactions avec une base de données`,
+          `écrire du code maintenable et compréhensible par une équipe`,
         ],
       },
       {
         title: 'Mise en œuvre concrète',
         paragraphs: [
           `J’ai utilisé C# dans plusieurs projets professionnels, notamment CityBoard, BOOST et DiaPyl.`,
-          `Exemple CityBoard : implémentation de la logique métier pour la gestion des widgets utilisateurs, gestion des préférences et mise en place d’un système de cache mémoire.`,
-          `Résultats observés : réduction significative du temps de réponse lors des tests internes et amélioration de la fluidité côté utilisateur.`,
-          `Exemple BOOST : correction d’anomalies, développement de fonctionnalités liées à la gestion des projets terrain et manipulation des données via Entity Framework.`,
-          `Exemple DiaPyl : écriture de tests unitaires avec NUnit pour valider les fonctions critiques et assurer la qualité du code.`,
+          `Exemple précis — Projet CityBoard : implémentation de la logique métier pour la gestion des widgets utilisateurs, gestion des données liées aux préférences utilisateurs et mise en place d’un système de cache mémoire pour limiter les appels aux APIs externes.`,
+          `Cela a permis une réduction significative du temps de réponse (mesurée lors des tests internes) et une amélioration de la fluidité côté utilisateur.`,
+          `Exemple — Projet BOOST : correction d’anomalies dans un logiciel métier existant, développement de nouvelles fonctionnalités en lien avec la gestion des projets terrain, manipulation des données via Entity Framework.`,
+          `Impact : amélioration de la fiabilité du logiciel et réduction des erreurs rencontrées par les utilisateurs.`,
+          `Exemple — Projet DiaPyl : écriture de tests unitaires avec NUnit, validation du comportement des fonctions critiques et amélioration de la qualité du code.`,
         ],
       },
       {
@@ -55,21 +60,23 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Apprentissage et progression',
         paragraphs: [
           `J’ai acquis cette compétence progressivement au cours de mon alternance, sur des projets de complexité variée.`,
-          `La pratique sur des cas réels, les échanges avec des développeurs expérimentés et la correction de bugs ont accéléré ma montée en compétence.`,
+          `Ce qui a accéléré mon apprentissage : la pratique sur des cas réels, les échanges avec des développeurs expérimentés, la correction de bugs et la compréhension du code existant.`,
+          `Cette montée en compétence a été progressive mais régulière, me permettant aujourd’hui d’être autonome sur de nombreuses tâches.`,
         ],
       },
       {
         title: 'Recul critique et conseils',
         paragraphs: [
           `Avec le recul, C# est un langage puissant mais exigeant en rigueur.`,
-          `Je conseille de bien structurer son code dès le départ, de privilégier la lisibilité et de tester régulièrement pour limiter les régressions.`,
+          `Je conseille de bien structurer son code dès le départ, de privilégier la lisibilité plutôt que la complexité et de tester régulièrement ses fonctionnalités.`,
+          `J’ai également compris que la qualité du code est essentielle pour faciliter la maintenance et le travail en équipe.`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `À moyen terme, je souhaite atteindre un niveau avancé sur les architectures logicielles (Clean Architecture), les principes SOLID et les design patterns.`,
-          `Je veux aussi approfondir les sujets performance et scalabilité dans l’écosystème .NET.`,
+          `À moyen terme, mon objectif est d’atteindre un niveau avancé en C#, notamment sur les architectures logicielles (Clean Architecture), les bonnes pratiques de conception (SOLID, design patterns), la performance et la scalabilité.`,
+          `Je souhaite également approfondir mes connaissances en lien avec l’écosystème .NET pour concevoir des applications robustes et évolutives.`,
         ],
       },
     ],
@@ -90,16 +97,21 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Niveau de maîtrise',
         paragraphs: [
           `Je me situe actuellement à un niveau confirmé en .NET.`,
-          `Je suis capable de développer des APIs backend, structurer une application en couches, gérer les interactions avec une base de données et intégrer des services externes.`,
+          `Je suis capable de :`,
+          `développer des APIs backend`,
+          `structurer une application en couches (architecture claire)`,
+          `gérer les interactions avec une base de données`,
+          `intégrer des services externes`,
         ],
       },
       {
         title: 'Mise en œuvre concrète',
         paragraphs: [
-          `Exemple CityBoard : création d’endpoints API pour traiter des données externes (transport, météo), implémentation de la logique métier des widgets et mise en place d’un cache MemoryCache.`,
-          `Résultat : amélioration des performances, réduction des appels API externes et meilleure expérience utilisateur.`,
-          `Exemple Kalicolis : développement backend de l’application mobile, gestion des échanges Flutter-base de données et sécurisation des flux.`,
-          `Exemple BOOST : évolutions et correctifs sur une architecture MVC en .NET pour améliorer la stabilité du logiciel métier.`,
+          `Exemple précis — Projet CityBoard : création d’endpoints API pour récupérer et traiter des données externes (API transport, météo), implémentation de la logique métier liée aux widgets personnalisés, mise en place d’un système de cache mémoire de type MemoryCache pour limiter les appels API.`,
+          `Résultat : amélioration des performances de l’application, réduction du nombre d’appels aux APIs externes et meilleure expérience utilisateur.`,
+          `Exemple — Projet Kalicolis : développement du backend de l’application mobile, gestion de la communication entre l’application Flutter et la base de données, sécurisation des échanges de données.`,
+          `Impact : application fonctionnelle de bout en bout et communication fiable entre client et serveur.`,
+          `Exemple — Projet BOOST : évolutions et correctifs sur une architecture MVC en .NET, ajout de nouvelles fonctionnalités et amélioration de la gestion des données pour améliorer la stabilité du logiciel métier.`,
         ],
       },
       {
@@ -113,20 +125,23 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Apprentissage et progression',
         paragraphs: [
           `J’ai acquis cette compétence principalement en alternance, via la pratique sur des projets concrets, la lecture de code existant et les échanges d’équipe.`,
-          `Cela m’a permis de mieux comprendre les bonnes pratiques de structuration d’une application backend.`,
+          `Mon apprentissage s’est fait par la pratique sur des cas réels, en lisant du code existant et en échangeant avec mon équipe.`,
+          `Cela m’a permis de comprendre progressivement les bonnes pratiques de structuration d’une application backend.`,
         ],
       },
       {
         title: 'Recul critique et conseils',
         paragraphs: [
           `Avec le recul, .NET est un cadre puissant qui exige une bonne organisation du code.`,
-          `Je recommande de structurer clairement les couches (contrôleurs, services, données) et de privilégier la maintenabilité dès les premières itérations.`,
+          `Je conseille de structurer clairement son projet dès le départ, de bien séparer les responsabilités (contrôleurs, services, données), et de privilégier la lisibilité et la maintenabilité.`,
+          `J’ai également réalisé que la qualité de l’architecture a un impact direct sur la facilité d’évolution d’un projet.`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `Je souhaite approfondir .NET sur les architectures avancées (Clean Architecture, microservices), la mise en place de pipelines CI/CD et l’optimisation des performances.`,
+          `À moyen terme, je souhaite approfondir mes compétences en .NET sur les architectures avancées (Clean Architecture, microservices), la mise en place de pipelines CI/CD et l’optimisation des performances.`,
+          `Mon objectif est de concevoir des applications backend robustes, évolutives et adaptées à des environnements professionnels complexes.`,
         ],
       },
     ],
@@ -155,6 +170,7 @@ export const technicalSkills: TechnicalSkill[] = [
           `Exemple BOOST : manipulation des données via entités C#, requêtes LINQ, opérations CRUD et gestion des relations entre entités.`,
           `Impact : meilleure organisation du code et réduction de la complexité liée aux requêtes manuelles.`,
           `Exemple CityBoard : gestion des préférences utilisateurs, persistance des configurations de widgets et interaction avec PostgreSQL.`,
+          `Impact : cohérence des données, simplification de la gestion backend et meilleure maintenabilité du code.`,
         ],
       },
       {
@@ -175,7 +191,8 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Recul critique et conseils',
         paragraphs: [
           `Avec le recul, EF est un outil très productif mais il peut masquer la complexité réelle des requêtes SQL générées.`,
-          `Je conseille de surveiller les performances et de comprendre ce qui est exécuté en base pour éviter les surprises en production.`,
+          `Je conseille de comprendre les requêtes générées, de ne pas dépendre uniquement de l’abstraction et de surveiller les performances.`,
+          `J’ai également compris qu’un mauvais usage peut entraîner des problèmes de performance.`,
         ],
       },
       {
@@ -202,15 +219,20 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Niveau de maîtrise',
         paragraphs: [
           `Je me situe à un niveau confirmé en SQL.`,
-          `Je suis capable d’écrire des requêtes avec jointures, manipuler des données sur plusieurs tables, sécuriser la cohérence via transactions et optimiser des requêtes courantes.`,
+          `Je suis capable de :`,
+          `écrire des requêtes complexes avec jointures`,
+          `manipuler des données dans plusieurs tables`,
+          `garantir la cohérence des données`,
+          `optimiser des requêtes simples`,
         ],
       },
       {
         title: 'Mise en œuvre concrète',
         paragraphs: [
-          `Exemple CityBoard : requêtes SQL avec jointures entre utilisateurs, widgets et préférences ; mise en place de transactions (BEGIN/COMMIT/ROLLBACK) pour garantir la cohérence lors d’opérations multiples.`,
+          `Exemple CityBoard : requêtes SQL avec jointures entre utilisateurs, widgets et préférences ; mise en place de transactions (BEGIN TRANSACTION / COMMIT / ROLLBACK) pour garantir la cohérence lors d’opérations multiples.`,
           `Résultats : données cohérentes, même en cas d’erreur, et amélioration des performances du chargement des dashboards.`,
           `Exemple Kalicolis : conception des tables (utilisateurs, trajets, colis), relations par clés étrangères et requêtes multi-objets pour lier utilisateur, trajet et colis.`,
+          `Impact : meilleure organisation des données et application plus fiable.`,
         ],
       },
       {
@@ -258,7 +280,11 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Niveau de maîtrise',
         paragraphs: [
           `Je me situe à un niveau confirmé en React.`,
-          `Je suis capable de créer des composants réutilisables, gérer l’état avec useState/useContext, connecter l’interface à des APIs backend et structurer une application front-end.`,
+          `Je suis capable de :`,
+          `créer des composants réutilisables`,
+          `gérer l’état d’une application (useState, useContext)`,
+          `connecter une interface à des APIs backend`,
+          `structurer une application front-end`,
         ],
       },
       {
@@ -306,7 +332,11 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Niveau de maîtrise',
         paragraphs: [
           `Je me situe à un niveau confirmé.`,
-          `Je suis capable de manipuler le DOM, gérer des appels API, utiliser async/await et structurer la logique applicative.`,
+          `Je suis capable de :`,
+          `manipuler le DOM`,
+          `gérer des appels API`,
+          `utiliser l’asynchronisme (async/await)`,
+          `structurer la logique d’une application`,
         ],
       },
       {
@@ -317,7 +347,7 @@ export const technicalSkills: TechnicalSkill[] = [
         ],
       },
       {
-        title: 'Contexte d’utilisation et limites',
+        title: 'Contexte et limites',
         paragraphs: [
           `Bonne maîtrise générale dans les contextes applicatifs courants.`,
           `Je reste en progression sur l’optimisation avancée et la gestion de code JavaScript complexe à grande échelle.`,
@@ -350,21 +380,21 @@ export const softSkills: SoftSkill[] = [
         title: 'Situation et exemples concrets',
         paragraphs: [
           `L’autonomie est une compétence essentielle dans mon travail de développeuse. Elle se traduit par ma capacité à avancer seule sur une tâche, tout en sachant identifier mes limites et solliciter de l’aide lorsque cela est nécessaire.`,
-          `Sur CityBoard et Kalicolis, j’ai pris en charge des fonctionnalités de manière indépendante. Sur Kalicolis, par exemple, j’ai conçu plusieurs écrans Flutter en prenant des décisions d’ergonomie et de navigation.`,
-          `Quand je rencontre une difficulté, j’adopte une démarche structurée : documentation, tests, analyse des erreurs. Sur DiagElec et BOOST, cette méthode m’a permis de résoudre des problèmes sans dépendre systématiquement des autres.`,
+          `Au cours de mes projets, notamment sur CityBoard et Kalicolis, j’ai été amenée à prendre en charge des fonctionnalités de manière indépendante. Sur Kalicolis, par exemple, j’ai conçu plusieurs écrans mobiles en Flutter en faisant des choix d’ergonomie et de navigation, ce qui m’a permis de développer ma capacité à prendre des décisions techniques.`,
+          `Lorsque je rencontre une difficulté, j’adopte une démarche structurée : recherche dans la documentation, tests, analyse des erreurs. Sur des projets comme DiagElec ou BOOST, cela m’a permis de résoudre des problèmes sans dépendre systématiquement des autres.`,
         ],
       },
       {
         title: 'Recul critique',
         paragraphs: [
-          `Avec le recul, mon autonomie s’accompagne parfois d’une prudence volontaire : je vérifie ou fais valider certaines décisions sensibles pour garantir la qualité du travail.`,
+          `Cependant, avec le recul, je constate que mon autonomie s’accompagne parfois d’une forme de prudence. Il m’arrive de vérifier mes décisions ou de demander une validation, notamment sur des sujets sensibles. Aujourd’hui, je considère cela non pas comme une faiblesse, mais comme une démarche responsable visant à garantir la qualité du travail.`,
         ],
       },
       {
         title: 'Évolution et projection',
         paragraphs: [
-          `Au fil des projets, j’ai gagné en confiance et en initiative.`,
-          `Je souhaite continuer à développer une autonomie plus affirmée sur des sujets techniques complexes et des décisions à fort impact.`,
+          `Évolution : au fil des projets, j’ai gagné en confiance et en capacité à prendre des initiatives. Je suis aujourd’hui capable de travailler de manière autonome sur des tâches complètes, tout en restant ouverte aux retours.`,
+          `Projection : je souhaite continuer à développer une autonomie plus affirmée, notamment sur des sujets techniques complexes et des prises de décision à fort impact.`,
         ],
       },
     ],
@@ -377,21 +407,22 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Situation et exemples concrets',
         paragraphs: [
-          `La curiosité est une qualité centrale dans mon parcours : elle m’amène à comprendre en profondeur les technologies et les choix de conception.`,
-          `Sur DiagElec, lors de ma découverte de React, je suis allée au-delà des tâches minimales : exploration de la documentation, expérimentation de hooks et analyse du code existant.`,
-          `Sur CityBoard, cette curiosité m’a poussée à approfondir l’architecture backend et l’intégration d’APIs externes, avec une logique de compréhension du "pourquoi" autant que du "comment".`,
+          `La curiosité est une qualité centrale dans mon parcours. Elle se traduit par une volonté constante de comprendre en profondeur les technologies et les problématiques rencontrées.`,
+          `Par exemple, lors de ma découverte de React sur le projet DiagElec, j’ai pris l’initiative d’aller au-delà des tâches demandées : j’ai exploré la documentation, expérimenté différents hooks (useState, useContext) et analysé le code existant. Cette démarche m’a permis de progresser rapidement et de gagner en autonomie.`,
+          `Sur CityBoard, ma curiosité m’a poussée à approfondir des notions plus complexes, comme l’architecture backend et l’intégration d’APIs externes. J’ai cherché à comprendre non seulement “comment” implémenter une fonctionnalité, mais aussi “pourquoi” elle était conçue de cette manière.`,
         ],
       },
       {
         title: 'Recul critique',
         paragraphs: [
-          `Avec le recul, la curiosité peut conduire à sur-investir un sujet. J’ai appris à mieux prioriser pour conserver efficacité et impact.`,
+          `Cependant, avec le recul, je constate que cette curiosité peut parfois me conduire à passer plus de temps que nécessaire sur certains sujets. J’ai donc appris à mieux prioriser et à équilibrer exploration et efficacité.`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `Je souhaite continuer à approfondir les architectures logicielles et les bonnes pratiques de conception.`,
+          `Évolution : aujourd’hui, ma curiosité est plus structurée et orientée vers des objectifs concrets.`,
+          `Projection : je souhaite continuer à approfondir mes connaissances, notamment sur les architectures logicielles et les bonnes pratiques de développement.`,
         ],
       },
     ],
@@ -404,16 +435,17 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Situation et exemples concrets',
         paragraphs: [
-          `Le travail en équipe est central dans mes expériences : communication, écoute et collaboration avec développeurs, chefs de projet et parfois experts métier.`,
-          `Sur CityBoard, DiagElec et BOOST, les échanges SCRUM et les code reviews ont amélioré la qualité de mon travail et ma capacité à formuler des retours constructifs.`,
-          `J’ai appris à adapter ma communication selon l’interlocuteur pour mieux aligner besoins métier et solutions techniques.`,
+          `Le travail en équipe est un élément central de mes expériences professionnelles. Il ne se limite pas à la répartition des tâches, mais repose sur la communication, l’écoute et la collaboration.`,
+          `Sur des projets comme CityBoard, DiagElec ou BOOST, j’ai travaillé avec des développeurs, des chefs de projet et parfois des experts métier. Cela m’a appris à adapter ma communication en fonction des interlocuteurs et à mieux comprendre les besoins non techniques.`,
+          `Les échanges réguliers (réunions SCRUM, code reviews) m’ont permis d’améliorer la qualité de mon travail. Recevoir des retours m’a aidée à progresser, et donner des retours m’a appris à formuler des critiques constructives.`,
+          `Avec le recul, je réalise que je pouvais être initialement plus en retrait dans les discussions techniques. Progressivement, j’ai pris plus confiance pour exprimer mes idées et proposer des solutions.`,
         ],
       },
       {
         title: 'Évolution et projection',
         paragraphs: [
-          `J’étais initialement plus en retrait dans certaines discussions techniques ; je prends aujourd’hui davantage la parole et défends mieux mes propositions.`,
-          `Je souhaite continuer à renforcer mon impact collectif, notamment en contribuant davantage aux décisions techniques.`,
+          `Évolution : je participe aujourd’hui plus activement aux échanges et je suis capable de défendre mes choix techniques.`,
+          `Projection : je souhaite continuer à développer mon impact en équipe, notamment en prenant davantage d’initiatives et en contribuant aux décisions techniques.`,
         ],
       },
     ],
@@ -426,16 +458,21 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Situation et exemples concrets',
         paragraphs: [
-          `Dans le développement, les priorités évoluent vite. J’ai appris à m’adapter à des changements fonctionnels, des contraintes techniques imprévues et des ajustements de planning.`,
-          `Sur DiagElec, CityBoard et BOOST, cette adaptabilité m’a permis d’ajuster mon travail rapidement et de proposer des alternatives réalistes.`,
-          `Cette compétence s’appuie aussi sur mon parcours personnel et académique, marqué par plusieurs transitions culturelles et disciplinaires.`,
+          `Dans le domaine du développement, les besoins évoluent constamment. J’ai appris à m’adapter à ces changements à travers mes différentes expériences.`,
+          `Sur des projets comme DiagElec, CityBoard ou BOOST, j’ai été confrontée à :`,
+          `des changements de priorités`,
+          `des évolutions fonctionnelles`,
+          `des contraintes techniques imprévues`,
+          `Dans ces situations, j’ai appris à prendre du recul, à ajuster mon travail et à proposer des alternatives.`,
+          `Cette adaptabilité s’est également manifestée dans mon parcours académique et personnel, notamment lors de mon passage du domaine des langues à l’informatique, puis de mon intégration dans un environnement professionnel en France.`,
         ],
       },
       {
         title: 'Recul critique et projection',
         paragraphs: [
-          `Les changements rapides peuvent créer de l’incertitude ; j’ai appris à structurer davantage mon organisation pour rester efficace.`,
-          `Je souhaite renforcer cette capacité dans des environnements encore plus dynamiques et complexes.`,
+          `Cependant, avec le recul, je constate que les changements rapides peuvent parfois générer de l’incertitude. J’ai donc appris à mieux structurer mon travail pour rester efficace même dans un contexte évolutif.`,
+          `Évolution : aujourd’hui, je m’adapte plus rapidement aux nouvelles situations et je reste efficace malgré les changements.`,
+          `Projection : je souhaite renforcer cette capacité dans des environnements encore plus complexes et dynamiques.`,
         ],
       },
     ],
@@ -448,16 +485,16 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Situation et exemples concrets',
         paragraphs: [
-          `Je veille à expliquer clairement mes propositions, à synthétiser l’avancement et à documenter ce qui est utile à l’équipe (tests, anomalies, choix techniques).`,
-          `Sur BOOST et CityBoard, les échanges avec chefs de projet et interlocuteurs métier m’ont appris à reformuler un besoin utilisateur en tâches techniques priorisées.`,
-          `Les revues de code et réunions d’équipe ont renforcé ma communication constructive et la qualité collective des livrables.`,
+          `La communication professionnelle est une compétence essentielle dans mon travail de développeuse. Elle se traduit par ma capacité à exprimer clairement mes idées, à partager l’avancement de mes tâches et à échanger efficacement avec différents interlocuteurs.`,
+          `Au cours de mes projets, notamment sur CityBoard, DiagElec et BOOST, j’ai été amenée à collaborer avec des développeurs, des chefs de projet et des experts métier. Par exemple, sur le projet BOOST, j’ai régulièrement communiqué avec le chef de projet pour clarifier les besoins fonctionnels et remonter les anomalies identifiées. Cela a permis d’éviter des incompréhensions et d’améliorer la qualité des livrables.`,
+          `De plus, lors des réunions d’équipe (SCRUM, points de suivi), j’ai appris à partager l’avancement de mon travail de manière structurée et concise, ainsi qu’à adapter mon discours selon mes interlocuteurs, en vulgarisant les aspects techniques lorsque cela était nécessaire.`,
+          `Cependant, avec le recul, je constate qu’au début de mes expériences, je pouvais être plus réservée dans mes prises de parole, notamment sur des sujets techniques. Progressivement, j’ai gagné en confiance et en aisance pour exprimer mes idées et poser des questions.`,
         ],
       },
       {
-        title: 'Recul critique et projection',
+        title: 'Évolution',
         paragraphs: [
-          `Avec le recul, une communication claire réduit les incompréhensions et accélère la résolution des problèmes.`,
-          `Je veux continuer à progresser sur la communication inter-profils (technique, produit, métier) pour fluidifier davantage la collaboration.`,
+          `Évolution : aujourd’hui, je communique de manière plus claire et structurée, aussi bien à l’écrit (tickets, documentation) qu’à l’oral (réunions, échanges d’équipe).`,
         ],
       },
     ],
