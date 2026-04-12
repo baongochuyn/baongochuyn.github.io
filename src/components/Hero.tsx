@@ -55,10 +55,12 @@ const CODE_INNER_MAX = 'max-w-[26rem]';
 export default function Hero() {
   const router = useRouter();
   const presentationHref = hrefWithBase('/presentation');
+  const parcoursHref = hrefWithBase('/presentation#timeline-parcours');
 
   useEffect(() => {
     router.prefetch(presentationHref);
-  }, [router, presentationHref]);
+    router.prefetch(parcoursHref);
+  }, [router, parcoursHref, presentationHref]);
 
   return (
     <section
@@ -90,7 +92,7 @@ export default function Hero() {
             <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 tracking-tight">
               {profile.name}
             </h1>
-            <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-normal">
+            <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-nowrap overflow-hidden text-ellipsis">
               {profile.role}
             </p>
             <p className="text-slate-400 text-sm md:text-base mb-8">
@@ -100,16 +102,21 @@ export default function Hero() {
               <Link
                 href={presentationHref}
                 prefetch
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-medium hover:bg-pink-600 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(presentationHref, { scroll: true });
+                }}
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
               >
-                À propos &amp; parcours
+                À propos
               </Link>
-              <a
-                href={hrefWithBase('/#realisations')}
-                className="inline-flex items-center px-5 py-2.5 rounded-full border border-slate-600 text-slate-200 text-sm font-medium hover:border-pink-500 hover:text-pink-300 transition-colors"
+              <Link
+                href={parcoursHref}
+                prefetch
+                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-slate-200 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
               >
-                Réalisations
-              </a>
+                Parcours
+              </Link>
             </div>
           </div>
 
@@ -138,7 +145,7 @@ export default function Hero() {
             <h1 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
               {profile.name}
             </h1>
-            <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-normal">
+            <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-nowrap overflow-hidden text-ellipsis">
               {profile.role}
             </p>
             <p className="text-slate-400 text-sm md:text-base mb-8">
@@ -148,16 +155,21 @@ export default function Hero() {
               <Link
                 href={presentationHref}
                 prefetch
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-medium hover:bg-pink-600 transition-colors"
+                onClick={(e) => {
+                  e.preventDefault();
+                  router.push(presentationHref, { scroll: true });
+                }}
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
               >
-                À propos &amp; parcours
+                À propos
               </Link>
-              <a
-                href={hrefWithBase('/#realisations')}
-                className="inline-flex items-center px-5 py-2.5 rounded-full border border-slate-600 text-slate-200 text-sm font-medium hover:border-pink-500 hover:text-pink-300 transition-colors"
+              <Link
+                href={parcoursHref}
+                prefetch
+                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-slate-200 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
               >
-                Réalisations
-              </a>
+                Parcours
+              </Link>
             </div>
           </div>
 

@@ -86,6 +86,13 @@ export const projects: Project[] = [
           `une bonne stratégie de test améliore fortement la qualité`,
         ],
       },
+      {
+        title: 'Lendemains du projet',
+        paragraphs: [
+          `Avec le recul, ce projet a renforcé ma conviction que la qualité doit être pensée dès le démarrage et non en fin de cycle.`,
+          `Il a aussi structuré ma manière d’aborder les nouveaux sujets avec plus de méthode et d’anticipation des risques.`,
+        ],
+      },
     ],
   },
   {
@@ -178,6 +185,13 @@ export const projects: Project[] = [
           `la structure du front-end est essentielle pour la maintenabilité`,
           `une bonne gestion de l’état améliore la qualité du code`,
           `la collaboration est clé pour avancer efficacement`,
+        ],
+      },
+      {
+        title: 'Lendemains du projet',
+        paragraphs: [
+          `Ce projet m’a donné une base solide en React qui continue d’être utile dans mes missions actuelles.`,
+          `Il a changé ma façon de concevoir une interface : je pense désormais plus tôt à la maintenabilité et à l’expérience utilisateur.`,
         ],
       },
     ],
@@ -301,6 +315,13 @@ export const projects: Project[] = [
           `une architecture claire facilite l’évolution`,
         ],
       },
+      {
+        title: 'Lendemains du projet',
+        paragraphs: [
+          `Les choix d’optimisation réalisés restent pertinents pour limiter les coûts techniques et améliorer la fluidité perçue.`,
+          `Ce retour d’expérience a renforcé ma vision full stack, avec une attention constante au couple performance et valeur utilisateur.`,
+        ],
+      },
     ],
   },
   {
@@ -406,6 +427,13 @@ export const projects: Project[] = [
           `la maintenance est une partie essentielle du développement`,
           `comprendre le métier est indispensable pour proposer des solutions pertinentes`,
           `un code mal structuré complique fortement les évolutions`,
+        ],
+      },
+      {
+        title: 'Lendemains du projet',
+        paragraphs: [
+          `Ce projet m’a durablement sensibilisée à l’impact d’une bonne structuration sur la maintenance en production.`,
+          `Il influence encore ma pratique quotidienne, notamment dans la clarté du code et la communication avec les équipes métier.`,
         ],
       },
     ],
@@ -515,6 +543,13 @@ export const projects: Project[] = [
           `la séparation des responsabilités est essentielle`,
           `une bonne architecture facilite la maintenance`,
           `l’expérience utilisateur est clé dans une application mobile`,
+        ],
+      },
+      {
+        title: 'Lendemains du projet',
+        paragraphs: [
+          `Cette expérience continue d’orienter ma manière de concevoir des applications mobiles centrées sur la clarté des parcours.`,
+          `Avec le temps, j’ai gagné en maturité sur les arbitrages entre vitesse de livraison, qualité technique et expérience utilisateur.`,
         ],
       },
     ],

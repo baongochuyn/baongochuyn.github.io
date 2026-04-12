@@ -40,7 +40,7 @@ export default function Projects() {
         </h2>
 
         <div className="space-y-4">
-          {projects.map((project) => {
+          {projects.map((project: { id: string; title: string; skillsPreview?: string[] }) => {
             const raw = (project as { skillsPreview?: string[] }).skillsPreview;
             const previewSkills: string[] = Array.isArray(raw) ? raw : [];
             const projectHref = hrefWithBase(`/realisations/${project.id}`);

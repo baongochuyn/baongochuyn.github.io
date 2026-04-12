@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import Header from '@/components/Header';
 import BackLink from '@/components/BackLink';
 import SkillIcon from '@/components/SkillIcon';
+import Contact from '@/components/Contact';
 import { projects, technicalSkills } from '@/data/content';
 import { TextWithProjectLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
@@ -50,7 +51,7 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                     const bullet = isLikelyListItem(section.paragraphs, i);
                     const numbered = isNumberedItem(section.paragraphs[i] ?? '');
                     const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
-                    const paragraphClass = `${bullet ? 'relative pl-4' : keyLabel ? 'relative pl-3' : ''}${keyLabel ? ' mt-1 mb-2' : numbered ? ' mt-1 mb-1' : ''}`.trim();
+                    const paragraphClass = `${keyLabel ? 'mt-1 mb-2' : numbered ? 'mt-1 mb-1' : ''}`.trim();
                     const textClass = keyLabel
                       ? 'text-pink-400 font-semibold'
                       : numbered
@@ -59,16 +60,14 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
 
                     return (
                     <p key={i} className={paragraphClass}>
-                      {bullet ? (
-                        <span className="absolute left-0 top-[0.62em] inline-block h-1.5 w-1.5 rounded-full bg-pink-400" aria-hidden />
-                      ) : null}
-                      {keyLabel && !bullet ? (
-                        <span className="absolute left-0 top-[0.35em] inline-block h-4 w-0.5 rounded bg-pink-500/55" aria-hidden />
-                      ) : null}
-                      <span className={textClass}>
-                        <TextWithProjectLinks>
-                          {bullet ? normalizeListItemText(text) : text}
-                        </TextWithProjectLinks>
+                      <span className="flex items-start gap-2.5">
+                        {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
+                        {keyLabel && !bullet ? <span className="mt-[0.35em] inline-block h-4 w-0.5 shrink-0 rounded bg-pink-500/55" aria-hidden /> : null}
+                        <span className={textClass}>
+                          <TextWithProjectLinks>
+                            {bullet ? normalizeListItemText(text) : text}
+                          </TextWithProjectLinks>
+                        </span>
                       </span>
                     </p>
                   );})}
@@ -100,6 +99,7 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
           </div>
         </div>
       </main>
+      <Contact />
       <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>

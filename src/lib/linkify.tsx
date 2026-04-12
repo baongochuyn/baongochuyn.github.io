@@ -12,7 +12,7 @@ const SKILL_LINKS: LinkDef[] = [
   { pattern: /\bASP\.NET Core\b/gi, id: 'skill-dotnet' },
   { pattern: /\.NET Core 8\b/gi, id: 'skill-dotnet' },
   { pattern: /\.NET\b/gi, id: 'skill-dotnet' },
-  { pattern: /\bC#\b/g, id: 'skill-csharp' },
+  { pattern: /C#/g, id: 'skill-csharp' },
   { pattern: /\bReact 18\b/gi, id: 'skill-react' },
   { pattern: /\bReact\b/g, id: 'skill-react' },
   { pattern: /\bJavaScript\b/g, id: 'skill-javascript' },
@@ -40,6 +40,21 @@ const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
   { pattern: /\bBanque Alimentaire\b/g },
   { pattern: /\bKaliva\b/g },
   { pattern: /\bESIEA\b/g },
+  { pattern: /\bASP\.NET Core\b/gi },
+  { pattern: /\.NET Core 8\b/gi },
+  { pattern: /\.NET\b/gi },
+  { pattern: /\bC#\b/g },
+  { pattern: /\bReact 18\b/gi },
+  { pattern: /\bReact\b/g },
+  { pattern: /\bJavaScript\b/g },
+  { pattern: /\bjQuery\b/gi },
+  { pattern: /\bSQL\b/g },
+  { pattern: /\bPostgreSQL\b/gi },
+  { pattern: /\bEntity Framework Core\b/gi },
+  { pattern: /\bEntity Framework\b/gi },
+  { pattern: /\bEF\b/g },
+  { pattern: /\bNUnit\b/gi },
+  { pattern: /\bMaterial UI\b/gi },
 ];
 
 interface Segment {
@@ -128,7 +143,7 @@ function highlightText(text: string, highlights: HighlightDef[]): HighlightSegme
 }
 
 const linkClass = 'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
-const highlightClass = 'text-pink-300 font-medium';
+const highlightClass = 'text-pink-300 font-semibold';
 
 function toRouteHref(href: string, kind: 'skill' | 'project'): string {
   if (kind === 'skill') {

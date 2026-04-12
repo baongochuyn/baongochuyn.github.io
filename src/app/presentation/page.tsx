@@ -3,8 +3,10 @@ import Image from 'next/image';
 import Header from '@/components/Header';
 import BackLink from '@/components/BackLink';
 import ParcoursTimeline from '@/components/ParcoursTimeline';
+import Contact from '@/components/Contact';
+import ScrollToHash from '@/components/ScrollToHash';
 import { presentationIntro, presentationSections, parcoursTimeline, profile } from '@/data/content';
-import { TextWithHighlights } from '@/lib/linkify';
+import { TextWithSkillLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
 import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
 
@@ -17,6 +19,7 @@ export default function PresentationPage() {
   return (
     <div className="flex min-h-screen flex-col">
       <Header />
+      <ScrollToHash />
       <main className="flex-1 max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 md:py-14 pb-16 md:pb-20">
         <BackLink href={hrefWithBase('/')} label="Retour à l’accueil" />
         <header className="mb-12 rounded-2xl border border-slate-700/80 bg-slate-800/40 overflow-hidden">
@@ -64,7 +67,7 @@ export default function PresentationPage() {
                   const bullet = isLikelyListItem(section.paragraphs, i);
                   const numbered = isNumberedItem(section.paragraphs[i] ?? '');
                   const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
-                  const paragraphClass = `${bullet ? 'relative pl-4' : keyLabel ? 'relative pl-3' : ''}${keyLabel ? ' mt-1 mb-2' : numbered ? ' mt-1 mb-1' : ''}`.trim();
+                  const paragraphClass = `${keyLabel ? 'mt-1 mb-2' : numbered ? 'mt-1 mb-1' : ''}`.trim();
                   const textClass = keyLabel
                     ? 'text-pink-400 font-semibold'
                     : numbered
@@ -73,16 +76,14 @@ export default function PresentationPage() {
 
                   return (
                   <p key={i} className={paragraphClass}>
-                    {bullet ? (
-                      <span className="absolute left-0 top-[0.62em] inline-block h-1.5 w-1.5 rounded-full bg-pink-400" aria-hidden />
-                    ) : null}
-                    {keyLabel && !bullet ? (
-                      <span className="absolute left-0 top-[0.35em] inline-block h-4 w-0.5 rounded bg-pink-500/55" aria-hidden />
-                    ) : null}
-                    <span className={textClass}>
-                      <TextWithHighlights>
-                        {bullet ? normalizeListItemText(text) : text}
-                      </TextWithHighlights>
+                    <span className="flex items-start gap-2.5">
+                      {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
+                      {keyLabel && !bullet ? <span className="mt-[0.35em] inline-block h-4 w-0.5 shrink-0 rounded bg-pink-500/55" aria-hidden /> : null}
+                      <span className={textClass}>
+                        <TextWithSkillLinks>
+                          {bullet ? normalizeListItemText(text) : text}
+                        </TextWithSkillLinks>
+                      </span>
                     </span>
                   </p>
                 );})}
@@ -96,6 +97,7 @@ export default function PresentationPage() {
           </section>
         </div>
       </main>
+      <Contact />
       <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>

@@ -79,6 +79,13 @@ export const technicalSkills: TechnicalSkill[] = [
         ],
       },
       {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `C# continue d’évoluer rapidement avec l’écosystème .NET 8, notamment sur la performance et la productivité des équipes backend.`,
+          `Cette dynamique renforce l’intérêt de maîtriser les bonnes pratiques modernes pour rester alignée avec les standards actuels du marché.`,
+        ],
+      },
+      {
         title: 'Projection professionnelle',
         paragraphs: [
           `À moyen terme, mon objectif est d’atteindre un niveau avancé en C#, notamment sur :`,
@@ -147,6 +154,13 @@ export const technicalSkills: TechnicalSkill[] = [
         ],
       },
       {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `La sortie de .NET 8 confirme la place de la plateforme dans les projets backend modernes grâce à de fortes améliorations de performance et de stabilité.`,
+          `Dans ce contexte, consolider mes compétences .NET me permet de rester en phase avec les besoins actuels des équipes full stack.`,
+        ],
+      },
+      {
         title: 'Projection professionnelle',
         paragraphs: [
           `À moyen terme, je souhaite approfondir mes compétences en .NET sur les architectures avancées (Clean Architecture, microservices), la mise en place de pipelines CI/CD et l’optimisation des performances.`,
@@ -211,6 +225,13 @@ export const technicalSkills: TechnicalSkill[] = [
         ],
       },
       {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `Entity Framework reste très utilisé dans les applications .NET actuelles, avec une attention croissante portée à l’optimisation des requêtes et au monitoring.`,
+          `Cette tendance confirme l’importance de combiner productivité ORM et vigilance sur les performances SQL réelles.`,
+        ],
+      },
+      {
         title: 'Projection professionnelle',
         paragraphs: [
           `Je souhaite approfondir l’optimisation des requêtes EF, l’utilisation avancée de LINQ et la gestion fine du tracking/performance.`,
@@ -269,6 +290,13 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `Avec le recul, la qualité de modélisation des données est un facteur déterminant de stabilité applicative.`,
           `Je recommande de structurer les tables dès le départ, clarifier les relations et sécuriser les opérations critiques avec transactions.`,
+        ],
+      },
+      {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `Le volume croissant des données et les besoins temps réel rendent l’optimisation SQL de plus en plus stratégique dans les projets actuels.`,
+          `Cette évolution confirme l’intérêt d’approfondir les index, plans d’exécution et pratiques de performance dès la phase de conception.`,
         ],
       },
       {
@@ -331,6 +359,13 @@ export const technicalSkills: TechnicalSkill[] = [
         ],
       },
       {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `L’écosystème React évolue vite, avec un accent fort sur la performance perçue, l’ergonomie et la maintenabilité des composants.`,
+          `Cette dynamique m’encourage à renforcer les patterns modernes pour construire des interfaces robustes et évolutives.`,
+        ],
+      },
+      {
         title: 'Projection professionnelle',
         paragraphs: [
           `Je souhaite approfondir React sur :`,
@@ -387,6 +422,13 @@ export const technicalSkills: TechnicalSkill[] = [
           `Importance :`,
           `d’organiser le code`,
           `de gérer correctement l’asynchronisme`,
+        ],
+      },
+      {
+        title: 'Actualité et tendances',
+        paragraphs: [
+          `JavaScript reste central dans les applications web, avec des attentes croissantes sur la qualité du code et la performance front-end.`,
+          `Cette tendance rend indispensable une approche structurée pour garantir lisibilité, évolutivité et fiabilité.`,
         ],
       },
       {

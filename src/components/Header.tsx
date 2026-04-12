@@ -92,42 +92,48 @@ export default function Header() {
       return;
     }
 
-    const updateActiveByScroll = () => {
-      if (Date.now() < lockActiveUntilRef.current) return;
-
-      // Priority to hash during route transitions like /presentation -> /#realisations.
+    const updateActiveFromHash = () => {
       const hashKey = keyFromHash(window.location.hash);
-      if (hashKey) {
-        setActiveKey(hashKey);
-        return;
-      }
-
-      const nearBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 8;
-      if (nearBottom) {
-        setActiveKey('contact');
-        return;
-      }
-
-      const triggerLine = window.innerHeight * 0.35;
-      let next: NavKey = 'accueil';
-
-      for (const section of homeSections) {
-        const el = document.getElementById(section.id);
-        if (!el) continue;
-        const top = el.getBoundingClientRect().top;
-        if (top <= triggerLine) next = section.key;
-      }
-
-      setActiveKey(next);
+      if (hashKey) setActiveKey(hashKey);
     };
 
-    updateActiveByScroll();
-    window.addEventListener('scroll', updateActiveByScroll, { passive: true });
-    window.addEventListener('hashchange', updateActiveByScroll);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (Date.now() < lockActiveUntilRef.current) return;
+
+        const visible = entries.filter((entry) => entry.isIntersecting);
+        if (!visible.length) return;
+
+        const preferred = visible.reduce<{ key: NavKey; top: number } | null>((best, entry) => {
+          const id = entry.target.id;
+          const match = homeSections.find((section) => section.id === id);
+          if (!match) return best;
+
+          const top = entry.boundingClientRect.top;
+          if (!best || top < best.top) return { key: match.key, top };
+          return best;
+        }, null);
+
+        if (preferred) setActiveKey(preferred.key);
+      },
+      {
+        root: null,
+        threshold: 0.35,
+        rootMargin: '-18% 0px -45% 0px',
+      }
+    );
+
+    for (const section of homeSections) {
+      const el = document.getElementById(section.id);
+      if (el) observer.observe(el);
+    }
+
+    updateActiveFromHash();
+    window.addEventListener('hashchange', updateActiveFromHash);
 
     return () => {
-      window.removeEventListener('scroll', updateActiveByScroll);
-      window.removeEventListener('hashchange', updateActiveByScroll);
+      observer.disconnect();
+      window.removeEventListener('hashchange', updateActiveFromHash);
     };
   }, [onHome, pathname]);
 
