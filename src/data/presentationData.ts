@@ -11,7 +11,7 @@ export const presentationSections = [
     title: 'Profil',
     paragraphs: [
       `Étudiante en ingénierie du logiciel en quatrième année à l'ESIEA, je réalise actuellement mon alternance chez Bluesoft en tant que développeuse full stack.`,
-      `Dans ce cadre, je participe à des projets concrets pour des clients tels que TDF (Télédiffusion de France), Banque Alimentaire, ce qui me permet d'appliquer mes compétences techniques dans un environnement professionnel exigeant. J'interviens à la fois sur le développement backend, frontend et sur la qualité logicielle, notamment à travers la mise en place de tests.`,
+      `Dans ce cadre, je participe à des projets concrets pour des clients tels que TDF(Télédiffusion de France), Banque Alimentaire, ce qui me permet d'appliquer mes compétences techniques dans un environnement professionnel exigeant. J'interviens à la fois sur le développement backend, frontend et sur la qualité logicielle, notamment à travers la mise en place de tests.`,
       `Cette expérience me permet de développer une approche à la fois technique et orientée métier, en comprenant les besoins des utilisateurs et en proposant des solutions adaptées.`,
     ],
   },
@@ -33,8 +33,8 @@ export const presentationSections = [
     paragraphs: [
       `Mon parcours académique est atypique et m'a permis de développer une forte capacité d'adaptation.`,
       `Avant de me tourner vers l'informatique, j'ai obtenu une licence en langues et cultures coréennes à l'Université de Hué, au Vietnam. J'ai ensuite eu l'opportunité d'étudier pendant un an en Corée du Sud, avant de m'installer en France pour apprendre le français à la Sorbonne Nouvelle Paris 3.`,
-      `Cette transition vers un domaine technique a nécessité un important investissement personnel, ce qui m'a permis de développer une forte capacité d'adaptation et une approche analytique des problèmes complexes. J'ai dû acquérir de nouvelles compétences en programmation, en logique et en résolution de problèmes, tout en m'adaptant à un nouvel environnement culturel et académique.`,
-      `Aujourd'hui, cette diversité de parcours constitue une force : elle me permet d'aborder les problèmes avec un regard différent, de m'adapter rapidement et de continuer à apprendre efficacement.`,
+      `Cette transition vers un domaine technique a nécessité un important investissement personnel ce qui m'a permis de développer une forte capacité d'adaptation et une approche analytique des problèmes complexes.. J'ai dû acquérir de nouvelles compétences en programmation, en logique et en résolution de problèmes, tout en m'adaptant à un nouvel environnement culturel et académique.`,
+      `Aujourd'hui, cette diversité de parcours constitue une force : elle me permet d'aborder les problèmes avec un regard différent, de m'adapter rapidement et de continuer à apprendre efficacement.estimée du temps`,
     ],
   },
   {

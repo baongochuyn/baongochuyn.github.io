@@ -6,18 +6,19 @@ import SkillIcon from '@/components/SkillIcon';
 import { projects, technicalSkills } from '@/data/content';
 import { TextWithProjectLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
+import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
 
 type PageProps = {
   params: Promise<{ id: string }>;
 };
 
 export function generateStaticParams() {
-  return technicalSkills.map((skill) => ({ id: skill.id }));
+  return technicalSkills.map((skill: { id: string }) => ({ id: skill.id }));
 }
 
 export default async function TechnicalSkillDetailPage({ params }: PageProps) {
   const { id } = await params;
-  const skill = technicalSkills.find((item) => item.id === id);
+  const skill = technicalSkills.find((item: { id: string }) => item.id === id);
 
   if (!skill) notFound();
 
@@ -40,15 +41,37 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
           </header>
 
           <div className="space-y-14">
-            {skill.sections.map((section) => (
+            {skill.sections.map((section: { title: string; paragraphs: string[] }) => (
               <article key={section.title} className="scroll-mt-24">
                 <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight border-b border-pink-500/25 pb-2">{section.title}</h2>
                 <div className="space-y-4 text-slate-300 leading-relaxed text-sm md:text-[15px]">
-                  {section.paragraphs.map((p, i) => (
-                    <p key={i}>
-                      <TextWithProjectLinks>{p}</TextWithProjectLinks>
+                  {section.paragraphs.map((_: string, i: number) => {
+                    const text = ensureListPunctuation(section.paragraphs, i);
+                    const bullet = isLikelyListItem(section.paragraphs, i);
+                    const numbered = isNumberedItem(section.paragraphs[i] ?? '');
+                    const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
+                    const paragraphClass = `${bullet ? 'relative pl-4' : keyLabel ? 'relative pl-3' : ''}${keyLabel ? ' mt-1 mb-2' : numbered ? ' mt-1 mb-1' : ''}`.trim();
+                    const textClass = keyLabel
+                      ? 'text-pink-400 font-semibold'
+                      : numbered
+                        ? 'text-pink-400 font-medium'
+                        : '';
+
+                    return (
+                    <p key={i} className={paragraphClass}>
+                      {bullet ? (
+                        <span className="absolute left-0 top-[0.62em] inline-block h-1.5 w-1.5 rounded-full bg-pink-400" aria-hidden />
+                      ) : null}
+                      {keyLabel && !bullet ? (
+                        <span className="absolute left-0 top-[0.35em] inline-block h-4 w-0.5 rounded bg-pink-500/55" aria-hidden />
+                      ) : null}
+                      <span className={textClass}>
+                        <TextWithProjectLinks>
+                          {bullet ? normalizeListItemText(text) : text}
+                        </TextWithProjectLinks>
+                      </span>
                     </p>
-                  ))}
+                  );})}
                 </div>
               </article>
             ))}
@@ -57,8 +80,8 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
               <section className="pt-2">
                 <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight border-b border-pink-500/25 pb-2">Réalisations liées</h2>
                 <p className="text-slate-300 text-sm md:text-[15px] leading-relaxed">
-                  {skill.projectIds.map((projectId, index) => {
-                    const title = projects.find((p) => p.id === projectId)?.title ?? projectId;
+                  {skill.projectIds.map((projectId: string, index: number) => {
+                    const title = projects.find((p: { id: string; title: string }) => p.id === projectId)?.title ?? projectId;
                     return (
                       <span key={projectId}>
                         {index > 0 ? ' · ' : ''}

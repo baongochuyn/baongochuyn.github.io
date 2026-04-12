@@ -52,8 +52,11 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Contexte d’utilisation et limites',
         paragraphs: [
-          `Je suis à l’aise avec C# dans des contextes de développement applicatif classique (API, logique métier, manipulation de données).`,
-          `Je reste toutefois en progression sur l’optimisation avancée des performances, les architectures complexes (microservices, distribués) et la gestion fine de la mémoire.`,
+          `Je suis aujourd’hui à l’aise avec C# dans des contextes de développement applicatif classique (API, logique métier, manipulation de données).`,
+          `Cependant, je reste en progression sur :`,
+          `l’optimisation avancée des performances`,
+          `les architectures complexes (microservices, systèmes distribués)`,
+          `la gestion fine de la mémoire et des performances`,
         ],
       },
       {
@@ -67,15 +70,21 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Recul critique et conseils',
         paragraphs: [
-          `Avec le recul, C# est un langage puissant mais exigeant en rigueur.`,
-          `Je conseille de bien structurer son code dès le départ, de privilégier la lisibilité plutôt que la complexité et de tester régulièrement ses fonctionnalités.`,
+          `Avec le recul, je considère que C# est un langage puissant mais qui nécessite de la rigueur dans son utilisation.`,
+          `Je conseille :`,
+          `de bien structurer son code dès le départ`,
+          `de privilégier la lisibilité plutôt que la complexité`,
+          `de tester régulièrement ses fonctionnalités`,
           `J’ai également compris que la qualité du code est essentielle pour faciliter la maintenance et le travail en équipe.`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `À moyen terme, mon objectif est d’atteindre un niveau avancé en C#, notamment sur les architectures logicielles (Clean Architecture), les bonnes pratiques de conception (SOLID, design patterns), la performance et la scalabilité.`,
+          `À moyen terme, mon objectif est d’atteindre un niveau avancé en C#, notamment sur :`,
+          `les architectures logicielles (Clean Architecture)`,
+          `les bonnes pratiques de conception (SOLID, design patterns)`,
+          `la performance et la scalabilité`,
           `Je souhaite également approfondir mes connaissances en lien avec l’écosystème .NET pour concevoir des applications robustes et évolutives.`,
         ],
       },
@@ -89,14 +98,14 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Définition',
         paragraphs: [
-          `.NET est une plateforme de développement Microsoft permettant de concevoir des applications web, des services backend (APIs) et des logiciels métiers.`,
+          `.NET est une plateforme de développement développée par Microsoft, permettant de concevoir des applications web, des services backend (APIs) et des logiciels métiers.`,
           `Elle offre un cadre structuré pour organiser le code, gérer les dépendances et construire des applications robustes, performantes et évolutives.`,
         ],
       },
       {
         title: 'Niveau de maîtrise',
         paragraphs: [
-          `Je me situe actuellement à un niveau confirmé en .NET.`,
+          `Je me situe actuellement à un niveau confirmé en .NET, comme validé dans ma matrice de compétences.`,
           `Je suis capable de :`,
           `développer des APIs backend`,
           `structurer une application en couches (architecture claire)`,
@@ -155,13 +164,19 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Définition',
         paragraphs: [
           `Entity Framework est un ORM (Object-Relational Mapping) utilisé dans l’écosystème .NET, permettant de manipuler une base de données relationnelle via des objets C# sans écrire systématiquement du SQL brut.`,
+          `Il facilite la gestion des données, la structuration des entités et la communication entre l’application et la base de données.`,
         ],
       },
       {
         title: 'Niveau de maîtrise',
         paragraphs: [
-          `Je me situe à un niveau intermédiaire à confirmé.`,
-          `Je suis capable de manipuler des données avec LINQ, configurer des entités et leurs relations, réaliser des opérations CRUD et intégrer EF dans une application existante.`,
+          `Je me situe actuellement à un niveau intermédiaire à confirmé en Entity Framework.`,
+          `Je suis capable de :`,
+          `manipuler des données via LINQ`,
+          `configurer des entités et leurs relations`,
+          `effectuer des opérations CRUD`,
+          `intégrer Entity Framework dans une application .NET existante`,
+          `utiliser Entity Framework pour structurer l’accès aux données`,
         ],
       },
       {
@@ -211,8 +226,8 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Définition',
         paragraphs: [
-          `SQL (Structured Query Language) est un langage standard utilisé pour créer, manipuler et interroger des bases de données relationnelles.`,
-          `Il permet de garantir la cohérence et l’intégrité des données via des relations explicites entre tables.`,
+          `SQL (Structured Query Language) est un langage standard utilisé pour interagir avec des bases de données relationnelles. Il permet de créer, manipuler et interroger des données structurées à travers des opérations telles que la sélection (SELECT), l’insertion (INSERT), la mise à jour (UPDATE) et la suppression (DELETE).`,
+          `SQL permet également de définir des relations entre les données, garantissant leur cohérence et leur intégrité.`,
         ],
       },
       {
@@ -272,14 +287,14 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Définition',
         paragraphs: [
-          `React est une bibliothèque JavaScript permettant de construire des interfaces utilisateur dynamiques et interactives à partir de composants réutilisables.`,
-          `Elle facilite la gestion de l’état et l’actualisation performante de l’interface.`,
+          `React est une bibliothèque JavaScript développée par Facebook, utilisée pour construire des interfaces utilisateur dynamiques et interactives à partir de composants réutilisables.`,
+          `Elle permet de gérer efficacement l’état d’une application et d’optimiser les mises à jour de l’interface.`,
         ],
       },
       {
         title: 'Niveau de maîtrise',
         paragraphs: [
-          `Je me situe à un niveau confirmé en React.`,
+          `Je me situe actuellement à un niveau confirmé en React.`,
           `Je suis capable de :`,
           `créer des composants réutilisables`,
           `gérer l’état d’une application (useState, useContext)`,
@@ -298,21 +313,30 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Contexte d’utilisation et limites',
         paragraphs: [
-          `Je suis à l’aise avec React pour les interfaces modernes et dynamiques.`,
-          `Je reste en progression sur l’architecture front-end avancée, la gestion d’état complexe (Redux) et l’optimisation de performance à grande échelle.`,
+          `Je suis à l’aise avec React pour développer des interfaces modernes.`,
+          `Cependant, je reste en progression sur :`,
+          `l’architecture front-end avancée`,
+          `la gestion d’état complexe (Redux, etc.)`,
+          `l’optimisation des performances`,
         ],
       },
       {
         title: 'Recul critique et conseils',
         paragraphs: [
-          `Avec le recul, React exige une organisation claire des composants et des responsabilités.`,
-          `Je conseille de structurer tôt les composants et de garder une gestion d’état lisible pour éviter la dette front-end.`,
+          `Avec le recul, j’ai compris que React nécessite une bonne organisation du code.`,
+          `Je conseille :`,
+          `de structurer les composants dès le départ`,
+          `de limiter la complexité de l’état`,
+          `de privilégier la lisibilité`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `Je souhaite approfondir React sur les patterns avancés, la performance et la gestion d’état complexe.`,
+          `Je souhaite approfondir React sur :`,
+          `les patterns avancés`,
+          `la performance`,
+          `la gestion d’état complexe`,
         ],
       },
     ],
@@ -325,13 +349,13 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Définition',
         paragraphs: [
-          `JavaScript est le langage de référence pour rendre les applications web interactives : manipulation du DOM, gestion d’événements et communication avec des services externes.`,
+          `JavaScript est un langage de programmation utilisé pour rendre les applications web interactives, en permettant de manipuler le contenu d’une page, gérer les événements et communiquer avec des services externes.`,
         ],
       },
       {
         title: 'Niveau de maîtrise',
         paragraphs: [
-          `Je me situe à un niveau confirmé.`,
+          `Je me situe à un niveau confirmé en JavaScript.`,
           `Je suis capable de :`,
           `manipuler le DOM`,
           `gérer des appels API`,
@@ -342,28 +366,35 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Mise en œuvre concrète',
         paragraphs: [
-          `Exemple CityBoard : récupération de données depuis des APIs externes, affichage dynamique dans les widgets et gestion de l’asynchronisme avec async/await.`,
-          `Exemple BOOST : manipulation de l’interface avec jQuery pour améliorer l’ergonomie et la vitesse d’exécution de certaines actions utilisateur.`,
+          `J’ai utilisé JavaScript dans plusieurs projets comme CityBoard, DiagElec et BOOST.`,
+          `Exemple précis — CityBoard : récupération de données depuis des APIs externes, affichage dynamique dans les widgets, gestion de l’asynchronisme avec async/await.`,
+          `Résultat : interface dynamique, chargement fluide des données.`,
+          `Exemple — BOOST : manipulation de l’interface avec jQuery, amélioration de l’expérience utilisateur.`,
         ],
       },
       {
         title: 'Contexte et limites',
         paragraphs: [
-          `Bonne maîtrise générale dans les contextes applicatifs courants.`,
-          `Je reste en progression sur l’optimisation avancée et la gestion de code JavaScript complexe à grande échelle.`,
+          `Bonne maîtrise générale, mais progression sur :`,
+          `optimisation`,
+          `code complexe`,
         ],
       },
       {
         title: 'Recul critique et conseils',
         paragraphs: [
-          `JavaScript est puissant mais peut rapidement devenir difficile à maintenir sans structure claire.`,
-          `J’accorde une attention particulière à l’organisation du code et à la gestion propre de l’asynchronisme.`,
+          `JavaScript est puissant mais peut devenir complexe sans structure.`,
+          `Importance :`,
+          `d’organiser le code`,
+          `de gérer correctement l’asynchronisme`,
         ],
       },
       {
         title: 'Projection professionnelle',
         paragraphs: [
-          `Je souhaite approfondir les patterns JavaScript avancés et l’optimisation de performance côté front.`,
+          `Approfondir :`,
+          `patterns avancés`,
+          `performance`,
         ],
       },
     ],

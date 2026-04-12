@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { hrefWithBase } from './site';
 
 type LinkDef = { pattern: RegExp; id: string };
+type HighlightDef = { pattern: RegExp };
 
 const SKILL_LINKS: LinkDef[] = [
   { pattern: /\bEntity Framework Core\b/gi, id: 'skill-entity-framework' },
@@ -33,10 +34,23 @@ const PROJECT_LINKS: LinkDef[] = [
   { pattern: /\bKalicolis\b/g, id: 'project-kalicolis' },
 ];
 
+const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
+  { pattern: /\bBluesoft\b/g },
+  { pattern: /\bTDF\b/g },
+  { pattern: /\bBanque Alimentaire\b/g },
+  { pattern: /\bKaliva\b/g },
+  { pattern: /\bESIEA\b/g },
+];
+
 interface Segment {
   type: 'text' | 'link';
   value: string;
   href?: string;
+}
+
+interface HighlightSegment {
+  type: 'text' | 'highlight';
+  value: string;
 }
 
 function linkifyText(text: string, links: LinkDef[]): Segment[] {
@@ -75,7 +89,46 @@ function linkifyText(text: string, links: LinkDef[]): Segment[] {
   return segments.length ? segments : [{ type: 'text', value: text }];
 }
 
+function highlightText(text: string, highlights: HighlightDef[]): HighlightSegment[] {
+  if (highlights.length === 0) return [{ type: 'text', value: text }];
+
+  const matches: { index: number; length: number; value: string }[] = [];
+  for (const { pattern } of highlights) {
+    const re = new RegExp(pattern.source, pattern.flags);
+    let m: RegExpExecArray | null;
+    while ((m = re.exec(text)) !== null) {
+      matches.push({ index: m.index, length: m[0].length, value: m[0] });
+    }
+  }
+
+  matches.sort((a, b) => a.index - b.index);
+  for (let i = 0; i < matches.length; i++) {
+    const curr = matches[i];
+    const next = matches[i + 1];
+    if (next && curr.index + curr.length > next.index) {
+      matches.splice(i + 1, 1);
+      i--;
+    }
+  }
+
+  const segments: HighlightSegment[] = [];
+  let last = 0;
+  for (const m of matches) {
+    if (m.index > last) {
+      segments.push({ type: 'text', value: text.slice(last, m.index) });
+    }
+    segments.push({ type: 'highlight', value: m.value });
+    last = m.index + m.length;
+  }
+  if (last < text.length) {
+    segments.push({ type: 'text', value: text.slice(last) });
+  }
+
+  return segments.length ? segments : [{ type: 'text', value: text }];
+}
+
 const linkClass = 'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
+const highlightClass = 'text-pink-300 font-medium';
 
 function toRouteHref(href: string, kind: 'skill' | 'project'): string {
   if (kind === 'skill') {
@@ -100,7 +153,17 @@ export function TextWithSkillLinks({
             {seg.value}
           </Link>
         ) : (
-          <React.Fragment key={i}>{seg.value}</React.Fragment>
+          <React.Fragment key={i}>
+            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+              item.type === 'highlight' ? (
+                <span key={`${i}-h-${idx}`} className={highlightClass}>
+                  {item.value}
+                </span>
+              ) : (
+                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+              )
+            )}
+          </React.Fragment>
         )
       )}
     </>
@@ -121,7 +184,48 @@ export function TextWithProjectLinks({
             {seg.value}
           </Link>
         ) : (
-          <React.Fragment key={i}>{seg.value}</React.Fragment>
+          <React.Fragment key={i}>
+            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+              item.type === 'highlight' ? (
+                <span key={`${i}-h-${idx}`} className={highlightClass}>
+                  {item.value}
+                </span>
+              ) : (
+                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+              )
+            )}
+          </React.Fragment>
+        )
+      )}
+    </>
+  );
+}
+
+export function TextWithHighlights({
+  children,
+}: {
+  children: string;
+}) {
+  const segments = linkifyText(children, PROJECT_LINKS);
+  return (
+    <>
+      {segments.map((seg, i) =>
+        seg.type === 'link' && seg.href ? (
+          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
+            {seg.value}
+          </Link>
+        ) : (
+          <React.Fragment key={i}>
+            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+              item.type === 'highlight' ? (
+                <span key={`${i}-h-${idx}`} className={highlightClass}>
+                  {item.value}
+                </span>
+              ) : (
+                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+              )
+            )}
+          </React.Fragment>
         )
       )}
     </>

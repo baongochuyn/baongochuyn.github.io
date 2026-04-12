@@ -4,7 +4,9 @@ import Header from '@/components/Header';
 import BackLink from '@/components/BackLink';
 import ParcoursTimeline from '@/components/ParcoursTimeline';
 import { presentationIntro, presentationSections, parcoursTimeline, profile } from '@/data/content';
+import { TextWithHighlights } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
+import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
 
 export const metadata = {
   title: 'Présentation · Bao Ngoc HUYNH',
@@ -57,9 +59,33 @@ export default function PresentationPage() {
                 {section.title}
               </h2>
               <div className="space-y-4 text-slate-300 leading-relaxed text-sm md:text-[15px]">
-                {section.paragraphs.map((p, i) => (
-                  <p key={i}>{p}</p>
-                ))}
+                {section.paragraphs.map((_, i) => {
+                  const text = ensureListPunctuation(section.paragraphs, i);
+                  const bullet = isLikelyListItem(section.paragraphs, i);
+                  const numbered = isNumberedItem(section.paragraphs[i] ?? '');
+                  const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
+                  const paragraphClass = `${bullet ? 'relative pl-4' : keyLabel ? 'relative pl-3' : ''}${keyLabel ? ' mt-1 mb-2' : numbered ? ' mt-1 mb-1' : ''}`.trim();
+                  const textClass = keyLabel
+                    ? 'text-pink-400 font-semibold'
+                    : numbered
+                      ? 'text-pink-400 font-medium'
+                      : '';
+
+                  return (
+                  <p key={i} className={paragraphClass}>
+                    {bullet ? (
+                      <span className="absolute left-0 top-[0.62em] inline-block h-1.5 w-1.5 rounded-full bg-pink-400" aria-hidden />
+                    ) : null}
+                    {keyLabel && !bullet ? (
+                      <span className="absolute left-0 top-[0.35em] inline-block h-4 w-0.5 rounded bg-pink-500/55" aria-hidden />
+                    ) : null}
+                    <span className={textClass}>
+                      <TextWithHighlights>
+                        {bullet ? normalizeListItemText(text) : text}
+                      </TextWithHighlights>
+                    </span>
+                  </p>
+                );})}
               </div>
             </article>
           ))}
