@@ -1,6 +1,6 @@
-'use client';
-
 import React from 'react';
+import Link from 'next/link';
+import { hrefWithBase } from './site';
 
 type LinkDef = { pattern: RegExp; id: string };
 
@@ -77,43 +77,28 @@ function linkifyText(text: string, links: LinkDef[]): Segment[] {
 
 const linkClass = 'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
 
-function getSkillIdFromHref(href: string): string {
-  return href.replace(/^#skill-/, '');
-}
-
-function getProjectIdFromHref(href: string): string {
-  return href.replace(/^#?project-/, '');
+function toRouteHref(href: string, kind: 'skill' | 'project'): string {
+  if (kind === 'skill') {
+    const id = href.replace(/^#skill-/, '');
+    return hrefWithBase(`/competences-techniques/${id}`);
+  }
+  const id = href.replace(/^#?project-/, '');
+  return hrefWithBase(`/realisations/${id}`);
 }
 
 export function TextWithSkillLinks({
   children,
-  onSkillClick,
 }: {
   children: string;
-  onSkillClick?: (skillId: string) => void;
 }) {
   const segments = linkifyText(children, SKILL_LINKS);
   return (
     <>
       {segments.map((seg, i) =>
         seg.type === 'link' && seg.href ? (
-          onSkillClick ? (
-            <button
-              key={i}
-              type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                onSkillClick(getSkillIdFromHref(seg.href!));
-              }}
-              className={linkClass}
-            >
-              {seg.value}
-            </button>
-          ) : (
-            <a key={i} href={seg.href} className={linkClass}>
-              {seg.value}
-            </a>
-          )
+          <Link key={i} href={toRouteHref(seg.href, 'skill')} className={linkClass}>
+            {seg.value}
+          </Link>
         ) : (
           <React.Fragment key={i}>{seg.value}</React.Fragment>
         )
@@ -124,33 +109,17 @@ export function TextWithSkillLinks({
 
 export function TextWithProjectLinks({
   children,
-  onProjectClick,
 }: {
   children: string;
-  onProjectClick?: (projectId: string) => void;
 }) {
   const segments = linkifyText(children, PROJECT_LINKS);
   return (
     <>
       {segments.map((seg, i) =>
         seg.type === 'link' && seg.href ? (
-          onProjectClick ? (
-            <button
-              key={i}
-              type="button"
-              onClick={(e) => {
-                e.preventDefault();
-                onProjectClick(getProjectIdFromHref(seg.href!));
-              }}
-              className={linkClass}
-            >
-              {seg.value}
-            </button>
-          ) : (
-            <a key={i} href={seg.href} className={linkClass}>
-              {seg.value}
-            </a>
-          )
+          <Link key={i} href={toRouteHref(seg.href, 'project')} className={linkClass}>
+            {seg.value}
+          </Link>
         ) : (
           <React.Fragment key={i}>{seg.value}</React.Fragment>
         )

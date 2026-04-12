@@ -6,6 +6,8 @@
   html {
     scroll-behavior: smooth;
     -webkit-text-size-adjust: 100%;
+    /* Ancres + header sticky : évite le titre caché sous la barre (Mac 13", etc.) */
+    scroll-padding-top: 5rem;
   }
   body {
     min-height: 100vh;
@@ -84,6 +86,7 @@
   .code-typing-line:nth-child(5) { animation-delay: 10.6s; }
   .code-typing-line:nth-child(6) { animation-delay: 13.2s; }
   .code-typing-line:nth-child(7) { animation-delay: 15.8s; }
+  .code-typing-line:nth-child(8) { animation-delay: 18.4s; }
   .code-typing-cursor {
     display: inline-block;
     width: 2px;
@@ -103,5 +106,21 @@
   .code-typing-dots {
     display: inline;
     animation: typing-dots 1.2s ease-in-out infinite;
+  }
+
+  /* Code Hero : uniquement sur le carré grille — pas de bordure ni fond (derrière le profil en z-index) */
+  .hero-code-column {
+    contain: layout paint;
+    overflow: hidden;
+    max-height: min(52vh, 24rem);
+    padding: 0;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  @media (min-width: 1024px) {
+    .hero-code-column {
+      max-height: min(58vh, 26rem);
+    }
   }
 }

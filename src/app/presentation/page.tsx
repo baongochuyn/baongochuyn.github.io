@@ -1,0 +1,82 @@
+import Link from 'next/link';
+import Image from 'next/image';
+import Header from '@/components/Header';
+import BackLink from '@/components/BackLink';
+import ParcoursTimeline from '@/components/ParcoursTimeline';
+import { presentationIntro, presentationSections, parcoursTimeline, profile } from '@/data/content';
+import { hrefWithBase } from '@/lib/site';
+
+export const metadata = {
+  title: 'Présentation · Bao Ngoc HUYNH',
+  description: 'Profil, motivations, parcours et objectifs — ESIEA, alternance Bluesoft.',
+};
+
+export default function PresentationPage() {
+  return (
+    <>
+      <Header />
+      <main className="max-w-3xl mx-auto px-3 sm:px-4 py-8 sm:py-10 md:py-14 pb-16 md:pb-20">
+        <BackLink href={hrefWithBase('/')} label="Retour à l’accueil" />
+        <header className="mb-12 rounded-2xl border border-slate-700/80 bg-slate-800/40 overflow-hidden">
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 p-6 md:p-8">
+            <div className="flex justify-center sm:justify-start shrink-0">
+              <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden border-2 border-pink-500/40 shadow-lg ring-2 ring-pink-400/15">
+                <Image
+                  src="/profile-avatar.png"
+                  alt={profile.name}
+                  width={176}
+                  height={176}
+                  className="object-cover object-top w-full h-full"
+                  unoptimized
+                  priority
+                />
+              </div>
+            </div>
+            <div className="flex-1 min-w-0 flex flex-col justify-center text-center sm:text-left">
+              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{presentationIntro.title}</h1>
+              <p className="text-slate-400 mb-4">{presentationIntro.subtitle}</p>
+              <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-500/15 text-pink-300 border border-pink-500/30">
+                  ESIEA · 5e année
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-slate-200 border border-slate-600">
+                  Alternance · Bluesoft
+                </span>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-slate-200 border border-slate-600">
+                  Full stack
+                </span>
+              </div>
+            </div>
+          </div>
+        </header>
+
+        <div className="space-y-14">
+          {presentationSections.map((section) => (
+            <article key={section.id} id={section.id} className="scroll-mt-24">
+              <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight">
+                {section.title}
+              </h2>
+              <div className="space-y-4 text-slate-300 leading-relaxed text-sm md:text-[15px]">
+                {section.paragraphs.map((p, i) => (
+                  <p key={i}>{p}</p>
+                ))}
+              </div>
+            </article>
+          ))}
+
+          <section id="timeline-parcours" className="scroll-mt-24">
+            <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-2">Parcours — frise chronologique</h2>
+            <p className="text-slate-400 text-sm mb-6">
+              Frise <strong className="text-slate-300 font-semibold">anti-chronologique</strong> (du plus récent au plus
+              ancien), comme attendu dans la notation ESIEA.
+            </p>
+            <ParcoursTimeline steps={[...parcoursTimeline]} />
+          </section>
+        </div>
+      </main>
+      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
+        © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
+      </footer>
+    </>
+  );
+}

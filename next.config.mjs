@@ -6,17 +6,8 @@ const nextConfig = {
   images: { unoptimized: true },
   basePath,
   assetPrefix: basePath ? `${basePath}/` : '',
-  async headers() {
-    if (process.env.NODE_ENV === 'development') {
-      return [
-        {
-          source: '/:path*',
-          headers: [{ key: 'Cache-Control', value: 'no-store, no-cache, must-revalidate' }],
-        },
-      ];
-    }
-    return [];
-  },
+  // Pas de headers() ici : avec output: 'export', Next ne les applique pas au build statique
+  // et cela évite des avertissements / comportements étranges en dev.
 };
 
 export default nextConfig;

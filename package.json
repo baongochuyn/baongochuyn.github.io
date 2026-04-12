@@ -4,6 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:webpack": "next dev",
+    "dev:turbo": "next dev --turbo",
+    "dev:clean": "node scripts/clean-next.mjs && next dev",
+    "dev:3000": "node scripts/kill-port.mjs 3000 && node scripts/clean-next.mjs && next dev -p 3000",
     "build": "next build",
     "build:preview": "cross-env NEXT_PUBLIC_BASE_PATH= next build",
     "start": "next start",

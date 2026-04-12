@@ -20,7 +20,7 @@ const GitHubIcon = ({ className }: { className?: string }) => (
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-16 px-4 scroll-mt-20 bg-slate-900">
+    <section id="contact" className="pt-12 pb-16 px-4 scroll-mt-20 bg-slate-900">
       <div className="max-w-2xl mx-auto text-center">
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
           {contact.title}

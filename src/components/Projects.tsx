@@ -1,7 +1,9 @@
 'use client';
 
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { projects } from '@/data/content';
-import { useModal } from '@/context/ModalContext';
+import { hrefWithBase } from '@/lib/site';
 import ProjectIcon from './ProjectIcon';
 
 // Seules les compétences ayant une fiche dédiée (C#, .NET, SQL, React, JavaScript, Entity Framework) sont cliquables.
@@ -20,19 +22,20 @@ const SKILL_LABEL_TO_ID: Record<string, string> = {
 };
 
 export default function Projects() {
-  const { openProject, openSkillById } = useModal();
+  const router = useRouter();
 
   return (
-    <section id="projets" className="py-16 px-4 scroll-mt-20 bg-slate-900/50 relative">
+    <section id="realisations" className="pt-12 pb-16 px-4 scroll-mt-20 bg-slate-900/50 relative">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
-          Projets
+          Réalisations
         </h2>
 
         <div className="space-y-4">
           {projects.map((project) => {
             const raw = (project as { skillsPreview?: string[] }).skillsPreview;
             const previewSkills: string[] = Array.isArray(raw) ? raw : [];
+            const projectHref = hrefWithBase(`/realisations/${project.id}`);
             return (
               <article
                 key={project.id}
@@ -40,41 +43,35 @@ export default function Projects() {
                 className="rounded-xl bg-slate-800 border border-slate-700 overflow-hidden scroll-mt-24"
               >
                 <div
-                  role="button"
+                  role="link"
                   tabIndex={0}
-                  onClick={() => openProject(project)}
+                  onClick={() => router.push(projectHref)}
                   onKeyDown={(e) => {
                     if (e.key === 'Enter' || e.key === ' ') {
                       e.preventDefault();
-                      openProject(project);
+                      router.push(projectHref);
                     }
                   }}
-                  className="w-full text-left p-5 flex items-center gap-4 hover:bg-slate-700/50 transition-colors cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-inset rounded-xl"
+                  className="w-full text-left p-5 flex items-center gap-4 hover:bg-slate-700/50 transition-colors rounded-xl cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-inset"
                 >
                   <span className="w-12 h-12 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">
                     <ProjectIcon projectId={project.id} className="w-6 h-6" />
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-white">
-                      {project.title}
-                    </h3>
+                    <h3 className="font-semibold text-white">{project.title}</h3>
                     {previewSkills.length > 0 && (
                       <p className="mt-1 text-slate-400 text-sm">
                         {previewSkills.map((label, i) => {
                           const skillId = SKILL_LABEL_TO_ID[label];
                           return skillId ? (
                             <span key={label + i}>
-                              <button
-                                type="button"
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  openProject(null);
-                                  openSkillById(skillId);
-                                }}
+                              <Link
+                                href={hrefWithBase(`/competences-techniques/${skillId}`)}
+                                onClick={(e) => e.stopPropagation()}
                                 className="text-pink-400 hover:text-pink-300 hover:underline cursor-pointer font-medium"
                               >
                                 {label}
-                              </button>
+                              </Link>
                               {i < previewSkills.length - 1 ? ' · ' : ''}
                             </span>
                           ) : (
@@ -86,7 +83,12 @@ export default function Projects() {
                       </p>
                     )}
                   </div>
-                  <span className="text-slate-500 flex-shrink-0">→</span>
+                  <span
+                    className="text-slate-500 flex-shrink-0"
+                    aria-hidden
+                  >
+                    →
+                  </span>
                 </div>
               </article>
             );
