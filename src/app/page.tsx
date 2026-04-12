@@ -9,9 +9,9 @@ import Contact from '@/components/Contact';
 
 export default function Home() {
   return (
-    <>
+    <div className="flex min-h-screen flex-col">
       <Header />
-      <main>
+      <main className="flex-1">
         <Hero />
         <SectionDivider className="-mt-2 mb-2" />
         <Projects />
@@ -24,9 +24,9 @@ export default function Home() {
         <SectionDivider className="my-2" />
         <Contact />
       </main>
-      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-800/50 text-center text-sm text-slate-500">
+      <footer className="py-4 px-4 bg-slate-900 border-t border-slate-800/40 text-center text-sm text-slate-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>
-    </>
+    </div>
   );
 }
