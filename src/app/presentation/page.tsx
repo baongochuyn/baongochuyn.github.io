@@ -65,11 +65,7 @@ export default function PresentationPage() {
           ))}
 
           <section id="timeline-parcours" className="scroll-mt-24">
-            <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-2">Parcours — frise chronologique</h2>
-            <p className="text-slate-400 text-sm mb-6">
-              Frise <strong className="text-slate-300 font-semibold">anti-chronologique</strong> (du plus récent au plus
-              ancien), comme attendu dans la notation ESIEA.
-            </p>
+            <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-6">Parcours</h2>
             <ParcoursTimeline steps={[...parcoursTimeline]} />
           </section>
         </div>

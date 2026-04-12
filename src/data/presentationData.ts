@@ -10,7 +10,7 @@ export const presentationSections = [
     id: 'profil',
     title: 'Profil',
     paragraphs: [
-      `Étudiante en ingénierie du logiciel en quatrième année à l'ESIEA, je réalise actuellement mon alternance chez Bluesoft en tant que développeuse full stack.`,
+      `Étudiante en ingénierie du logiciel en cinquième année à l'ESIEA, je réalise actuellement mon alternance chez Bluesoft en tant que développeuse full stack.`,
       `Dans ce cadre, je participe à des projets concrets pour des clients tels que TDF (Télédiffusion de France), Banque Alimentaire, ce qui me permet d'appliquer mes compétences techniques dans un environnement professionnel exigeant. J'interviens à la fois sur le développement backend, frontend et sur la qualité logicielle, notamment à travers la mise en place de tests.`,
       `Cette expérience me permet de développer une approche à la fois technique et orientée métier, en comprenant les besoins des utilisateurs et en proposant des solutions adaptées.`,
     ],
@@ -68,8 +68,8 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Projets concrets pour des clients tels que TDF (Télédiffusion de France), Banque Alimentaire ; développement backend, frontend et qualité logicielle (tests).',
   },
   {
-    period: '2023 – 2026',
-    title: 'ESIEA — cycle ingénieur · ingénierie du logiciel (4e année)',
+    period: '2023 – présent',
+    title: 'ESIEA — cycle ingénieur · ingénierie du logiciel',
     detail:
       'Formation d’ingénieur : développement logiciel, architecture, mise en situation sur des projets concrets.',
   },
