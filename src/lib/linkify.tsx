@@ -6,6 +6,7 @@ type LinkDef = { pattern: RegExp; id: string };
 type HighlightDef = { pattern: RegExp };
 
 const SKILL_LINKS: LinkDef[] = [
+  { pattern: /\bORM\b/g, id: 'skill-entity-framework' },
   { pattern: /\bEntity Framework Core\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bEntity Framework\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bEF\b/g, id: 'skill-entity-framework' },
@@ -40,6 +41,7 @@ const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
   { pattern: /\bBanque Alimentaire\b/g },
   { pattern: /\bKaliva\b/g },
   { pattern: /\bESIEA\b/g },
+  { pattern: /\bORM\b/g },
   { pattern: /\bASP\.NET Core\b/gi },
   { pattern: /\.NET Core 8\b/gi },
   { pattern: /\.NET\b/gi },

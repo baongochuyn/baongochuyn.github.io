@@ -7,7 +7,7 @@ import { projects } from '@/data/content';
 import { hrefWithBase } from '@/lib/site';
 import ProjectIcon from './ProjectIcon';
 
-// Seules les compétences ayant une fiche dédiée (C#, .NET, SQL, React, JavaScript, Entity Framework) sont cliquables.
+// Seules les compétences ayant une fiche dédiée (C#, .NET, SQL, React, JavaScript, ORM) sont cliquables.
 // Flutter, Git, MVC, SVN, etc. ne sont pas liés car ils n'ont pas de section compétence dédiée.
 const SKILL_LABEL_TO_ID: Record<string, string> = {
   'C#': 'csharp',
@@ -16,6 +16,7 @@ const SKILL_LABEL_TO_ID: Record<string, string> = {
   'JavaScript': 'javascript',
   'SQL': 'sql',
   'PostgreSQL': 'sql',
+  ORM: 'entity-framework',
   'Entity Framework': 'entity-framework',
   'NUnit': 'csharp',
   'jQuery': 'javascript',

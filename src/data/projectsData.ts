@@ -199,7 +199,7 @@ export const projects: Project[] = [
   {
     id: 'cityboard',
     title: 'CityBoard',
-    skillsPreview: ['C#', '.NET', 'React', 'SQL', 'Git', 'PostgreSQL', 'Entity Framework'],
+    skillsPreview: ['C#', '.NET', 'React', 'SQL', 'Git', 'PostgreSQL', 'ORM'],
     skillLinkIds: ['csharp', 'dotnet', 'sql', 'react', 'javascript', 'entity-framework'],
     sections: [
       {
@@ -327,7 +327,7 @@ export const projects: Project[] = [
   {
     id: 'boost',
     title: 'BOOST',
-    skillsPreview: ['Entity Framework', 'JavaScript', 'jQuery', 'MVC', 'C#'],
+    skillsPreview: ['ORM', 'JavaScript', 'jQuery', 'MVC', 'C#'],
     skillLinkIds: ['entity-framework', 'javascript', 'csharp', 'dotnet'],
     sections: [
       {
@@ -365,8 +365,8 @@ export const projects: Project[] = [
           `Impact :`,
           `gain de temps pour les utilisateurs`,
           `meilleure efficacité opérationnelle`,
-          `4. Gestion des données avec Entity Framework`,
-          `J’ai travaillé sur la base de données via Entity Framework :`,
+          `4. Gestion des données avec un ORM (Entity Framework Core)`,
+          `J’ai travaillé sur la base de données via Entity Framework Core (approche ORM) :`,
           `création de nouvelles tables`,
           `définition des relations entre les entités`,
           `manipulation des données (CRUD)`,
