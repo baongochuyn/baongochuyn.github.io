@@ -5,6 +5,7 @@ export type Project = {
   title: string;
   skillsPreview: string[];
   skillLinkIds: string[];
+  skillLabels?: Record<string, string>;
   sections: ProjectContentSection[];
 };
 
@@ -16,14 +17,25 @@ export const projects: Project[] = [
     skillLinkIds: ['csharp', 'sql'],
     sections: [
       {
-        title: 'Contexte et objectif',
+        title: 'Présentation et définition du projet',
         paragraphs: [
           `DiaPyl est une application développée pour TDF (Télédiffusion de France), visant à analyser la solidité des pylônes lors de l’ajout de nouvelles installations (antennes).`,
+        ],
+      },
+      {
+        title: 'Contexte, objectifs, enjeux et risques',
+        paragraphs: [
           `Avant ce projet, cette analyse était réalisée à l’aide d’un fichier Excel complexe utilisé depuis plus de 15 ans, devenu difficile à maintenir et peu adapté à un usage moderne.`,
           `L’objectif était de :`,
           `remplacer cet outil par une application fiable`,
           `améliorer la précision des analyses`,
           `faciliter l’utilisation pour les ingénieurs`,
+          `Enjeux et risques identifiés :`,
+          `- La complexité du domaine métier a rendu la phase de cadrage exigeante.`,
+          `- La compréhension du code existant a demandé une montée en compétence progressive.`,
+          `Réponse apportée :`,
+          `- Les échanges réguliers avec l’équipe ont accéléré la compréhension fonctionnelle.`,
+          `- Une approche itérative m’a permis de sécuriser chaque lot de tests.`,
         ],
       },
       {
@@ -51,46 +63,42 @@ export const projects: Project[] = [
         ],
       },
       {
+        title: 'Acteurs',
+        paragraphs: [
+          `Je travaille en collaboration étroite avec un autre développeur, en partageant les responsabilités sur les tests et l’analyse des résultats.`,
+          `J’ai eu des échanges réguliers avec le chef de projet pour suivre l’avancement, présenter les résultats et résoudre les problèmes rencontrés.`,
+          `Nous avons utilisé TortoiseSVN pour la gestion des versions et Microsoft Teams pour la communication et la coordination des tâches.`,
+        ],
+      },
+      {
         title: 'Résultats et impacts',
         paragraphs: [
-          `amélioration de la fiabilité de l’application`,
-          `détection précoce des bugs`,
-          `meilleure qualité globale du produit`,
+          `- Ce projet m’a permis d’améliorer concrètement la fiabilité de l’application.`,
+          `- Les campagnes de test que j’ai structurées ont facilité la détection précoce des bugs.`,
+          `- La qualité globale du produit a gagné en stabilité sur les cas critiques.`,
           `Impact métier :`,
-          `gain de temps pour les ingénieurs`,
-          `réduction des erreurs`,
-        ],
-      },
-      {
-        title: 'Difficultés rencontrées',
-        paragraphs: [
-          `complexité du domaine métier`,
-          `compréhension du code existant`,
-          `Solution :`,
-          `communication avec l’équipe`,
-          `travail progressif`,
-        ],
-      },
-      {
-        title: 'Apprentissages',
-        paragraphs: [
-          `développer ma rigueur`,
-          `comprendre l’importance des tests`,
-          `gagner en autonomie`,
-        ],
-      },
-      {
-        title: 'Recul critique',
-        paragraphs: [
-          `les tests sont essentiels dès le début d’un projet`,
-          `une bonne stratégie de test améliore fortement la qualité`,
+          `- Les ingénieurs gagnent du temps grâce à des diagnostics plus sûrs.`,
+          `- Le risque d’erreur a diminué sur les scénarios les plus sensibles.`,
         ],
       },
       {
         title: 'Lendemains du projet',
         paragraphs: [
-          `Avec le recul, ce projet a renforcé ma conviction que la qualité doit être pensée dès le démarrage et non en fin de cycle.`,
-          `Il a aussi structuré ma manière d’aborder les nouveaux sujets avec plus de méthode et d’anticipation des risques.`,
+          `- Aujourd’hui, cette expérience guide ma manière de structurer les tests et de sécuriser les évolutions.`,
+          `- Dans le futur, l’application DiaPyl pourra être améliorée avec davantage de tests automatisés et une couverture plus complète des fonctionnalités.`,
+          `- À court terme, l’objectif est de renforcer la stabilité et la qualité des tests existants.`,
+          `- À moyen terme, l’outil pourra évoluer vers une automatisation plus avancée des études de charge.`,
+          `- À long terme, DiaPyl pourrait intégrer de nouvelles fonctionnalités pour améliorer encore la prise de décision des ingénieurs.`,
+        ],
+      },
+      {
+        title: 'Regard critique',
+        paragraphs: [
+          `- Dans ce projet, j’ai compris que la qualité des tests est essentielle pour garantir la fiabilité d’une application critique.`,
+          `- Le travail sur les API REST et les tests CRUD m’a permis de mieux comprendre l’importance de vérifier chaque scénario, y compris les cas d’erreurs.`,
+          `- J’ai également appris à être plus rigoureuse dans la préparation des données de test et dans l’analyse des résultats.`,
+          `- Cette expérience m’a aidée à améliorer ma méthode de travail, notamment en structurant mieux mes tests et en communiquant plus efficacement avec l’équipe.`,
+          `- Mon autonomie a progressé dans l’analyse des anomalies et la priorisation des corrections.`,
         ],
       },
     ],
@@ -102,13 +110,24 @@ export const projects: Project[] = [
     skillLinkIds: ['react', 'javascript', 'csharp'],
     sections: [
       {
-        title: 'Contexte et objectif',
+        title: 'Présentation et définition du projet',
         paragraphs: [
           `DiagElec est une application développée pour TDF (Télédiffusion de France), dont l’objectif est de permettre aux techniciens de réaliser des diagnostics électriques directement sur le terrain de manière numérique.`,
+        ],
+      },
+      {
+        title: 'Contexte, objectifs, enjeux et risques',
+        paragraphs: [
           `Dans un contexte d’augmentation des besoins énergétiques (notamment avec la 5G), il était essentiel de disposer d’un outil permettant :`,
           `une évaluation rapide et fiable des installations`,
           `une centralisation des données`,
           `une réduction des erreurs humaines`,
+          `Enjeux et risques rencontrés :`,
+          `- La prise en main de React a représenté un vrai défi au démarrage.`,
+          `- Comprendre le fonctionnement global de l’application a demandé du temps.`,
+          `Réponse apportée :`,
+          `- La documentation, les tests et l’expérimentation guidée m’ont aidée à progresser vite.`,
+          `- Les retours des développeurs ont permis de valider les choix techniques plus tôt.`,
         ],
       },
       {
@@ -140,51 +159,24 @@ export const projects: Project[] = [
           `mise en place de tests d’intégration`,
           `vérification de la communication entre les modules`,
           `Tests backend réalisés avec NUnit (tests unitaires et d’intégration)`,
-          `5. Collaboration et communication`,
-          `Le projet s’est déroulé en équipe :`,
-          `3 développeurs full stack`,
-          `1 chef de projet`,
-          `J’ai :`,
-          `remonté les anomalies identifiées`,
-          `proposé des améliorations`,
-          `échangé régulièrement avec l’équipe`,
+        ],
+      },
+      {
+        title: 'Acteurs et interactions',
+        paragraphs: [
+          `Le projet s’est déroulé en équipe avec 3 développeurs full stack et 1 chef de projet.`,
+          `Dans ce cadre, j’ai remonté les anomalies identifiées, proposé des améliorations et échangé régulièrement avec l’équipe.`,
         ],
       },
       {
         title: 'Résultats et impacts',
         paragraphs: [
-          `amélioration de la fiabilité des diagnostics`,
-          `réduction des erreurs humaines`,
-          `gain de temps pour les techniciens`,
+          `- J’ai contribué à fiabiliser les diagnostics réalisés sur le terrain.`,
+          `- L’interface plus structurée a réduit les erreurs de manipulation.`,
+          `- Le temps d’exécution des tâches a été allégé pour les techniciens.`,
           `Impact métier :`,
-          `prise de décision plus rapide`,
-          `meilleure qualité des données collectées`,
-        ],
-      },
-      {
-        title: 'Difficultés rencontrées',
-        paragraphs: [
-          `prise en main d’une nouvelle technologie (React)`,
-          `compréhension du fonctionnement global de l’application`,
-          `Solutions mises en place :`,
-          `apprentissage autonome (documentation, tests)`,
-          `échanges avec les développeurs`,
-        ],
-      },
-      {
-        title: 'Apprentissages',
-        paragraphs: [
-          `monter rapidement en compétence sur React`,
-          `comprendre le fonctionnement d’une application front-end moderne`,
-          `mieux appréhender la collaboration entre front et back`,
-        ],
-      },
-      {
-        title: 'Recul critique',
-        paragraphs: [
-          `la structure du front-end est essentielle pour la maintenabilité`,
-          `une bonne gestion de l’état améliore la qualité du code`,
-          `la collaboration est clé pour avancer efficacement`,
+          `- Les décisions opérationnelles peuvent être prises plus rapidement.`,
+          `- La qualité des données collectées est devenue plus homogène.`,
         ],
       },
       {
@@ -194,6 +186,17 @@ export const projects: Project[] = [
           `Il a changé ma façon de concevoir une interface : je pense désormais plus tôt à la maintenabilité et à l’expérience utilisateur.`,
         ],
       },
+      {
+        title: 'Regard critique',
+        paragraphs: [
+          `- Cette expérience m’a permis de monter rapidement en compétence sur React.`,
+          `- J’ai mieux compris les exigences d’un front-end moderne en production.`,
+          `- La collaboration front/back est devenue plus fluide dans ma pratique quotidienne.`,
+          `- Je retiens qu’une structure front-end claire conditionne la maintenabilité.`,
+          `- Une gestion d’état maîtrisée améliore directement la qualité du code livré.`,
+          `- Les tests de non-régression et les revues d’équipe restent indispensables pour sécuriser les évolutions.`,
+        ],
+      },
     ],
   },
   {
@@ -201,15 +204,28 @@ export const projects: Project[] = [
     title: 'CityBoard',
     skillsPreview: ['C#', '.NET', 'React', 'SQL', 'Git', 'PostgreSQL', 'ORM'],
     skillLinkIds: ['csharp', 'dotnet', 'sql', 'react', 'javascript', 'entity-framework'],
+    skillLabels: { sql: 'PostgreSQL' },
     sections: [
       {
-        title: 'Contexte et objectif',
+        title: 'Présentation et définition du projet',
         paragraphs: [
           `CityBoard est une plateforme web développée pour la BU Kaliva, visant à centraliser des informations utiles du quotidien (météo, transports, perturbations en temps réel) dans un tableau de bord personnalisable.`,
+        ],
+      },
+      {
+        title: 'Contexte, objectifs, enjeux et risques',
+        paragraphs: [
           `L’objectif principal était de :`,
           `simplifier l’accès à l’information`,
           `proposer une interface personnalisable via des widgets`,
           `offrir une expérience fluide et performante`,
+          `Enjeux et risques rencontrés :`,
+          `- L’intégration des API externes a été complexe (structure des données, qualité et stabilité des réponses).`,
+          `- Les enjeux de performance étaient critiques pour conserver une navigation fluide.`,
+          `Réponse apportée :`,
+          `- Une analyse approfondie des données a permis de fiabiliser leur traitement côté application.`,
+          `- La mise en place du cache mémoire a réduit les appels redondants et amélioré les temps de réponse.`,
+          `- Des tests internes réguliers ont servi à valider les gains de performance.`,
         ],
       },
       {
@@ -269,57 +285,48 @@ export const projects: Project[] = [
           `8. Internationalisation`,
           `J’ai participé à l’ouverture de l’application à un public plus large :`,
           `mise en place de la gestion multi-langues (i18n / ICU)`,
-          `9. Mise en place des tests`,
-          `J’ai développé :`,
-          `des tests unitaires pour valider les fonctions`,
-          `des tests d’intégration pour vérifier la communication entre les composants`,
-          `Impact :`,
-          `détection précoce des bugs`,
-          `amélioration de la stabilité`,
         ],
       },
       {
-        title: 'Résultats et impacts',
+        title: 'Acteurs',
         paragraphs: [
-          `amélioration de l’accès à l’information pour les utilisateurs`,
-          `interface personnalisable et intuitive`,
-          `application performante grâce au cache`,
+          `Je travaille en équipe de sept développeurs fullstack.`,
+          `Dans l’équipe, nous avons partagé les tâches entre front-end et back-end selon les besoins du projet.`,
+          `Nous avons collaboré en mode agile avec des échanges réguliers pour suivre l’avancement du projet.`,
+          `Nous avons utilisé Git pour partager le code, gérer les versions et travailler ensemble efficacement.`,
+        ],
+      },
+      {
+        title: 'Résultats (techniques + pour l’entreprise)',
+        paragraphs: [
+          `- L’accès à l’information est devenu plus direct grâce à la centralisation des données utiles.`,
+          `- L’interface est désormais plus personnalisable et plus intuitive pour les utilisateurs finaux.`,
+          `- Les performances se sont améliorées avec le cache et une gestion plus propre des appels API.`,
           `Impact métier :`,
-          `gain de temps pour les utilisateurs`,
-          `meilleure expérience globale`,
-        ],
-      },
-      {
-        title: 'Difficultés rencontrées',
-        paragraphs: [
-          `complexité de l’intégration API externe`,
-          `gestion des performances`,
-          `Solutions :`,
-          `analyse approfondie des données`,
-          `mise en place du cache`,
-        ],
-      },
-      {
-        title: 'Apprentissages',
-        paragraphs: [
-          `développer une vision fullstack complète`,
-          `comprendre les enjeux de performance`,
-          `travailler sur un projet à fort impact utilisateur`,
-        ],
-      },
-      {
-        title: 'Recul critique',
-        paragraphs: [
-          `la performance est un élément clé dès la conception`,
-          `l’intégration API nécessite une bonne compréhension des données`,
-          `une architecture claire facilite l’évolution`,
+          `- Au quotidien, les utilisateurs gagnent du temps sur les actions fréquentes.`,
+          `- L’expérience globale est plus fluide et la fiabilité perçue est meilleure.`,
         ],
       },
       {
         title: 'Lendemains du projet',
         paragraphs: [
-          `Les choix d’optimisation réalisés restent pertinents pour limiter les coûts techniques et améliorer la fluidité perçue.`,
-          `Ce retour d’expérience a renforcé ma vision full stack, avec une attention constante au couple performance et valeur utilisateur.`,
+          `Dans un futur proche, le projet Cityboard sera encore amélioré avec de nouvelles fonctionnalités et des optimisations.`,
+          `À moyen terme, l’objectif est de stabiliser la plateforme et d’améliorer ses performances pour une meilleure expérience utilisateur.`,
+          `À long terme, Cityboard pourra évoluer avec plus de services connectés et une personnalisation encore plus avancée des widgets.`,
+        ],
+      },
+      {
+        title: 'Regard critique',
+        paragraphs: [
+          `- Cette mission m’a donné une vision full stack plus complète, du backend jusqu’à l’expérience utilisateur.`,
+          `- Les enjeux de performance doivent être anticipés dès la conception.`,
+          `- Mes choix techniques sont aujourd’hui davantage validés par des tests ciblés et des mesures concrètes.`,
+          `- Je me sens plus mature sur les projets à fort impact utilisateur.`,
+          `- La performance doit être pensée dès la conception, et non en fin de projet.`,
+          `- L’intégration API exige une compréhension solide des données avant implémentation.`,
+          `- Une architecture claire facilite la maintenance et les évolutions fonctionnelles.`,
+          `- Ce projet m’a permis de mesurer l’importance de la qualité du code et de l’organisation dans un travail en équipe.`,
+          `- Pour la suite, je veux systématiser encore davantage les tests et la validation technique avant livraison.`,
         ],
       },
     ],
@@ -331,14 +338,25 @@ export const projects: Project[] = [
     skillLinkIds: ['entity-framework', 'javascript', 'csharp', 'dotnet'],
     sections: [
       {
-        title: 'Contexte et objectif',
+        title: 'Présentation et définition du projet',
         paragraphs: [
           `BOOST est un logiciel métier développé pour TDF (Télédiffusion de France), utilisé pour suivre les différentes étapes d’un projet : création, estimation des coûts, planification des interventions et validation finale.`,
+        ],
+      },
+      {
+        title: 'Contexte, objectifs, enjeux et risques',
+        paragraphs: [
           `Cet outil est utilisé quotidiennement par plusieurs équipes (techniciens, logisticiens, planificateurs) et représente un élément central dans la gestion opérationnelle des projets.`,
           `L’objectif principal de ma mission était de :`,
           `améliorer la fiabilité du logiciel`,
           `corriger les anomalies existantes`,
           `faire évoluer l’application en ajoutant de nouvelles fonctionnalités`,
+          `Enjeux et risques rencontrés :`,
+          `- La complexité du code existant a ralenti les premières interventions.`,
+          `- La compréhension du métier était indispensable pour éviter des corrections superficielles.`,
+          `Réponse apportée :`,
+          `- Une analyse progressive du code a permis de sécuriser les modifications.`,
+          `- Les échanges réguliers avec l’équipe métier ont clarifié les priorités réelles.`,
         ],
       },
       {
@@ -381,59 +399,44 @@ export const projects: Project[] = [
           `Impact :`,
           `application plus intuitive`,
           `actions plus rapides pour les utilisateurs`,
-          `6. Travail en équipe et communication`,
-          `Le projet impliquait :`,
-          `développeurs`,
-          `chef de projet`,
-          `experts métier`,
-          `J’ai :`,
-          `échangé pour comprendre les besoins`,
-          `proposé des solutions`,
-          `validé les évolutions avec l’équipe`,
         ],
       },
       {
-        title: 'Résultats et impacts',
+        title: 'Acteurs et interactions',
         paragraphs: [
-          `amélioration de la stabilité du logiciel`,
-          `réduction des erreurs en production`,
-          `meilleure satisfaction des utilisateurs`,
+          `Le projet impliquait des développeurs, un chef de projet et des experts métier.`,
+          `Dans ce cadre, j’ai échangé pour comprendre les besoins, proposé des solutions et validé les évolutions avec l’équipe.`,
+        ],
+      },
+      {
+        title: 'Résultats (techniques + pour l’entreprise)',
+        paragraphs: [
+          `- Le logiciel est devenu plus stable après les correctifs et les évolutions livrées.`,
+          `- Les erreurs observées en production ont diminué de manière sensible.`,
+          `- Les retours utilisateurs montrent une meilleure satisfaction sur l’usage quotidien.`,
           `Impact métier :`,
-          `outil plus fiable`,
-          `meilleure gestion des projets`,
-        ],
-      },
-      {
-        title: 'Difficultés rencontrées',
-        paragraphs: [
-          `complexité du code existant`,
-          `compréhension du métier`,
-          `Solutions :`,
-          `analyse progressive`,
-          `échanges avec l’équipe`,
-        ],
-      },
-      {
-        title: 'Apprentissages',
-        paragraphs: [
-          `comprendre un logiciel métier en production`,
-          `travailler sur du code existant (maintenance)`,
-          `améliorer ma capacité d’analyse`,
-        ],
-      },
-      {
-        title: 'Recul critique',
-        paragraphs: [
-          `la maintenance est une partie essentielle du développement`,
-          `comprendre le métier est indispensable pour proposer des solutions pertinentes`,
-          `un code mal structuré complique fortement les évolutions`,
+          `- L’outil est perçu comme plus fiable par les équipes opérationnelles.`,
+          `- La gestion des projets terrain est devenue plus fluide.`,
         ],
       },
       {
         title: 'Lendemains du projet',
         paragraphs: [
-          `Ce projet m’a durablement sensibilisée à l’impact d’une bonne structuration sur la maintenance en production.`,
-          `Il influence encore ma pratique quotidienne, notamment dans la clarté du code et la communication avec les équipes métier.`,
+          `Dans un futur immédiat, le projet BOOST va continuer avec la maintenance (TMA) et des améliorations demandées par le client.`,
+          `À moyen terme, la collaboration avec le client va se renforcer grâce à de nouvelles demandes et à l’évolution du projet. Cela peut générer un chiffre d’affaires supplémentaire pour l’entreprise.`,
+          `À long terme, le projet peut évoluer vers d’autres fonctionnalités liées au métier du client, comme la gestion du stock ou d’autres processus internes.`,
+          `Ce projet permet aussi de maintenir une relation de confiance avec le client et d’assurer une activité stable pour l’entreprise.`,
+        ],
+      },
+      {
+        title: 'Regard critique',
+        paragraphs: [
+          `- Cette expérience m’a appris à intervenir sur un logiciel métier déjà en production.`,
+          `- J’ai progressé sur la maintenance de code existant et la lecture de dépendances complexes.`,
+          `- Ma capacité d’analyse s’est renforcée, notamment pour identifier les causes racines.`,
+          `- La maintenance est une partie centrale du développement, pas un sujet secondaire.`,
+          `- Comprendre le métier est indispensable pour proposer des solutions vraiment pertinentes.`,
+          `- Un code mal structuré complique fortement les évolutions et les tests de validation.`,
         ],
       },
     ],
@@ -445,9 +448,14 @@ export const projects: Project[] = [
     skillLinkIds: ['csharp', 'dotnet', 'sql'],
     sections: [
       {
-        title: 'Contexte et objectif',
+        title: 'Présentation et définition du projet',
         paragraphs: [
           `Kalicolis est une application mobile développée pour la BU Kaliva, dont l’objectif est de faciliter l’envoi de colis entre particuliers en utilisant des trajets existants.`,
+        ],
+      },
+      {
+        title: 'Contexte, objectifs, enjeux et risques',
+        paragraphs: [
           `Le principe est simple :`,
           `une personne effectuant un trajet peut transporter un colis pour une autre, permettant ainsi :`,
           `de réduire les coûts`,
@@ -457,6 +465,12 @@ export const projects: Project[] = [
           `simple à utiliser`,
           `fiable`,
           `performante`,
+          `Enjeux et risques rencontrés :`,
+          `- La découverte de Flutter a demandé une montée en compétence rapide.`,
+          `- La compréhension de l’architecture BLoC a nécessité plusieurs itérations.`,
+          `Réponse apportée :`,
+          `- L’apprentissage progressif, la pratique et l’expérimentation ont débloqué les points techniques.`,
+          `- Des tests fonctionnels réguliers ont permis de valider les écrans et la logique métier au fil de l’eau.`,
         ],
       },
       {
@@ -497,59 +511,45 @@ export const projects: Project[] = [
           `Impact :`,
           `application fonctionnelle de bout en bout`,
           `échanges de données fiables`,
-          `6. Travail en équipe et organisation`,
-          `Le projet s’est déroulé avec :`,
-          `une équipe de 6 développeurs`,
-          `utilisation de Git pour la gestion de version`,
-          `Azure DevOps pour le suivi des tâches`,
-          `Cela m’a permis de :`,
-          `travailler en équipe`,
-          `respecter des délais`,
-          `m’organiser efficacement`,
         ],
       },
       {
-        title: 'Résultats et impacts',
+        title: 'Acteurs et interactions',
         paragraphs: [
-          `application fonctionnelle et utilisable`,
-          `interface intuitive`,
-          `solution innovante pour la livraison`,
+          `Le projet s’est déroulé avec une équipe de 6 développeurs.`,
+          `Nous avons utilisé Git pour la gestion de version et Azure DevOps pour le suivi des tâches.`,
+          `Ce cadre de travail m’a permis de mieux collaborer, respecter les délais et m’organiser efficacement.`,
+        ],
+      },
+      {
+        title: 'Résultats (techniques + pour l’entreprise)',
+        paragraphs: [
+          `- L’application est devenue fonctionnelle de bout en bout et réellement exploitable.`,
+          `- L’interface mobile est restée intuitive malgré la diversité des parcours.`,
+          `- La solution propose une approche innovante pour la livraison entre particuliers.`,
           `Impact :`,
-          `simplification de l’envoi de colis`,
-          `optimisation des trajets`,
-        ],
-      },
-      {
-        title: 'Difficultés rencontrées',
-        paragraphs: [
-          `découverte de Flutter`,
-          `compréhension de l’architecture BLoC`,
-          `Solutions :`,
-          `apprentissage progressif`,
-          `pratique et expérimentation`,
-        ],
-      },
-      {
-        title: 'Apprentissages',
-        paragraphs: [
-          `découvrir le développement mobile`,
-          `comprendre une architecture applicative (BLoC)`,
-          `travailler sur une application complète`,
-        ],
-      },
-      {
-        title: 'Recul critique',
-        paragraphs: [
-          `la séparation des responsabilités est essentielle`,
-          `une bonne architecture facilite la maintenance`,
-          `l’expérience utilisateur est clé dans une application mobile`,
+          `- L’envoi de colis est plus simple pour les utilisateurs.`,
+          `- Les trajets existants sont mieux valorisés et optimisés.`,
         ],
       },
       {
         title: 'Lendemains du projet',
         paragraphs: [
-          `Cette expérience continue d’orienter ma manière de concevoir des applications mobiles centrées sur la clarté des parcours.`,
-          `Avec le temps, j’ai gagné en maturité sur les arbitrages entre vitesse de livraison, qualité technique et expérience utilisateur.`,
+          `Dans un futur immédiat, le projet pourra être amélioré pour corriger les limites techniques et optimiser les performances de l’application, notamment avec le framework Flutter.`,
+          `À moyen terme, l’objectif est de stabiliser l’application et d’améliorer l’expérience utilisateur pour favoriser son adoption dans un marché compétitif.`,
+          `À long terme, l’application pourra évoluer avec de nouvelles fonctionnalités liées à la logistique collaborative et s’adapter aux besoins du marché.`,
+          `Ce projet me permet aussi de continuer à développer mes compétences sur Flutter, .NET et les technologies modernes.`,
+        ],
+      },
+      {
+        title: 'Regard critique',
+        paragraphs: [
+          `- Ce projet m’a fait découvrir concrètement le développement mobile en équipe.`,
+          `- J’ai mieux compris les bénéfices d’une architecture applicative claire comme BLoC.`,
+          `- Travailler sur une application complète a renforcé ma vision produit et technique.`,
+          `- La séparation des responsabilités reste essentielle pour garder un code lisible.`,
+          `- Une architecture claire facilite la maintenance et les évolutions futures.`,
+          `- Sur mobile, l’expérience utilisateur doit rester prioritaire à chaque choix technique.`,
         ],
       },
     ],

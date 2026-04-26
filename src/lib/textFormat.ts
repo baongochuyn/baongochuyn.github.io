@@ -14,6 +14,7 @@ export function ensureListPunctuation(paragraphs: readonly string[], index: numb
 export function isLikelyListItem(paragraphs: readonly string[], index: number): boolean {
   const current = paragraphs[index]?.trim() ?? '';
   if (!current) return false;
+  if (/^[•\-]\s+/.test(current)) return true;
   return /^[a-zà-ÿ]/.test(current);
 }
 

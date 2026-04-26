@@ -100,7 +100,7 @@ export const technicalSkills: TechnicalSkill[] = [
   {
     id: 'dotnet',
     name: '.NET',
-    projectIds: ['cityboard', 'boost', 'kalicolis'],
+    projectIds: ['cityboard', 'boost', 'kalicolis', 'diapyl', 'diagelec'],
     sections: [
       {
         title: 'Définition',
@@ -172,7 +172,7 @@ export const technicalSkills: TechnicalSkill[] = [
   {
     id: 'entity-framework',
     name: 'ORM',
-    projectIds: ['boost', 'cityboard'],
+    projectIds: ['boost', 'cityboard', 'kalicolis'],
     sections: [
       {
         title: 'Définition',
@@ -475,7 +475,7 @@ export const softSkills: SoftSkill[] = [
         ],
       },
       {
-        title: 'Évolution et projection',
+        title: 'Projection professionnelle',
         paragraphs: [
           `Évolution : au fil des projets, j’ai gagné en confiance et en capacité à prendre des initiatives. Je suis aujourd’hui capable de travailler de manière autonome sur des tâches complètes, tout en restant ouverte aux retours.`,
           `Projection : je souhaite continuer à développer une autonomie plus affirmée, notamment sur des sujets techniques complexes et des prises de décision à fort impact.`,
@@ -526,7 +526,13 @@ export const softSkills: SoftSkill[] = [
         ],
       },
       {
-        title: 'Évolution et projection',
+        title: 'Recul critique',
+        paragraphs: [
+          `Cependant, avec le recul, je constate que j’avais tendance à rester prudente dans les échanges techniques au début. J’ai appris à dépasser cette réserve pour contribuer plus activement aux discussions et aux choix d’équipe.`,
+        ],
+      },
+      {
+        title: 'Projection professionnelle',
         paragraphs: [
           `Évolution : je participe aujourd’hui plus activement aux échanges et je suis capable de défendre mes choix techniques.`,
           `Projection : je souhaite continuer à développer mon impact en équipe, notamment en prenant davantage d’initiatives et en contribuant aux décisions techniques.`,
@@ -552,9 +558,14 @@ export const softSkills: SoftSkill[] = [
         ],
       },
       {
-        title: 'Recul critique et projection',
+        title: 'Recul critique',
         paragraphs: [
           `Cependant, avec le recul, je constate que les changements rapides peuvent parfois générer de l’incertitude. J’ai donc appris à mieux structurer mon travail pour rester efficace même dans un contexte évolutif.`,
+        ],
+      },
+      {
+        title: 'Projection professionnelle',
+        paragraphs: [
           `Évolution : aujourd’hui, je m’adapte plus rapidement aux nouvelles situations et je reste efficace malgré les changements.`,
           `Projection : je souhaite renforcer cette capacité dans des environnements encore plus complexes et dynamiques.`,
         ],
@@ -572,13 +583,19 @@ export const softSkills: SoftSkill[] = [
           `La communication professionnelle est une compétence essentielle dans mon travail de développeuse. Elle se traduit par ma capacité à exprimer clairement mes idées, à partager l’avancement de mes tâches et à échanger efficacement avec différents interlocuteurs.`,
           `Au cours de mes projets, notamment sur CityBoard, DiagElec et BOOST, j’ai été amenée à collaborer avec des développeurs, des chefs de projet et des experts métier. Par exemple, sur le projet BOOST, j’ai régulièrement communiqué avec le chef de projet pour clarifier les besoins fonctionnels et remonter les anomalies identifiées. Cela a permis d’éviter des incompréhensions et d’améliorer la qualité des livrables.`,
           `De plus, lors des réunions d’équipe (SCRUM, points de suivi), j’ai appris à partager l’avancement de mon travail de manière structurée et concise, ainsi qu’à adapter mon discours selon mes interlocuteurs, en vulgarisant les aspects techniques lorsque cela était nécessaire.`,
+        ],
+      },
+      {
+        title: 'Recul critique',
+        paragraphs: [
           `Cependant, avec le recul, je constate qu’au début de mes expériences, je pouvais être plus réservée dans mes prises de parole, notamment sur des sujets techniques. Progressivement, j’ai gagné en confiance et en aisance pour exprimer mes idées et poser des questions.`,
         ],
       },
       {
-        title: 'Évolution',
+        title: 'Projection professionnelle',
         paragraphs: [
           `Évolution : aujourd’hui, je communique de manière plus claire et structurée, aussi bien à l’écrit (tickets, documentation) qu’à l’oral (réunions, échanges d’équipe).`,
+          `Projection : je souhaite continuer à renforcer ma communication en contexte professionnel, notamment pour mieux valoriser mon travail, poser les bonnes questions et contribuer plus activement aux échanges techniques.`,
         ],
       },
     ],

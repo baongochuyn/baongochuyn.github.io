@@ -79,7 +79,7 @@ export default function Hero() {
           <div className="flex flex-col items-center text-center min-w-0 max-w-md mx-auto shrink-0 lg:px-0">
             <div className="rounded-2xl overflow-hidden bg-slate-800/95 border-2 border-pink-500/50 shadow-xl mb-6 ring-2 ring-pink-400/20 shrink-0">
               <Image
-                src="/profile-avatar.png"
+                src="/profile-avatar.jpg"
                 alt={profile.name}
                 width={208}
                 height={208}
@@ -132,7 +132,7 @@ export default function Hero() {
           <div className="flex flex-col items-center text-center min-w-0 max-w-md mx-auto w-full">
             <div className="rounded-2xl overflow-hidden bg-slate-800/95 border-2 border-pink-500/50 shadow-xl mb-6 ring-2 ring-pink-400/20 shrink-0">
               <Image
-                src="/profile-avatar.png"
+                src="/profile-avatar.jpg"
                 alt={profile.name}
                 width={208}
                 height={208}

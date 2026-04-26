@@ -9,6 +9,20 @@ import { TextWithSkillLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
 import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
 
+const SKILL_LABEL_TO_ID: Record<string, string> = {
+  'C#': 'csharp',
+  '.NET': 'dotnet',
+  React: 'react',
+  JavaScript: 'javascript',
+  SQL: 'sql',
+  PostgreSQL: 'sql',
+  ORM: 'entity-framework',
+  'Entity Framework': 'entity-framework',
+  NUnit: 'csharp',
+  jQuery: 'javascript',
+  'Material UI': 'react',
+};
+
 type PageProps = {
   params: Promise<{ id: string }>;
 };
@@ -76,21 +90,28 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               </article>
             ))}
 
-            {project.skillLinkIds.length > 0 && (
+            {project.skillsPreview.length > 0 && (
               <section className="pt-2">
                 <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight border-b border-pink-500/25 pb-2">Compétences mobilisées</h2>
                 <p className="text-slate-300 text-sm md:text-[15px] leading-relaxed">
-                {project.skillLinkIds.map((skillId, index) => {
-                  const name = technicalSkills.find((s) => s.id === skillId)?.name ?? skillId;
-                  return (
-                    <span key={skillId}>
+                {project.skillsPreview.map((label, index) => {
+                  const skillId = SKILL_LABEL_TO_ID[label];
+                  const fallbackByName = technicalSkills.find((s) => s.name === label)?.id;
+                  const finalSkillId = skillId ?? fallbackByName;
+                  return finalSkillId ? (
+                    <span key={`${label}-${index}`}>
                       {index > 0 ? ' · ' : ''}
                       <Link
-                        href={hrefWithBase(`/competences-techniques/${skillId}`)}
+                        href={hrefWithBase(`/competences-techniques/${finalSkillId}`)}
                         className="text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium"
                       >
-                        {name}
+                        {label}
                       </Link>
+                    </span>
+                  ) : (
+                    <span key={`${label}-${index}`}>
+                      {index > 0 ? ' · ' : ''}
+                      <span className="text-pink-400 font-medium">{label}</span>
                     </span>
                   );
                 })}

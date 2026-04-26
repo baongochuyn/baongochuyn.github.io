@@ -27,7 +27,7 @@ export default function PresentationPage() {
             <div className="flex justify-center sm:justify-start shrink-0">
               <div className="relative w-36 h-36 md:w-44 md:h-44 rounded-2xl overflow-hidden border-2 border-pink-500/40 shadow-lg ring-2 ring-pink-400/15">
                 <Image
-                  src="/profile-avatar.png"
+                  src="/profile-avatar.jpg"
                   alt={profile.name}
                   width={176}
                   height={176}
