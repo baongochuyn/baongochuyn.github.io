@@ -612,8 +612,9 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Situation et exemples concrets',
         paragraphs: [
-          `La communication professionnelle est une compétence essentielle dans mon travail de développeuse. Elle se traduit par ma capacité à exprimer clairement mes idées, à partager l’avancement de mes tâches et à échanger efficacement avec différents interlocuteurs.`,
-          `Au cours de mes projets, notamment sur CityBoard, DiagElec et BOOST, j’ai été amenée à collaborer avec des développeurs, des chefs de projet et des experts métier. Par exemple, sur le projet BOOST, j’ai régulièrement communiqué avec le chef de projet pour clarifier les besoins fonctionnels et remonter les anomalies identifiées. Cela a permis d’éviter des incompréhensions et d’améliorer la qualité des livrables.`,
+          `Pour moi, la communication est une compétence clé. On ne développe jamais seule dans son coin ! Je mets un point d'honneur à exprimer mes idées clairement et à partager l'avancée de mes tâches de façon transparente. Que ce soit avec d'autres tech ou des non-développeurs, j'adore échanger pour que le projet avance vite et bien. Savoir écouter et se faire comprendre, c'est ce qui fait la différence dans une équipe.`,
+          `Sur mes projets comme CityBoard, DiagElec ou BOOST, j’ai adoré collaborer avec tout le monde : d'autres dévs, bien sûr, mais aussi des chefs de projet et des experts métier.`,
+          `Par exemple, sur le projet BOOST, j’étais tout le temps en contact avec mon chef de projet. On discutait pour bien comprendre les besoins et je lui signalais les bugs tout de suite. Franchement, ça change tout ! Ça permet d'éviter les malentendus et, à la fin, on livre un projet de bien meilleure qualité. Pour moi, une bonne ambiance et une communication fluide, c’est la clé du succès.`,
           `De plus, lors des réunions d’équipe (SCRUM, points de suivi), j’ai appris à partager l’avancement de mon travail de manière structurée et concise, ainsi qu’à adapter mon discours selon mes interlocuteurs, en vulgarisant les aspects techniques lorsque cela était nécessaire.`,
         ],
       },
