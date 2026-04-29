@@ -41,7 +41,7 @@ export const presentationSections = [
     paragraphs: [
       `En informatique, je ne veux pas juste 'pisser du code'. Mon but, c’est d’être une ingénieure utile et responsable.`,
       `Pour moi, on ne code pas pour des robots, mais pour des humains ! C’est pour ça que je me mets toujours à la place des utilisateurs pour créer des outils simples et agréables. Je ne plaisante pas avec la technique non plus : chaque décision compte. Un mauvais choix aujourd'hui, c'est une galère demain ! Alors, je mise tout sur la qualité, la sécurité et la stabilité.`,
-      `Je travaille avec conscience. La tech peut changer la société, donc je réfléchis toujours aux conséquences de mon travail. Bref, je suis quelqu'un de sérieux, de super motivé et je ne m'arrête jamais d'apprendre. Pour moi, le top du top, c'est d'être hyper compétente tout en restant à l'écoute des autres !`,
+      `Je travaille avec conscience. La tech peut changer la société, donc je réfléchis toujours aux conséquences de mon travail. Bref, je suis quelqu'un de sérieux, de super motivé et je ne m'arrête jamais d'apprendre. Pour moi, le top du top, c'est d'être hyper compétente tout en restant à l'écoute des autres!`,
     ],
   },
   {
@@ -126,7 +126,7 @@ export const parcoursTimeline: ParcoursStep[] = [
   },
   {
     period: '2023 – présent',
-    title: 'Cycle ingénieur — ingénierie du logiciel',
+    title: 'Mastère expert ingénierie de l’intelligence artificielle et des applications',
     organization: 'ESIEA',
     location: 'Ivry-sur-Seine, France',
     organizationUrl: 'https://www.esiea.fr/',
@@ -148,7 +148,7 @@ export const parcoursTimeline: ParcoursStep[] = [
     organization: 'Sorbonne Nouvelle Paris 3',
     location: 'Paris, France',
     organizationUrl: 'https://www.sorbonne-nouvelle.fr/',
-    logoUrl: 'https://www.google.com/s2/favicons?domain=sorbonne-nouvelle.fr&sz=64',
+    logoUrl: 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABDklEQVR4AW3RAUcEURSG4WOayc4mKlCbFEgUiECJhNiFgAWQgkQUxJIICbQElRCA9D+qAChAAgRQaAOrXtzhcxw8cC4vvmvdot3EjZiC4UxuHRhmcSVWLT3+JU+w5EPu2zCsye0bYz6wEQTeUQSBU5gGHmFBYAvmAl8YrQIrOMYiTOyneC63GZxgE1YFCtTFAAyl3EoYMtRE7jfoYSIY8cFvkLR8oBts0MdCEHjxI/5gPAjcw4JA0wcugl/oYz4IPOuIgxjWtZOhxESOEdQ0sIyOaMCwJ7cdGKZxJJb8iG/Igl84DDb4xaQPtIMRP1EPApd+xFdkQeAgGLGHRhVo4RbrMHGOa5Rym8MddqvbPybgUT248gX0AAAAAElFTkSuQmCC',
     responsibilities: [
       'Atteindre un niveau académique permettant de poursuivre des études supérieures en France.',
       'Construire une communication professionnelle claire à l’écrit comme à l’oral.',
