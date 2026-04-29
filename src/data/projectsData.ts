@@ -182,8 +182,9 @@ export const projects: Project[] = [
       {
         title: 'Lendemains du projet',
         paragraphs: [
-          `Ce projet m’a donné une base solide en React qui continue d’être utile dans mes missions actuelles.`,
-          `Il a changé ma façon de concevoir une interface : je pense désormais plus tôt à la maintenabilité et à l’expérience utilisateur.`,
+          `Dans le futur, l'application DiagElec pourra être améliorée avec de nouvelles fonctionnalités d'analyse plus avancées.`,
+          `À court terme, l'objectif est d'optimiser les performances et d'améliorer encore l'ergonomie de l'interface utilisateur.`,
+          `À long terme, DiagElec pourra évoluer pour devenir une plateforme plus complète de gestion des infrastructures électriques.`,
         ],
       },
       {
