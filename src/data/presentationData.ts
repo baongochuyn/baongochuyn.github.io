@@ -107,7 +107,7 @@ export type ParcoursStep = {
 /** Frise anti-chronologique : du plus récent au plus ancien (exigence ESIEA). */
 export const parcoursTimeline: ParcoursStep[] = [
   {
-    period: '2023 – présent',
+    period: '2021 – présent',
     title: 'Développeuse full stack (alternance)',
     organization: 'Bluesoft',
     location: 'Paris, France',
@@ -125,7 +125,7 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Bluesoft représente pour moi un environnement exigeant et formateur, où la rigueur technique et la valeur métier avancent ensemble.',
   },
   {
-    period: '2023 – présent',
+    period: '2021 – présent',
     title: 'Mastère expert ingénierie de l’intelligence artificielle et des applications',
     organization: 'ESIEA',
     location: 'Ivry-sur-Seine, France',
@@ -143,7 +143,7 @@ export const parcoursTimeline: ParcoursStep[] = [
       'ESIEA me donne un cadre méthodologique solide pour transformer la pratique terrain en compétence durable.',
   },
   {
-    period: '2021 – 2022',
+    period: '2020 – 2021',
     title: 'Apprentissage intensif du français',
     organization: 'Sorbonne Nouvelle Paris 3',
     location: 'Paris, France',
@@ -161,7 +161,7 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Cette étape a été déterminante pour ma capacité d’adaptation et ma communication en contexte international.',
   },
   {
-    period: '2020 – 2021',
+    period: '2017 – 2018',
     title: 'Programme de mobilité académique',
     organization: 'Jeonbuk National University',
     location: 'Jeonju, Corée du Sud',
@@ -179,7 +179,7 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Cette mobilité m’a appris à évoluer efficacement dans l’incertitude et à transformer le changement en levier de progression.',
   },
   {
-    period: '2017 – 2021',
+    period: '2015 – 2019',
     title: 'Licence — langues et cultures coréennes',
     organization: 'Université de Hué',
     location: 'Hué, Vietnam',
