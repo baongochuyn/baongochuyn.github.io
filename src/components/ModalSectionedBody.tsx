@@ -32,7 +32,7 @@ export default function ModalSectionedBody(props: ModalSectionedBodyProps) {
           <div className="space-y-3">
             {sec.paragraphs.map((p, i) => (
               <p key={i} className="text-sm md:text-[15px] text-slate-300 leading-relaxed">
-                {props.variant === 'project' ? (
+                {props.variant === 'skill' ? (
                   <TextWithSkillLinks>{p}</TextWithSkillLinks>
                 ) : (
                   <TextWithProjectLinks>{p}</TextWithProjectLinks>

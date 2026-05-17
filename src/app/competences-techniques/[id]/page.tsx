@@ -5,7 +5,7 @@ import BackLink from '@/components/BackLink';
 import SkillIcon from '@/components/SkillIcon';
 import Contact from '@/components/Contact';
 import { projects, technicalSkills } from '@/data/content';
-import { TextWithProjectLinks } from '@/lib/linkify';
+import { TextWithRefLinks, TextWithSkillLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
 import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
 
@@ -64,9 +64,11 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                         {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
                         {keyLabel && !bullet ? <span className="mt-[0.35em] inline-block h-4 w-0.5 shrink-0 rounded bg-pink-500/55" aria-hidden /> : null}
                         <span className={textClass}>
-                          <TextWithProjectLinks>
-                            {bullet ? normalizeListItemText(text) : text}
-                          </TextWithProjectLinks>
+                          {section.title.toLowerCase().includes('formation') ? (
+                            <TextWithRefLinks>{bullet ? normalizeListItemText(text) : text}</TextWithRefLinks>
+                          ) : (
+                            <TextWithSkillLinks>{bullet ? normalizeListItemText(text) : text}</TextWithSkillLinks>
+                          )}
                         </span>
                       </span>
                     </p>

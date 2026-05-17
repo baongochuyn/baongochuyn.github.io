@@ -161,28 +161,120 @@ export function TextWithSkillLinks({
 }: {
   children: string;
 }) {
-  const segments = linkifyText(children, SKILL_LINKS);
+  // First split by markdown links like [text](url)
+  const mdRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: Array<{ type: 'text' | 'mdlink'; text?: string; label?: string; href?: string }> = [];
+  let lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = mdRe.exec(children)) !== null) {
+    if (m.index > lastIndex) parts.push({ type: 'text', text: children.slice(lastIndex, m.index) });
+    parts.push({ type: 'mdlink', label: m[1], href: m[2] });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < children.length) parts.push({ type: 'text', text: children.slice(lastIndex) });
+
   return (
     <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'skill')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>
-            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
-              item.type === 'highlight' ? (
-                <span key={`${i}-h-${idx}`} className={highlightClass}>
-                  {item.value}
-                </span>
+      {parts.map((p, pi) => {
+        if (p.type === 'mdlink' && p.href) {
+          const href = p.href;
+          const label = p.label || p.href;
+          const isExternal = /^https?:\/\//i.test(href);
+          if (isExternal) {
+            return (
+              <a key={pi} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                {label}
+              </a>
+            );
+          }
+          // internal link — use Next Link. support hashes like #skill-<id>
+          if (href.startsWith('#skill-')) {
+            return (
+              <Link key={pi} href={toRouteHref(href, 'skill')} className={linkClass}>
+                {label}
+              </Link>
+            );
+          }
+          // assume path like /competences-techniques/xxx or /realisations/xxx
+          return (
+            <Link key={pi} href={href} className={linkClass}>
+              {label}
+            </Link>
+          );
+        }
+
+        // plain text — run keyword linkify + highlights
+        const text = p.text || '';
+        const segments = linkifyText(text, SKILL_LINKS);
+        return (
+          <React.Fragment key={pi}>
+            {segments.map((seg, i) =>
+              seg.type === 'link' && seg.href ? (
+                <Link key={i} href={toRouteHref(seg.href, 'skill')} prefetch className={linkClass}>
+                  {seg.value}
+                </Link>
               ) : (
-                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                <React.Fragment key={i}>
+                  {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+                    item.type === 'highlight' ? (
+                      <span key={`${i}-h-${idx}`} className={highlightClass}>
+                        {item.value}
+                      </span>
+                    ) : (
+                      <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                    )
+                  )}
+                </React.Fragment>
               )
             )}
           </React.Fragment>
-        )
-      )}
+        );
+      })}
+    </>
+  );
+}
+
+export function TextWithRefLinks({
+  children,
+}: {
+  children: string;
+}) {
+  const mdRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: Array<{ type: 'text' | 'mdlink'; text?: string; label?: string; href?: string }> = [];
+  let lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = mdRe.exec(children)) !== null) {
+    if (m.index > lastIndex) parts.push({ type: 'text', text: children.slice(lastIndex, m.index) });
+    parts.push({ type: 'mdlink', label: m[1], href: m[2] });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < children.length) parts.push({ type: 'text', text: children.slice(lastIndex) });
+
+  return (
+    <>
+      {parts.map((p, pi) => {
+        if (p.type !== 'mdlink' || !p.href) {
+          return <React.Fragment key={pi}>{p.text}</React.Fragment>;
+        }
+
+        const href = p.href;
+        const label = p.label || p.href;
+        const isExternal = /^https?:\/\//i.test(href);
+
+        if (isExternal) {
+          return (
+            <a key={pi} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+              {label}
+            </a>
+          );
+        }
+
+        return (
+          <Link key={pi} href={href} className={linkClass}>
+            {label}
+          </Link>
+        );
+      })}
     </>
   );
 }
@@ -192,28 +284,72 @@ export function TextWithProjectLinks({
 }: {
   children: string;
 }) {
-  const segments = linkifyText(children, PROJECT_LINKS);
+  // Support markdown links first
+  const mdRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: Array<{ type: 'text' | 'mdlink'; text?: string; label?: string; href?: string }> = [];
+  let lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = mdRe.exec(children)) !== null) {
+    if (m.index > lastIndex) parts.push({ type: 'text', text: children.slice(lastIndex, m.index) });
+    parts.push({ type: 'mdlink', label: m[1], href: m[2] });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < children.length) parts.push({ type: 'text', text: children.slice(lastIndex) });
+
   return (
     <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>
-            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
-              item.type === 'highlight' ? (
-                <span key={`${i}-h-${idx}`} className={highlightClass}>
-                  {item.value}
-                </span>
+      {parts.map((p, pi) => {
+        if (p.type === 'mdlink' && p.href) {
+          const href = p.href;
+          const label = p.label || p.href;
+          const isExternal = /^https?:\/\//i.test(href);
+          if (isExternal) {
+            return (
+              <a key={pi} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                {label}
+              </a>
+            );
+          }
+          if (href.startsWith('#project-')) {
+            return (
+              <Link key={pi} href={toRouteHref(href, 'project')} className={linkClass}>
+                {label}
+              </Link>
+            );
+          }
+          return (
+            <Link key={pi} href={href} className={linkClass}>
+              {label}
+            </Link>
+          );
+        }
+
+        const text = p.text || '';
+        const segments = linkifyText(text, PROJECT_LINKS);
+        return (
+          <React.Fragment key={pi}>
+            {segments.map((seg, i) =>
+              seg.type === 'link' && seg.href ? (
+                <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
+                  {seg.value}
+                </Link>
               ) : (
-                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                <React.Fragment key={i}>
+                  {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+                    item.type === 'highlight' ? (
+                      <span key={`${i}-h-${idx}`} className={highlightClass}>
+                        {item.value}
+                      </span>
+                    ) : (
+                      <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                    )
+                  )}
+                </React.Fragment>
               )
             )}
           </React.Fragment>
-        )
-      )}
+        );
+      })}
     </>
   );
 }
@@ -223,28 +359,72 @@ export function TextWithHighlights({
 }: {
   children: string;
 }) {
-  const segments = linkifyText(children, PROJECT_LINKS);
+  // reuse project link parsing + highlights
+  const mdRe = /\[([^\]]+)\]\(([^)]+)\)/g;
+  const parts: Array<{ type: 'text' | 'mdlink'; text?: string; label?: string; href?: string }> = [];
+  let lastIndex = 0;
+  let m: RegExpExecArray | null;
+  while ((m = mdRe.exec(children)) !== null) {
+    if (m.index > lastIndex) parts.push({ type: 'text', text: children.slice(lastIndex, m.index) });
+    parts.push({ type: 'mdlink', label: m[1], href: m[2] });
+    lastIndex = m.index + m[0].length;
+  }
+  if (lastIndex < children.length) parts.push({ type: 'text', text: children.slice(lastIndex) });
+
   return (
     <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>
-            {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
-              item.type === 'highlight' ? (
-                <span key={`${i}-h-${idx}`} className={highlightClass}>
-                  {item.value}
-                </span>
+      {parts.map((p, pi) => {
+        if (p.type === 'mdlink' && p.href) {
+          const href = p.href;
+          const label = p.label || p.href;
+          const isExternal = /^https?:\/\//i.test(href);
+          if (isExternal) {
+            return (
+              <a key={pi} href={href} target="_blank" rel="noopener noreferrer" className={linkClass}>
+                {label}
+              </a>
+            );
+          }
+          if (href.startsWith('#project-')) {
+            return (
+              <Link key={pi} href={toRouteHref(href, 'project')} className={linkClass}>
+                {label}
+              </Link>
+            );
+          }
+          return (
+            <Link key={pi} href={href} className={linkClass}>
+              {label}
+            </Link>
+          );
+        }
+
+        const text = p.text || '';
+        const segments = linkifyText(text, PROJECT_LINKS);
+        return (
+          <React.Fragment key={pi}>
+            {segments.map((seg, i) =>
+              seg.type === 'link' && seg.href ? (
+                <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
+                  {seg.value}
+                </Link>
               ) : (
-                <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                <React.Fragment key={i}>
+                  {highlightText(seg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+                    item.type === 'highlight' ? (
+                      <span key={`${i}-h-${idx}`} className={highlightClass}>
+                        {item.value}
+                      </span>
+                    ) : (
+                      <React.Fragment key={`${i}-t-${idx}`}>{item.value}</React.Fragment>
+                    )
+                  )}
+                </React.Fragment>
               )
             )}
           </React.Fragment>
-        )
-      )}
+        );
+      })}
     </>
   );
 }

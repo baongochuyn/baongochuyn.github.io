@@ -64,8 +64,8 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Ma formation actuelle et à venir',
         paragraphs: [
-          `En ce moment, je reste sur une formation volontairement simple et concrète : je lis Architecture Patterns with .NET de Christian Horsdal et [Clean Code](https://www.oreilly.com/library/view/clean-code-a/9780136083238/) de Robert C. Martin. L'idée est surtout de mieux structurer mes idées et de garder un code plus lisible au quotidien.`,
-          `Je complète ça avec une veille légère sur YouTube, par exemple la chaîne de [Nick Chapsas](https://www.youtube.com/@nickchapsas), qui est une référence connue sur les sujets .NET et les bonnes pratiques backend.`,
+          `En ce moment, je reste sur une formation volontairement simple et concrète : je lis Architecture Patterns with .NET de Christian Horsdal et Clean Code de Robert C. Martin (O'Reilly : https://www.oreilly.com/library/view/clean-code-a/9780136083238/). L'idée est surtout de mieux structurer mes idées et de garder un code plus lisible au quotidien.`,
+          `Je complète ça avec une veille légère sur YouTube, par exemple la chaîne de Nick Chapsas (https://www.youtube.com/@nickchapsas), qui est une référence connue sur les sujets .NET et les bonnes pratiques backend.`,
           `Je garde aussi une pratique régulière sur mes projets personnels, parce que c'est surtout en codeant que je consolide vraiment ce que je lis.`,
         ],
       },
@@ -128,10 +128,10 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Ma formation actuelle',
         paragraphs: [
-          `- [Microsoft Learn](https://learn.microsoft.com/) : "Design Microservices Architecture on Azure" (en cours)`,
-          `- [Documentation officielle .NET](https://learn.microsoft.com/en-us/dotnet/) : suivi régulier des release notes`,
-          `- Projets personnels : architecture backend avec .NET 8 et [Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)`,
-          `- Plan 2026 : [Certification AZ-204](https://learn.microsoft.com/en-us/credentials/certifications/exams/az-204/) en 2026`,
+          `- Microsoft Learn (https://learn.microsoft.com/) : "Design Microservices Architecture on Azure" (en cours)`,
+          `- Documentation officielle .NET (https://learn.microsoft.com/en-us/dotnet/) : suivi régulier des release notes`,
+          `- Projets personnels : architecture backend avec .NET 8 et Clean Architecture (https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)`,
+          `- Plan 2026 : Certification AZ-204 (https://learn.microsoft.com/en-us/credentials/certifications/exams/az-204/) en 2026`,
         ],
       },
       {
@@ -251,8 +251,8 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Ma formation en cours',
         paragraphs: [
-          `- [Udemy](https://www.udemy.com/) : "SQL Performance Explained" (en cours)`,
-          `- Pratique directe : optimisation de requêtes lentes en production (voir [PostgreSQL Performance](https://www.postgresql.org/docs/current/performance.html))`,
+          `- Udemy (https://www.udemy.com/) : "SQL Performance Explained" (en cours)`,
+          `- Pratique directe : optimisation de requêtes lentes en production (PostgreSQL docs : https://www.postgresql.org/docs/current/performance.html)`,
           `- Veille : articles sur Query Optimization (https://www.postgresql.org/docs/current/sql.html) et Index Strategies (https://www.postgresql.org/docs/current/sql-createindex.html)`,
         ],
       },
@@ -408,10 +408,10 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Ma formation actuelle',
         paragraphs: [
-          `- [Frontend Masters](https://frontendmasters.com/) : "JavaScript Performance" (en cours)`,
-          `- Livre : [You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS) et [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)`,
-          `- Pratique : optimization d'une application [React](https://react.dev/reference/react) performance-sensitive`,
-          `- Veille : ES2024 features et [Web APIs](https://developer.mozilla.org/en-US/docs/Web/API/)`,
+          `- Frontend Masters (https://frontendmasters.com/) : "JavaScript Performance" (en cours)`,
+          `- Livre : "You Don't Know JS Yet" (https://github.com/getify/You-Dont-Know-JS) et MDN (https://developer.mozilla.org/en-US/docs/Web/JavaScript/)`,
+          `- Pratique : optimization d'une application React (https://react.dev/reference/react) performance-sensitive`,
+          `- Veille : ES2024 features (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference) et Web APIs (https://developer.mozilla.org/en-US/docs/Web/API/)`,
         ],
       },
       {
