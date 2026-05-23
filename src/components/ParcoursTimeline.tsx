@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from 'react';
+import Image from 'next/image';
 import type { ParcoursStep } from '@/data/presentationData';
 
 export default function ParcoursTimeline({ steps }: { steps: ParcoursStep[] }) {
@@ -41,7 +42,7 @@ export default function ParcoursTimeline({ steps }: { steps: ParcoursStep[] }) {
                 aria-label={`Site de ${step.organization}`}
                 title={`Ouvrir le site de ${step.organization}`}
               >
-                <img src={step.logoUrl} alt={`Logo ${step.organization}`} className="h-5 w-5" loading="lazy" />
+                <Image src={step.logoUrl} alt={`Logo ${step.organization}`} width={20} height={20} className="h-5 w-5" unoptimized />
               </a>
               <div className="min-w-0">
                 <h3 className="text-base font-semibold text-white leading-tight">{step.title}</h3>

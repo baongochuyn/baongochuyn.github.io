@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0EA5E9"/>
+      <stop offset="0.5" stop-color="#1E3A8A"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(230 160) rotate(45) scale(300 230)">
+      <stop stop-color="#7DD3FC" stop-opacity="0.34"/>
+      <stop offset="1" stop-color="#7DD3FC" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="40" fill="url(#g1)"/>
+  <rect x="64" y="64" width="1072" height="572" rx="32" fill="#07111E" fill-opacity="0.72" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <ellipse cx="240" cy="160" rx="260" ry="190" fill="url(#r1)"/>
+  <path d="M154 490C230 428 306 406 390 428C474 450 556 508 642 508C728 508 814 444 900 398C986 352 1068 336 1106 346" stroke="#7DD3FC" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+  <rect x="128" y="126" width="304" height="96" rx="24" fill="#FFFFFF" fill-opacity="0.06" stroke="#7DD3FC" stroke-opacity="0.25"/>
+  <text x="160" y="176" fill="#E0F2FE" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">CityBoard</text>
+  <text x="160" y="203" fill="#BAE6FD" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500">APIs / performance / data flow</text>
+  <rect x="128" y="260" width="384" height="224" rx="28" fill="#FFFFFF" fill-opacity="0.05" stroke="#7DD3FC" stroke-opacity="0.16"/>
+  <rect x="160" y="294" width="220" height="16" rx="8" fill="#7DD3FC" fill-opacity="0.75"/>
+  <rect x="160" y="334" width="320" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.28"/>
+  <rect x="160" y="366" width="290" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.18"/>
+  <rect x="160" y="398" width="250" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.12"/>
+  <rect x="628" y="140" width="444" height="336" rx="34" fill="#08121F" fill-opacity="0.78" stroke="#7DD3FC" stroke-opacity="0.12"/>
+  <rect x="676" y="188" width="120" height="120" rx="22" fill="#0EA5E9" fill-opacity="0.18" stroke="#7DD3FC" stroke-opacity="0.22"/>
+  <rect x="822" y="188" width="120" height="120" rx="22" fill="#1D4ED8" fill-opacity="0.18" stroke="#93C5FD" stroke-opacity="0.22"/>
+  <rect x="968" y="188" width="120" height="120" rx="22" fill="#2563EB" fill-opacity="0.18" stroke="#93C5FD" stroke-opacity="0.22"/>
+  <path d="M736 248H822" stroke="#BAE6FD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M882 248H968" stroke="#BAE6FD" stroke-width="8" stroke-linecap="round"/>
+  <text x="676" y="408" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">centralized urban dashboard</text>
+  <text x="676" y="438" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400">dynamic widgets, cache, APIs</text>
+</svg>

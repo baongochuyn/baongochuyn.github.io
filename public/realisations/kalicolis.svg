@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" fill="none">
+  <defs>
+    <linearGradient id="g1" x1="0" y1="0" x2="1200" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#65A30D"/>
+      <stop offset="0.5" stop-color="#14532D"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <radialGradient id="r1" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(250 170) rotate(45) scale(300 220)">
+      <stop stop-color="#BEF264" stop-opacity="0.30"/>
+      <stop offset="1" stop-color="#BEF264" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1200" height="700" rx="40" fill="url(#g1)"/>
+  <rect x="64" y="64" width="1072" height="572" rx="32" fill="#071018" fill-opacity="0.74" stroke="#FFFFFF" stroke-opacity="0.08"/>
+  <ellipse cx="250" cy="170" rx="250" ry="180" fill="url(#r1)"/>
+  <path d="M150 500C236 430 322 404 404 422C490 442 566 500 650 500C734 500 814 438 894 398C978 354 1058 340 1108 348" stroke="#BEF264" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+  <rect x="128" y="126" width="320" height="96" rx="24" fill="#FFFFFF" fill-opacity="0.06" stroke="#BEF264" stroke-opacity="0.22"/>
+  <text x="160" y="176" fill="#F7FEE7" font-family="Inter, Arial, sans-serif" font-size="40" font-weight="700">Kalicolis</text>
+  <text x="160" y="203" fill="#D9F99D" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="500">mobile / collaboration / logistics</text>
+  <rect x="128" y="260" width="400" height="224" rx="28" fill="#FFFFFF" fill-opacity="0.05" stroke="#BEF264" stroke-opacity="0.16"/>
+  <rect x="160" y="294" width="160" height="16" rx="8" fill="#BEF264" fill-opacity="0.72"/>
+  <rect x="160" y="334" width="312" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.26"/>
+  <rect x="160" y="366" width="260" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.18"/>
+  <rect x="160" y="398" width="220" height="14" rx="7" fill="#E5E7EB" fill-opacity="0.12"/>
+  <rect x="628" y="138" width="444" height="340" rx="34" fill="#08131A" fill-opacity="0.78" stroke="#BEF264" stroke-opacity="0.12"/>
+  <circle cx="748" cy="280" r="58" fill="#BEF264" fill-opacity="0.16" stroke="#BEF264" stroke-opacity="0.24"/>
+  <path d="M860 344C886 316 922 300 964 300C1006 300 1040 316 1066 344" stroke="#D9F99D" stroke-width="10" stroke-linecap="round"/>
+  <path d="M880 272L948 204L1012 272" stroke="#D9F99D" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="628" y="484" fill="#E2E8F0" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="600">shared mobility, real-time flow</text>
+  <text x="628" y="514" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="18" font-weight="400">delivery between people, from route to parcel</text>
+</svg>

@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="1" stop-color="#020617"/>
+    </linearGradient>
+    <linearGradient id="line" x1="240" y1="530" x2="1360" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FB7185"/>
+      <stop offset="1" stop-color="#EC4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="700" rx="34" fill="url(#bg)"/>
+  <circle cx="280" cy="560" r="230" fill="#FB7185" fill-opacity="0.10"/>
+  <circle cx="1260" cy="170" r="240" fill="#F472B6" fill-opacity="0.08"/>
+  <g transform="translate(160 320)">
+    <path d="M120 220L220 70h84l98 150" stroke="#F472B6" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="188" y="40" width="48" height="36" rx="8" fill="#EC4899"/>
+    <path d="M214 22v18M200 40h28" stroke="#EC4899" stroke-width="8" stroke-linecap="round"/>
+    <path d="M154 170h190" stroke="#F472B6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g transform="translate(556 180)">
+    <rect x="0" y="0" width="300" height="320" rx="28" fill="#111827" stroke="#475569" stroke-width="4"/>
+    <circle cx="84" cy="92" r="36" fill="#F472B6"/>
+    <circle cx="206" cy="92" r="36" fill="#FB7185"/>
+    <path d="M66 148c12-18 30-28 48-28s36 10 48 28" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M188 148c12-18 30-28 48-28s36 10 48 28" stroke="#E2E8F0" stroke-width="8" stroke-linecap="round"/>
+    <path d="M84 240h132" stroke="#F472B6" stroke-width="10" stroke-linecap="round"/>
+    <path d="M84 240c22-24 44-36 66-36s44 12 66 36" stroke="#EC4899" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  <path d="M190 560C330 530 450 470 590 420C770 360 920 352 1080 316C1228 282 1328 246 1460 190" stroke="url(#line)" stroke-width="18" stroke-linecap="round"/>
+  <g transform="translate(1310 86)">
+    <path d="M0 70c28-22 58-34 90-40 22-4 46-4 72 0" stroke="#F472B6" stroke-width="8" stroke-linecap="round" opacity="0.82"/>
+    <path d="M144 18l16 2-2 16" stroke="#F472B6" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M160 16c-18 20-34 32-58 38" stroke="#EC4899" stroke-width="6" stroke-linecap="round" opacity="0.65"/>
+  </g>
+</svg>
