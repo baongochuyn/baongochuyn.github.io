@@ -86,37 +86,45 @@ const SKILL_LABEL_TO_ID: Record<string, string> = {
 type SectionIllustration = {
   src: string;
   alt: string;
+  aspectClass?: string;
+  fit?: 'cover' | 'contain';
 };
 
-const SECTION_ILLUSTRATIONS: Record<string, { lendemains: SectionIllustration }> = {
-  boost: {
-    lendemains: {
-      src: '/realisations/boost/lendemain.svg',
-      alt: 'Illustration des lendemains BOOST',
-    },
-  },
-  cityboard: {
-    lendemains: {
-      src: '/realisations/cityboard/lendemain.svg',
-      alt: 'Illustration des lendemains CityBoard',
-    },
-  },
+const SECTION_ILLUSTRATIONS: Record<string, Record<string, SectionIllustration>> = {
   diapyl: {
-    lendemains: {
-      src: '/realisations/diapyl/lendemain.svg',
-      alt: 'Illustration des lendemains DiaPyl',
+    'lancement du projet': {
+      src: '/realisations/diapyl/diapyl_architecture.png',
+      alt: 'Structure du projet DiaPyl',
+      aspectClass: 'aspect-[4/3] md:aspect-[3/2]',
+      fit: 'contain',
     },
   },
   diagelec: {
-    lendemains: {
-      src: '/realisations/diagelec/lendemain.svg',
-      alt: 'Illustration des lendemains DiagElec',
+    presentation: {
+      src: '/realisations/diagelec/diagelec.png',
+      alt: 'Interface de l’application DiagElec',
+      aspectClass: 'aspect-[3/2]',
+      fit: 'contain',
+    },
+    'les etapes': {
+      src: '/realisations/diagelec/diagram_sequence.png',
+      alt: 'Diagramme de séquence DiagElec',
+      aspectClass: 'aspect-[4/5]',
+      fit: 'contain',
+    },
+    'les acteurs': {
+      src: '/realisations/diagelec/diagram_CU.png',
+      alt: 'Diagramme de cas d’utilisation DiagElec',
+      aspectClass: 'aspect-[10/7]',
+      fit: 'contain',
     },
   },
   kalicolis: {
-    lendemains: {
-      src: '/realisations/kalicolis/lendemain.svg',
-      alt: 'Illustration des lendemains Kalicolis',
+    presentation: {
+      src: '/realisations/kalicolis/kalicoli.png',
+      alt: 'Interface de l’application Kalicolis',
+      aspectClass: 'aspect-[10/7]',
+      fit: 'contain',
     },
   },
 };
@@ -136,11 +144,25 @@ function getFeaturedSectionIllustration(projectId: string, sectionTitle: string)
     return null;
   }
 
-  if (title.includes('lendemain')) {
-    return illustrations.lendemains;
+  return illustrations[title] ?? null;
+}
+
+function getSectionIllustrations(projectId: string, sectionTitle: string): SectionIllustration[] {
+  const title = normalizeSectionTitle(sectionTitle);
+
+  if (projectId === 'diagelec' && title === 'les etapes') {
+    return [
+      SECTION_ILLUSTRATIONS.diagelec['les etapes'],
+      SECTION_ILLUSTRATIONS.diagelec['les acteurs'],
+    ];
   }
 
-  return null;
+  if (projectId === 'diagelec' && title === 'les acteurs') {
+    return [];
+  }
+
+  const illustration = getFeaturedSectionIllustration(projectId, sectionTitle);
+  return illustration ? [illustration] : [];
 }
 
 type PageProps = {
@@ -189,7 +211,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
 
           <div className="space-y-14">
             {project.sections.map((section) => {
-              const illustration = getFeaturedSectionIllustration(project.id, section.title);
+              const illustrations = getSectionIllustrations(project.id, section.title);
               return (
               <React.Fragment key={section.title}>
                 <article className="scroll-mt-24">
@@ -223,16 +245,20 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     })}
                   </div>
 
-                  {illustration ? (
-                    <div className="mt-6 mx-auto w-full max-w-2xl overflow-hidden rounded-2xl border border-white/10 bg-slate-950/40 shadow-lg shadow-black/20">
-                      <div className="relative aspect-[16/8] w-full">
-                        <Image
-                          src={illustration.src}
-                          alt={illustration.alt}
-                          fill
-                          className="object-cover"
-                        />
-                      </div>
+                  {illustrations.length > 0 ? (
+                    <div className={`mt-6 grid gap-6 ${illustrations.length > 1 ? 'md:grid-cols-2' : ''}`}>
+                      {illustrations.map((illustration) => (
+                        <div key={illustration.src} className="flex justify-center">
+                          <div className={`relative w-full max-w-2xl max-h-[500px] ${illustration.aspectClass ?? 'aspect-[16/9]'}`}>
+                            <Image
+                              src={illustration.src}
+                              alt={illustration.alt}
+                              fill
+                              className={illustration.fit === 'contain' ? 'object-contain' : 'object-cover'}
+                            />
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   ) : null}
                 </article>
