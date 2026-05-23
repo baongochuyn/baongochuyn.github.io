@@ -1,4 +1,4 @@
-export type SkillContentSection = { title: string; paragraphs: string[] };
+﻿export type SkillContentSection = { title: string; paragraphs: string[] };
 
 export type TechnicalSkill = {
   id: string;
@@ -32,7 +32,7 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `Au début, je voyais surtout C# comme un langage orienté objet classique. Je faisais des classes, des méthodes et des héritages sans forcément comprendre l'intérêt réel derrière certaines bonnes pratiques.`,
           `C'est surtout pendant mes projets backend que j'ai commencé à progresser. Je me souviens notamment du projet CityBoard : je devais gérer plusieurs routes API et une base de données. Dans les premières versions, tout était mélangé dans les mêmes contrôleurs. Le projet fonctionnait, mais dès que je voulais modifier une fonctionnalité, cela créait souvent de nouveaux problèmes—des dépendances cachées, du code dupliqué, une logique métier liée directement aux requêtes HTTP.`,
-          `Petit à petit, j'ai appris à mieux organiser mon application en séparant les différentes responsabilités. J'ai commencé à créer des couches distinctes : une couche métier (Services), une couche d'accès aux données (Repositories), et une couche de présentation (Contrôleurs). Cette expérience m'a fait comprendre qu'un projet ne doit pas seulement fonctionner, il doit aussi rester lisible et maintenable dans le temps. Le pire des cauchemars pour un développeur, c'est d'hériter d'un code mal structuré. Donc dès ce moment-là, j'ai choisi de privilégier l'organisation.`,
+          `Petit à petit, j'ai appris à mieux organiser mon application en séparant les différentes responsabilités. J'ai commencé à créer des couches distinctes : une couche métier (Services), une couche d'accès aux données (Repositories), et une couche de présentation (Contrôleurs). Cette expérience m'a fait comprendre qu'un projet ne doit pas seulement fonctionner, il doit aussi rester lisible et maintenable dans le temps. Cette expérience m'a fait comprendre qu'un code mal structuré devient rapidement difficile à reprendre, surtout lorsqu'un autre développeur doit intervenir dessus plus tard. Donc dès ce moment-là, j'ai choisi de privilégier l'organisation.`,
         ],
       },
       {
@@ -40,7 +40,7 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `Aujourd'hui, j'utilise principalement C# pour du **développement backend** et la création d'**API**. J'ai également appris à maîtriser plusieurs outils et concepts associés comme [ASP.NET](https://learn.microsoft.com/en-us/aspnet/core/), **Entity Framework**, [LINQ](https://learn.microsoft.com/en-us/dotnet/csharp/linq/) ou encore la [programmation asynchrone](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/).`,
           `Sur le projet BOOST en particulier, j'ai vraiment progressé sur **Entity Framework**. J'ai dû optimiser des requêtes **N+1**—c'est-à-dire que je faisais une requête à la base de données pour chaque élément d'une liste. Résultat ? L'application était lente pour les gros volumes. J'ai appris à utiliser **Include()**, **Select()** et les techniques de requête optimisées. Cela a réduit le nombre de requêtes de façon drastique (**100+** à **2-3 requêtes**) et amélioré significativement les **performances** (temps de réponse divisé par **50**).`,
-          `Avec le temps, je fais aussi plus attention à la **qualité du code**. Au début, mon objectif était surtout de terminer rapidement une fonctionnalité. Maintenant, j'essaie davantage de réfléchir à la **structure globale** du projet et à la manière dont le code pourra évoluer plus tard. Sur DiaPyl notamment, en écrivant **45+ tests unitaires** avec **NUnit**, j'ai dû repenser ma façon de coder pour rendre les fonctions testables. Ce qui m'a forcé à découpler les responsabilités et à créer de meilleures abstractions. Résultat : couverture de tests passée de **20% à 85%**, et bugs en production réduits de **60%**.`,
+          `Avec le temps, je fais aussi plus attention à la **qualité du code**. Au début, mon objectif était surtout de terminer rapidement une fonctionnalité. Maintenant, j'essaie davantage de réfléchir à la **structure globale** du projet et à la manière dont le code pourra évoluer plus tard. Sur DiaPyl notamment, en écrivant **45+ tests unitaires** avec **NUnit**, j'ai dû repenser ma façon de coder pour rendre les fonctions testables. Ce qui m'a forcée à découpler les responsabilités et à créer de meilleures abstractions. Résultat : couverture de tests augmentée significativement et bugs en production réduits.`,
           `J'ai aussi compris qu'on ne développe pas de la même manière selon le contexte. Sur un petit projet personnel, je vais chercher quelque chose de **simple et rapide**. Sur un projet plus important ou en entreprise, je vais davantage penser à l'**organisation du code**, aux **performances**, à la **sécurité** et à la **maintenabilité**.`,
         ],
       },
@@ -49,7 +49,7 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `Je suis à un niveau **intermédiaire-avancé** en C#. Ma vitesse d'acquisition a été remarquable—j'ai pu être autonome sur le framework **.NET** en **3-4 mois**. Cela s'explique par ma capacité à transférer mes fondamentaux logiques et par une pratique intense sur des projets réels.`,
           `Cependant, plus j'avance, plus je réalise que la difficulté ne vient pas forcément de la syntaxe du langage. Le plus compliqué est souvent de prendre de bonnes décisions de conception et de réussir à garder une application simple malgré des besoins parfois complexes.`,
-          `Lorsque je rencontre une difficulté, j'essaie généralement de comprendre le problème en profondeur avant de chercher une solution rapide. Cette manière de travailler m'a aidé à devenir plus autonome et plus rigoureuse dans mes projets.`,
+          `Lorsque je rencontre une difficulté, j'essaie généralement de comprendre le problème en profondeur avant de chercher une solution rapide. Cette manière de travailler m'a aidée à devenir plus autonome et plus rigoureuse dans mes projets.`,
         ],
       },
       {
@@ -94,8 +94,8 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Mon parcours avec .NET',
         paragraphs: [
           `J'ai découvert .NET lors de mes premiers projets en alternance chez Bluesoft. C'était une plateforme nouvelle pour moi, mais rapidement j'ai apprécié son approche structurée et la richesse de son écosystème.`,
-          `Trên CityBoard, j'ai créé des **endpoints API** pour récupérer et traiter des données externes (APIs de transport, météo). J'ai implémenté la **logique métier** pour la gestion des widgets personnalisés et mis en place un système de cache mémoire avec [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/) pour limiter les appels API. Résultat : amélioration des performances, réduction de **40%** du nombre d'appels API externes et meilleure expérience utilisateur.`,
-          `Sur Kalicolis, j'ai développé tout le backend de l'application mobile—communication entre l'application Flutter et la base de données, sécurisation des échanges. Impact : application fonctionnelle de bout en bout et communication fiable.`,
+          `Sur CityBoard, j'ai créé des **endpoints API** pour récupérer et traiter des données externes (APIs de transport, météo). J'ai implémenté la **logique métier** pour la gestion des widgets personnalisés et mis en place un système de cache mémoire avec [ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/) pour limiter les appels API. Résultat : amélioration des performances, réduction de **40%** du nombre d'appels API externes et meilleure expérience utilisateur.`,
+          `Sur Kalicolis, j'ai contribué au backend de l'application mobile, notamment sur les échanges entre l'application Flutter, les services .NET et la base de données. Impact : application fonctionnelle et communication fiable.`,
           `Sur BOOST, j'ai réalisé des évolutions et correctifs sur une architecture MVC en .NET existante, ajoutant de nouvelles fonctionnalités pour le métier.`,
         ],
       },
@@ -103,7 +103,7 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Mon niveau de maîtrise',
         paragraphs: [
           `Je me situe à un niveau **confirmé-avancé** en .NET. Je suis capable de structurer une application en couches (architecture claire), développer des **APIs backend robustes et performantes**, gérer les interactions avec une base de données, intégrer des services externes et mettre en place une **CI/CD basique**.`,
-          `Ce que je maîtrise bien : **conception d'architectures en couches**, **gestion de dépendances** (Dependency Injection : https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection), **intégration de frameworks tiers**, **tests d'intégration**.`,
+          `Ce que je maîtrise bien aujourd'hui concerne surtout la conception d'architectures en couches, la gestion des dépendances avec l'injection de dépendances (https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection), l'intégration de frameworks tiers et la mise en place de tests d'intégration.`,
           `Ce où je suis en progression : architectures avancées (microservices, CQRS), scalabilité à très large échelle, optimisation fine des performances sur gros volumes.`,
         ],
       },
@@ -150,13 +150,13 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Qu\'est-ce qu\'un ORM',
         paragraphs: [
           `**Un ORM (Object-Relational Mapping)** est une **couche d'abstraction** qui fait l'interface entre le monde objet (C#) et le monde relationnel (base de données). Il permet de manipuler les données via des objets du domaine, sans écrire manuellement la majorité des accès **SQL**.`,
-          `Dans mes projets .NET, je privilégie l'approche Code First avec Entity Framework Core (https://learn.microsoft.com/en-us/ef/core/) : je définis la structure de la base de données via des classes C#, puis j'utilise les migrations pour faire évoluer le schéma de manière contrôlée.`,
+          `Dans mes projets .NET, j'utilise Entity Framework Core (https://learn.microsoft.com/en-us/ef/core/) : je définis la structure de la base de données via des classes C#, puis j'utilise les migrations pour faire évoluer le schéma de manière contrôlée.`,
         ],
       },
       {
         title: 'Mes expériences concrètes',
         paragraphs: [
-          `Sur Kalicolis, j'ai dû évoluer la gestion des statuts de livraison avec une approche **Code First** (https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/). J'ai utilisé les **migrations EF Core** (https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/) pour faire évoluer le schéma sans perte de données. La **Fluent API** (https://learn.microsoft.com/en-us/ef/core/modeling/) m'a permis de configurer les relations correctement et **Include()** pour éviter les problèmes **N+1**.`,
+          `Sur Kalicolis, j'ai dû faire évoluer la gestion des statuts de livraison avec une approche **Code First** (https://learn.microsoft.com/en-us/ef/ef6/modeling/code-first/). J'ai utilisé les **migrations EF Core** (https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/) pour faire évoluer le schéma sans perte de données. La **Fluent API** (https://learn.microsoft.com/en-us/ef/core/modeling/) m'a permis de configurer les relations correctement et **Include()** pour éviter les problèmes **N+1**.`,
           `J'ai configuré DeleteBehavior.Restrict pour prévenir les suppressions incohérentes et protéger l'intégrité référentielle. Résultat : cycle de développement fluide, schéma versionné avec le code et meilleure fiabilité entre environnements.`,
           `Sur BOOST, j'ai manipulé des données complexes via des entités C#, LINQ et des relations entre entités pour stabiliser un logiciel métier en production. Impact : code plus lisible, règles métier mieux protégées et accès aux données cohérent.`,
           `Sur CityBoard, j'ai géré les préférences utilisateurs et la persistance des widgets avec PostgreSQL via EF Core. Impact : cohérence des données, simplification de la gestion backend et maintenance facilitée.`,
@@ -208,7 +208,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Le fondement : SQL',
         paragraphs: [
-          `**SQL (Structured Query Language)** est un **langage standard** utilisé pour interagir avec des bases de données relationnelles (notamment PostgreSQL : https://www.postgresql.org/). Il permet de **créer**, **manipuler** et **interroger** des données structurées à travers des opérations telles que **SELECT**, **INSERT**, **UPDATE** et **DELETE**.`,
+          `**SQL (Structured Query Language)** est un langage standard utilisé pour interagir avec des bases de données relationnelles, notamment PostgreSQL (https://www.postgresql.org/). Il permet de **créer**, **manipuler** et **interroger** des données structurées à travers des opérations telles que **SELECT**, **INSERT**, **UPDATE** et **DELETE**.`,
           `SQL permet également de définir des relations entre les données, garantissant leur cohérence et leur intégrité via les contraintes et les clés étrangères.`,
         ],
       },
@@ -218,7 +218,7 @@ export const technicalSkills: TechnicalSkill[] = [
           `Sur CityBoard, j'ai écrit des requêtes **SQL** complexes pour relier les utilisateurs, les widgets et les préférences dans une logique métier cohérente. Quand plusieurs mises à jour devaient rester synchronisées, je m'appuyais sur les transactions pour garantir que l'ensemble restait fiable même en cas d'erreur sur une étape.`,
           `Exemple concret : lors de la modification d'une préférence utilisateur, j'ai dû synchroniser plusieurs tables en une seule **transaction**. Si une étape échouait, tout était annulé pour éviter la corruption de données. Résultat : données cohérentes même en cas d'erreur et amélioration des performances du chargement des dashboards (requêtes optimisées de **2-3s à 200ms**).`,
           `Sur Kalicolis, j'ai conçu les tables (utilisateurs, trajets, colis), défini les relations par clés étrangères et écrit des requêtes multi-objets pour lier utilisateur, trajet et colis. Impact : meilleure organisation des données et application plus fiable.`,
-          `Sur BOOST, j'ai optimisé des requêtes lentes en analysant les plans d'exécution (https://www.postgresql.org/docs/current/sql-explain.html) et en ajoutant les bons index (https://www.postgresql.org/docs/current/sql-createindex.html). Temps de réponse réduit de 5s à 500ms sur certaines opérations critiques.`,
+          `Sur BOOST, j'ai analysé des plans d'exécution et travaillé sur l'optimisation des index afin d'améliorer les performances de certaines requêtes critiques. Temps de réponse réduit significativement sur plusieurs opérations.`,
         ],
       },
       {
@@ -232,7 +232,7 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Ma progression et apprentissage',
         paragraphs: [
           `J'ai appris SQL progressivement, de requêtes simples vers des requêtes plus complexes liées à des cas métier réels. La résolution d'incohérences de données et l'analyse d'erreurs ont fortement accéléré ma montée en compétence.`,
-          `Ce qui m'a vraiment fait progresser : rencontrer des problèmes données réels et devoir les débugguer, analyser les plans d'exécution Oracle/PostgreSQL, et apprendre des retours lors des reviews de code SQL.`,
+          `Ce qui m'a vraiment fait progresser : rencontrer des problèmes de données réels et devoir les débugguer, analyser les plans d'exécution Oracle/PostgreSQL, et apprendre des retours lors des reviews de code SQL.`,
         ],
       },
       {
@@ -268,7 +268,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Introduction',
         paragraphs: [
-          `React est une **bibliothèque JavaScript développée par Facebook** et rapidement devenu pour moi le point d'entrée vers un frontend plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mais une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
+          `React est une **bibliothèque JavaScript développée par Facebook**, qui est rapidement devenue pour moi le point d'entrée vers un frontend plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mais une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
           `C'est cette approche qui m'a permis de mieux organiser mes écrans, de séparer les responsabilités et de faire évoluer une interface sans devoir tout réécrire à chaque changement.`,
         ],
       },
@@ -296,7 +296,8 @@ export const technicalSkills: TechnicalSkill[] = [
           `Avec le recul, je vois React comme un cadre très efficace, mais qui demande de la rigueur dès le départ. Quand l'architecture est claire, tout devient plus simple à faire évoluer.`,
           `Avec React, j'ai compris qu'une architecture de composants approximative finit toujours par coûter cher. Plus l'application grossit, plus les mauvais choix de départ deviennent visibles.`,
           `Mon réflexe aujourd'hui est donc simple : garder des composants lisibles, limiter la logique inutile dans l'interface et séparer au maximum ce qui relève de l'affichage et ce qui relève du comportement.`,
-          `Si je devais résumer mon conseil, ce serait celui-ci : ne pas chercher à faire “vite et compact”, mais plutôt à faire “clair et durable”. Sur React, c'est souvent ce qui fait la différence entre un projet stable et un projet pénible à maintenir.`,
+          `Si je devais résumer mon conseil, ce serait celui-ci : ne pas chercher à faire "vite et compact", mais plutôt à faire "clair et durable". Sur React, c'est souvent ce qui fait la différence entre un projet stable et un projet pénible à maintenir.`,
+          `Dans mon profil de développeuse full stack, React reste une compétence importante car elle me permet de relier les contraintes techniques du backend aux besoins concrets des utilisateurs dans l'interface.`,
         ],
       },
       {
@@ -344,7 +345,7 @@ export const technicalSkills: TechnicalSkill[] = [
           `J'ai utilisé async/await et [Promise.all()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) pour paralléliser les requêtes. Exemple : au lieu de faire 3 requêtes séquentielles (3 secondes), je les fais en parallèle (1 seconde). Impact : chargement 3x plus rapide.`,
           `J'ai aussi dû gérer les erreurs et les timeouts correctement. Et la gestion d'état complexe avec beaucoup de variables async : quand les données arrivent, comment les mettre en cache? Comment gérer l'invalidation du cache?`,
           `Sur DiagElec, j'ai manipulé le DOM via React (donc indirectement du JavaScript), créé des event handlers complexes et géré des validations de formulaire côté client.`,
-          `Sur BOOST (un projet legacy), j'ai due corriger du JavaScript jQuery ancien, améliorer l'UX avec du JavaScript vanilla et contribuer à la modernisation progressive du code.`,
+          `Sur BOOST (un projet legacy), j'ai dû corriger du JavaScript jQuery ancien, améliorer l'UX avec du JavaScript vanilla et contribuer à la modernisation progressive du code.`,
         ],
       },
       {
@@ -360,7 +361,7 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `J'ai acquis JavaScript progressivement : d'abord les bases (variables, fonctions, objets), puis les concepts avancés (closures, prototypes, async/await) liés à des cas d'usage réels.`,
           `Le passage de jQuery vers React a marqué un tournant : je suis passée du "comment manipuler le DOM" au "comment structurer une application avec des composants".`,
-          `Les défis rencontrés (race conditions, gestion d'erreur, optimisation) m'ont forcé à approfondir mes connaissances.`,
+          `Les défis rencontrés (race conditions, gestion d'erreur, optimisation) m'ont forcée à approfondir mes connaissances.`,
         ],
       },
       {
@@ -372,7 +373,7 @@ export const technicalSkills: TechnicalSkill[] = [
           `- Rester vigilant sur la gestion des erreurs et des cas limites (edge cases)`,
           `- Préférer les approches fonctionnelles et déclaratives`,
           `- Comprendre les fondamentaux : scope, closures, prototypes`,
-          `Ma réflexion : une bonne compréhension des fondamentaux (https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide) facilite ÉNORMÉMENT l'adoption de frameworks comme React (https://react.dev). Et maîtriser async/await est presque plus important que de maîtriser la syntaxe du langage.`,
+          `Avec le recul, je pense qu'il est essentiel de maîtriser les fondamentaux de JavaScript avant de s'appuyer sur un framework comme React. Comprendre l'asynchronisme, le scope, les closures et la gestion des erreurs rend ensuite le développement Front-end beaucoup plus solide.`,
         ],
       },
       {
