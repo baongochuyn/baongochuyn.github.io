@@ -1,4 +1,4 @@
-﻿export type SkillContentSection = { title: string; paragraphs: string[] };
+export type SkillContentSection = { title: string; paragraphs: string[] };
 
 export type TechnicalSkill = {
   id: string;
@@ -696,4 +696,5 @@ export const softSkills: SoftSkill[] = [
     ],
   },
 ];
+
 

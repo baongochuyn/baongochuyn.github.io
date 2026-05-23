@@ -38,16 +38,16 @@ export default function PresentationPage() {
               </div>
             </div>
             <div className="flex-1 min-w-0 flex flex-col justify-center text-center sm:text-left">
-              <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">{presentationIntro.title}</h1>
-              <p className="text-slate-400 mb-4">{presentationIntro.subtitle}</p>
+              <h1 className="text-3xl md:text-4xl font-bold text-neutral-200 mb-2">{presentationIntro.title}</h1>
+              <p className="text-gray-400 mb-4">{presentationIntro.subtitle}</p>
               <div className="flex flex-wrap gap-2 justify-center sm:justify-start">
                 <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-pink-500/15 text-pink-300 border border-pink-500/30">
                   ESIEA · 5e année
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-slate-200 border border-slate-600">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-neutral-300 border border-slate-600">
                   Alternance · Bluesoft
                 </span>
-                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-slate-200 border border-slate-600">
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-slate-700/80 text-neutral-300 border border-slate-600">
                   Full stack
                 </span>
               </div>
@@ -61,7 +61,7 @@ export default function PresentationPage() {
               <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight">
                 {section.title}
               </h2>
-              <div className="space-y-4 text-slate-300 leading-relaxed text-sm md:text-[15px]">
+              <div className="space-y-4 text-neutral-300 leading-relaxed text-sm md:text-[15px]">
                 {section.paragraphs.map((_, i) => {
                   const text = ensureListPunctuation(section.paragraphs, i);
                   const bullet = isLikelyListItem(section.paragraphs, i);
@@ -98,9 +98,10 @@ export default function PresentationPage() {
         </div>
       </main>
       <Contact />
-      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
+      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>
     </div>
   );
 }
+

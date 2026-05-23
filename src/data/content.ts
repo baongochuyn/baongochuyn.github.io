@@ -40,3 +40,4 @@ export const nav = {
   competencesHumaines: 'Compétences humaines',
   contact: 'Contact',
 } as const;
+

@@ -180,10 +180,10 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               <span className="w-10 h-10 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">
                 <ProjectIcon projectId={project.id} className="w-5 h-5" />
               </span>
-              <h1 className="text-3xl md:text-4xl font-bold text-white tracking-tight">{project.title}</h1>
+              <h1 className="text-3xl md:text-4xl font-bold text-neutral-200 tracking-tight">{project.title}</h1>
             </div>
             <p className="text-xs uppercase tracking-[0.22em] text-pink-400/90 mb-2">{vibe.eyebrow}</p>
-            <p className="text-slate-400 text-sm">{vibe.summary}</p>
+            <p className="text-gray-400 text-sm">{vibe.summary}</p>
             <div className="mt-5 h-px bg-gradient-to-r from-pink-500/40 via-slate-700/70 to-transparent" />
           </header>
 
@@ -194,7 +194,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
               <React.Fragment key={section.title}>
                 <article className="scroll-mt-24">
                   <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight border-b border-pink-500/25 pb-2">{section.title}</h2>
-                  <div className="space-y-4 text-slate-300 leading-relaxed text-sm md:text-[15px]">
+                  <div className="space-y-4 text-neutral-300 leading-relaxed text-sm md:text-[15px]">
                     {section.paragraphs.map((_, i) => {
                       const text = ensureListPunctuation(section.paragraphs, i);
                       const bullet = isLikelyListItem(section.paragraphs, i);
@@ -244,7 +244,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
             {project.skillsPreview.length > 0 && (
               <section className="pt-2">
                 <h2 className="text-xl md:text-2xl font-semibold text-pink-400 mb-4 tracking-tight border-b border-pink-500/25 pb-2">Compétences mobilisées</h2>
-                <p className="text-slate-300 text-sm md:text-[15px] leading-relaxed">
+                <p className="text-neutral-300 text-sm md:text-[15px] leading-relaxed">
                 {project.skillsPreview.map((label, index) => {
                   const skillId = SKILL_LABEL_TO_ID[label];
                   const fallbackByName = technicalSkills.find((s) => s.name === label)?.id;
@@ -273,7 +273,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
         </div>
       </main>
       <Contact />
-      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
+      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>
     </div>

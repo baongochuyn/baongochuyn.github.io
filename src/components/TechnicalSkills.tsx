@@ -9,7 +9,7 @@ export default function TechnicalSkills() {
   return (
     <section id="competences-techniques" className="py-14 px-4 scroll-mt-20 bg-slate-900/50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 text-center mb-10">
           Compétences techniques
         </h2>
 
@@ -25,7 +25,7 @@ export default function TechnicalSkills() {
               <span className="w-12 h-12 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center">
                 <SkillIcon skillId={skill.id} className="w-6 h-6" />
               </span>
-              <span className="text-sm font-semibold text-white text-center">
+              <span className="text-sm font-semibold text-neutral-200 text-center">
                 {skill.name}
               </span>
             </Link>
@@ -35,3 +35,4 @@ export default function TechnicalSkills() {
     </section>
   );
 }
+

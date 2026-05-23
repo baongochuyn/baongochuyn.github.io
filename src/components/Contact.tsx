@@ -22,10 +22,10 @@ export default function Contact() {
   return (
     <section id="contact" className="pt-12 pb-16 px-4 scroll-mt-20 bg-slate-900">
       <div className="max-w-2xl mx-auto text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 mb-2">
           {contact.title}
         </h2>
-        <p className="text-slate-400 mb-8">
+        <p className="text-gray-400 mb-8">
           {contact.subtitle}
         </p>
         <div className="flex flex-wrap justify-center gap-6">
@@ -65,3 +65,4 @@ export default function Contact() {
     </section>
   );
 }
+

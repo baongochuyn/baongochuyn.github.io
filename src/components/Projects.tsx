@@ -36,7 +36,7 @@ export default function Projects() {
   return (
     <section id="realisations" className="pt-12 pb-16 px-4 scroll-mt-20 bg-slate-900/50 relative">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 text-center mb-10">
           Réalisations
         </h2>
 
@@ -74,9 +74,9 @@ export default function Projects() {
                     <ProjectIcon projectId={project.id} className="w-6 h-6" />
                   </span>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-white">{project.title}</h3>
+                    <h3 className="font-semibold text-neutral-200">{project.title}</h3>
                     {previewSkills.length > 0 && (
-                      <p className="mt-1 text-slate-400 text-sm">
+                      <p className="mt-1 text-gray-400 text-sm">
                         {previewSkills.map((label, i) => {
                           const skillId = SKILL_LABEL_TO_ID[label];
                           return skillId ? (
@@ -101,7 +101,7 @@ export default function Projects() {
                     )}
                   </div>
                   <span
-                    className="text-slate-500 flex-shrink-0"
+                    className="text-gray-500 flex-shrink-0"
                     aria-hidden
                   >
                     →
@@ -115,3 +115,4 @@ export default function Projects() {
     </section>
   );
 }
+

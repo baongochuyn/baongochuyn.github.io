@@ -45,9 +45,10 @@ export default function HomePageSkeleton() {
           ))}
         </div>
       </main>
-      <footer className="py-4 px-4 bg-slate-900 border-t border-slate-800/40 text-center text-sm text-slate-500">
+      <footer className="py-4 px-4 bg-slate-900 border-t border-slate-800/40 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>
     </div>
   );
 }
+

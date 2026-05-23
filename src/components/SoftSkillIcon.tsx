@@ -47,3 +47,4 @@ export default function SoftSkillIcon({ skillId, className = 'w-8 h-8' }: { skil
   if (!Icon) return <span className={className} aria-hidden>◆</span>;
   return <>{Icon(className)}</>;
 }
+

@@ -46,3 +46,4 @@ export default function ProjectIcon({ projectId, className = 'w-8 h-8' }: { proj
   if (!Icon) return <span className={className} aria-hidden>◆</span>;
   return <>{Icon(className)}</>;
 }
+

@@ -45,9 +45,9 @@ export default function ParcoursTimeline({ steps }: { steps: ParcoursStep[] }) {
                 <Image src={step.logoUrl} alt={`Logo ${step.organization}`} width={20} height={20} className="h-5 w-5" unoptimized />
               </a>
               <div className="min-w-0">
-                <h3 className="text-base font-semibold text-white leading-tight">{step.title}</h3>
+                <h3 className="text-base font-semibold text-neutral-200 leading-tight">{step.title}</h3>
                 <p className="text-sm text-pink-300/90 mt-1">{step.organization}</p>
-                <p className="text-sm text-slate-400">{step.location}</p>
+                <p className="text-sm text-gray-400">{step.location}</p>
               </div>
             </div>
           </div>
@@ -58,7 +58,7 @@ export default function ParcoursTimeline({ steps }: { steps: ParcoursStep[] }) {
               openItems[i] ? 'max-h-[32rem] opacity-100 translate-y-0' : 'max-h-0 opacity-0 -translate-y-1'
             }`}
           >
-            <div className="mt-3 rounded-xl border border-slate-700 bg-slate-900 p-4 space-y-3 text-sm text-slate-300">
+            <div className="mt-3 rounded-xl border border-slate-700 bg-slate-900 p-4 space-y-3 text-sm text-neutral-300">
               <div>
                 <p className="text-pink-300 font-semibold">Responsabilités</p>
                 <ul className="mt-1 space-y-1">
@@ -93,3 +93,4 @@ export default function ParcoursTimeline({ steps }: { steps: ParcoursStep[] }) {
     </ol>
   );
 }
+

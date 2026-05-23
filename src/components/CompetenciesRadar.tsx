@@ -34,8 +34,8 @@ export default function CompetenciesRadar() {
   return (
     <section id="synthese-competences" className="py-14 px-4 scroll-mt-20 bg-slate-900/40">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-2">Synthèse des compétences</h2>
-        <p className="text-slate-400 text-center text-sm mb-10 max-w-2xl mx-auto">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 text-center mb-2">Synthèse des compétences</h2>
+        <p className="text-gray-400 text-center text-sm mb-10 max-w-2xl mx-auto">
           Auto-évaluation sur une échelle de 1 à 5 — six compétences techniques et cinq compétences humaines.
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
@@ -43,7 +43,7 @@ export default function CompetenciesRadar() {
             width={SIZE}
             height={SIZE}
             viewBox={`0 0 ${SIZE} ${SIZE}`}
-            className="shrink-0 text-slate-500"
+            className="shrink-0 text-gray-500"
             aria-label="Diagramme radar des compétences"
           >
             {gridLevels.map((lvl) => (
@@ -101,14 +101,14 @@ export default function CompetenciesRadar() {
               );
             })}
           </svg>
-          <ul className="text-sm text-slate-300 space-y-2 w-full max-w-sm">
+          <ul className="text-sm text-neutral-300 space-y-2 w-full max-w-sm">
             <li className="font-semibold text-pink-400">Techniques</li>
             {competencyRadarAxes
               .filter((a) => a.kind === 'tech')
               .map((a) => (
                 <li key={a.id} className="flex justify-between border-b border-slate-700/80 pb-1">
                   <span>{a.label}</span>
-                  <span className="text-slate-500">{a.value.toFixed(1)}/5</span>
+                  <span className="text-gray-500">{a.value.toFixed(1)}/5</span>
                 </li>
               ))}
             <li className="font-semibold text-pink-400 pt-4">Humaines</li>
@@ -117,7 +117,7 @@ export default function CompetenciesRadar() {
               .map((a) => (
                 <li key={a.id} className="flex justify-between border-b border-slate-700/80 pb-1">
                   <span>{a.label}</span>
-                  <span className="text-slate-500">{a.value.toFixed(1)}/5</span>
+                  <span className="text-gray-500">{a.value.toFixed(1)}/5</span>
                 </li>
               ))}
           </ul>
@@ -126,3 +126,4 @@ export default function CompetenciesRadar() {
     </section>
   );
 }
+

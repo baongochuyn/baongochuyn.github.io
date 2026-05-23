@@ -135,3 +135,4 @@ export default function SkillIcon({ skillId, className = 'w-8 h-8' }: { skillId:
   if (!Icon) return <span className={className} aria-hidden>◆</span>;
   return <>{Icon(className)}</>;
 }
+

@@ -17,9 +17,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr" className="scroll-smooth">
-      <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-900 text-slate-100">
+      <body className="min-h-screen flex flex-col font-sans antialiased bg-slate-900 text-neutral-200">
         {children}
       </body>
     </html>
   );
 }
+

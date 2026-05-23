@@ -21,7 +21,7 @@ export type ModalSectionedBodyProps = SkillProps | ProjectProps | SoftProps;
 
 /* Hiérarchie : titre modal (h2) > sous-titres section (h3) > corps (p) */
 const sectionTitleClass =
-  'text-base md:text-lg font-semibold text-white tracking-tight border-b border-pink-500/30 pb-2 mb-3';
+  'text-base md:text-lg font-semibold text-neutral-200 tracking-tight border-b border-pink-500/30 pb-2 mb-3';
 
 export default function ModalSectionedBody(props: ModalSectionedBodyProps) {
   return (
@@ -31,7 +31,7 @@ export default function ModalSectionedBody(props: ModalSectionedBodyProps) {
           <h3 className={sectionTitleClass}>{sec.title}</h3>
           <div className="space-y-3">
             {sec.paragraphs.map((p, i) => (
-              <p key={i} className="text-sm md:text-[15px] text-slate-300 leading-relaxed">
+              <p key={i} className="text-sm md:text-[15px] text-neutral-300 leading-relaxed">
                 {props.variant === 'project' ? (
                   <TextWithSkillLinks>{p}</TextWithSkillLinks>
                 ) : (
@@ -45,3 +45,4 @@ export default function ModalSectionedBody(props: ModalSectionedBodyProps) {
     </div>
   );
 }
+

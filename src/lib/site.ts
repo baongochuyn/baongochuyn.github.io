@@ -9,3 +9,4 @@ export function hrefWithBase(path: string): string {
   if (!path.startsWith('/')) return path;
   return `${siteBasePath}${path}`;
 }
+

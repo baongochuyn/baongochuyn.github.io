@@ -56,9 +56,10 @@ export default function ContentPageSkeleton({ showProfileCard = false }: Content
           </div>
         </div>
       </main>
-      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-slate-500">
+      <footer className="py-6 px-4 bg-slate-900 border-t border-slate-700 text-center text-sm text-gray-500">
         © {new Date().getFullYear()} Bao Ngoc HUYNH · Portfolio
       </footer>
     </div>
   );
 }
+

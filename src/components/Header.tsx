@@ -142,7 +142,7 @@ export default function Header() {
       <nav className="max-w-5xl mx-auto px-3 sm:px-4 py-2.5 md:py-3 flex flex-wrap items-center justify-between gap-y-2 gap-x-4 md:gap-x-6">
         <Link
           href={hrefWithBase('/#accueil')}
-          className="text-sm sm:text-base md:text-lg font-semibold text-white hover:text-pink-400 transition-colors cursor-pointer truncate max-w-[min(100%,14rem)] sm:max-w-none tracking-tight"
+          className="text-sm sm:text-base md:text-lg font-semibold text-neutral-200 hover:text-pink-400 transition-colors cursor-pointer truncate max-w-[min(100%,14rem)] sm:max-w-none tracking-tight"
           onClick={() => {
             setOpen(false);
             pendingNavKey = 'accueil';
@@ -154,7 +154,7 @@ export default function Header() {
         </Link>
         <button
           type="button"
-          className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-700 cursor-pointer shrink-0"
+          className="md:hidden p-2 rounded-lg text-gray-400 hover:text-neutral-200 hover:bg-slate-700 cursor-pointer shrink-0"
           onClick={() => setOpen(!open)}
           aria-label="Menu"
           aria-expanded={open}
@@ -175,7 +175,7 @@ export default function Header() {
                 className={`block py-2 md:py-1.5 px-2 md:px-2.5 rounded-lg transition-colors text-xs sm:text-sm font-medium cursor-pointer whitespace-nowrap ${
                   activeKey === key
                     ? 'text-pink-400 bg-slate-800/80'
-                    : 'text-slate-300 hover:text-pink-400 hover:bg-slate-800/80'
+                    : 'text-neutral-300 hover:text-pink-400 hover:bg-slate-800/80'
                 }`}
                 onClick={() => {
                   setOpen(false);
@@ -193,3 +193,4 @@ export default function Header() {
     </header>
   );
 }
+

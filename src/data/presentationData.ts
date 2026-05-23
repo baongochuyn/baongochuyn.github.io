@@ -1,4 +1,4 @@
-﻿/ Page Présentation + base du parcours type CV */
+/ Page Présentation + base du parcours type CV */
 
 export const presentationIntro = {
   title: 'Présentation',
@@ -182,4 +182,5 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Ce socle m’apporte une ouverture utile pour comprendre des contextes variés et collaborer avec des profils différents.',
   },
 ];
+
 

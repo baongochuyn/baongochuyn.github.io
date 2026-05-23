@@ -9,7 +9,7 @@ export default function SoftSkills() {
   return (
     <section id="competences-humaines" className="py-14 px-4 scroll-mt-20 bg-slate-900/50">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-10">
+        <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 text-center mb-10">
           Compétences humaines
         </h2>
 
@@ -25,7 +25,7 @@ export default function SoftSkills() {
               <span className="w-11 h-11 rounded-lg bg-pink-500/20 text-pink-400 flex items-center justify-center flex-shrink-0">
                 <SoftSkillIcon skillId={skill.id} className="w-5 h-5" />
               </span>
-              <span className="font-semibold text-white">
+              <span className="font-semibold text-neutral-200">
                 {skill.title}
               </span>
             </Link>
@@ -35,3 +35,4 @@ export default function SoftSkills() {
     </section>
   );
 }
+

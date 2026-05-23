@@ -36,7 +36,7 @@ const CODE_BLOCK_CH = Math.max(maxLineLength(DOTNET_SNIPPET), maxLineLength(REAC
 function CodeLines({ lines }: { lines: string[] }) {
   return (
     <div
-      className="font-mono text-[9px] sm:text-[10px] leading-snug text-slate-500/40 text-left"
+      className="font-mono text-[9px] sm:text-[10px] leading-snug text-gray-500/40 text-left"
       style={{ width: `${CODE_BLOCK_CH}ch`, maxWidth: '100%' }}
     >
       {lines.map((line, i) => (
@@ -89,13 +89,13 @@ export default function Hero() {
                 priority
               />
             </div>
-            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 tracking-tight">
+            <h1 className="text-xl md:text-2xl lg:text-3xl font-bold text-neutral-200 mb-2 tracking-tight">
               {profile.name}
             </h1>
             <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-nowrap overflow-hidden text-ellipsis">
               {profile.role}
             </p>
-            <p className="text-slate-400 text-sm md:text-base mb-8">
+            <p className="text-gray-400 text-sm md:text-base mb-8">
               {profile.school} · Alternance {profile.company}
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
@@ -106,14 +106,14 @@ export default function Hero() {
                   e.preventDefault();
                   router.push(presentationHref, { scroll: true });
                 }}
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-neutral-200 text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
               >
                 À propos
               </Link>
               <Link
                 href={parcoursHref}
                 prefetch
-                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-slate-200 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-neutral-300 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
               >
                 Parcours
               </Link>
@@ -142,13 +142,13 @@ export default function Hero() {
                 priority
               />
             </div>
-            <h1 className="text-xl md:text-2xl font-bold text-white mb-2 tracking-tight">
+            <h1 className="text-xl md:text-2xl font-bold text-neutral-200 mb-2 tracking-tight">
               {profile.name}
             </h1>
             <p className="text-sm md:text-base text-pink-400 font-medium mb-2 max-w-xl whitespace-nowrap overflow-hidden text-ellipsis">
               {profile.role}
             </p>
-            <p className="text-slate-400 text-sm md:text-base mb-8">
+            <p className="text-gray-400 text-sm md:text-base mb-8">
               {profile.school} · Alternance {profile.company}
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
@@ -159,14 +159,14 @@ export default function Hero() {
                   e.preventDefault();
                   router.push(presentationHref, { scroll: true });
                 }}
-                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-white text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
+                className="inline-flex items-center px-5 py-2.5 rounded-full bg-pink-500 text-neutral-200 text-sm font-semibold hover:bg-pink-600 transition-colors shadow-sm shadow-pink-500/20"
               >
                 À propos
               </Link>
               <Link
                 href={parcoursHref}
                 prefetch
-                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-slate-200 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
+                className="inline-flex items-center px-4 py-2 rounded-full border border-slate-600 bg-transparent text-neutral-300 text-xs font-medium hover:border-pink-500 hover:text-pink-300 hover:bg-slate-800/50 transition-colors"
               >
                 Parcours
               </Link>
@@ -186,3 +186,4 @@ export default function Hero() {
     </section>
   );
 }
+

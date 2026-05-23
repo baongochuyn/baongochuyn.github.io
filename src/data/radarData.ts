@@ -15,3 +15,4 @@ export const competencyRadarAxes: RadarAxis[] = [
   { id: 'flexibilite', label: 'Adaptabilité', value: 4.2, kind: 'soft' },
   { id: 'communication', label: 'Rigueur', value: 4.4, kind: 'soft' },
 ];
+

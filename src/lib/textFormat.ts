@@ -30,3 +30,4 @@ export function isKeyLabelLine(text: string): boolean {
 export function normalizeListItemText(text: string): string {
   return text.replace(/^\d+[.)]\s+/, '').replace(/^[•\-]\s+/, '').trim();
 }
+
