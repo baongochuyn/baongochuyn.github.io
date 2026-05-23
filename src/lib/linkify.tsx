@@ -451,7 +451,7 @@ function splitBoldSegments(text: string): BoldSegment[] {
 }
 
 function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set<string> = new Set()): React.ReactNode {
-  return splitMarkdownLinkSegments(text).flatMap((markdownSeg, markdownIndex) => {
+  return splitMarkdownLinkSegments(text).flatMap<React.ReactNode>((markdownSeg, markdownIndex) => {
     if (markdownSeg.type === 'link' && markdownSeg.href) {
       const internalHref = resolveInternalReferenceHref(markdownSeg.value);
       if (internalHref && excludedHrefs.has(internalHref)) {
@@ -466,7 +466,7 @@ function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set
       );
     }
 
-    return splitLabeledUrlSegments(markdownSeg.value).flatMap((labeledSeg, labeledIndex) => {
+    return splitLabeledUrlSegments(markdownSeg.value).flatMap<React.ReactNode>((labeledSeg, labeledIndex) => {
       if (labeledSeg.type === 'link' && labeledSeg.href) {
         const internalHref = resolveInternalReferenceHref(labeledSeg.value);
         if (internalHref && excludedHrefs.has(internalHref)) {
@@ -481,7 +481,7 @@ function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set
         ];
       }
 
-      return splitUrlSegments(labeledSeg.value).flatMap((seg, index) => {
+      return splitUrlSegments(labeledSeg.value).flatMap<React.ReactNode>((seg, index) => {
         if (seg.type === 'url' && seg.href) {
           return [
             <a key={`${keyPrefix}-url-${markdownIndex}-${labeledIndex}-${index}`} href={seg.href} target="_blank" rel="noreferrer noopener" className={linkClass}>
@@ -491,7 +491,7 @@ function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set
           ];
         }
 
-        return splitReferenceSegments(seg.value, excludedHrefs).flatMap((referenceSeg, referenceIndex) => {
+        return splitReferenceSegments(seg.value, excludedHrefs).flatMap<React.ReactNode>((referenceSeg, referenceIndex) => {
           if (referenceSeg.type === 'link' && referenceSeg.href) {
             if (excludedHrefs.has(referenceSeg.href)) {
               return [renderDisabledLink(`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`, referenceSeg.value)];
@@ -519,11 +519,11 @@ function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set
 }
 
 function renderRichText(text: string, keyPrefix: string, excludedHrefs: Set<string> = new Set()): React.ReactNode {
-  return splitBoldSegments(text).flatMap((segment, segmentIndex) => {
+  return splitBoldSegments(text).flatMap<React.ReactNode>((segment, segmentIndex) => {
     if (segment.type === 'strong') {
       return [
         <strong key={`${keyPrefix}-strong-${segmentIndex}`} className="font-semibold text-pink-400">
-          {segment.value}
+          {renderPlainRichText(segment.value, `${keyPrefix}-strong-${segmentIndex}`, excludedHrefs)}
         </strong>,
       ];
     }

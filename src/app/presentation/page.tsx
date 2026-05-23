@@ -8,6 +8,7 @@ import { presentationIntro, presentationSections, parcoursTimeline, profile } fr
 import { TextWithSkillLinks } from '@/lib/linkify';
 import { hrefWithBase } from '@/lib/site';
 import { ensureListPunctuation, isKeyLabelLine, isLikelyListItem, isNumberedItem, normalizeListItemText } from '@/lib/textFormat';
+import Image from 'next/image';
 
 export const metadata = {
   title: 'Présentation · Bao Ngoc HUYNH',

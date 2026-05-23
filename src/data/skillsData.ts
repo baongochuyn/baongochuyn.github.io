@@ -8,6 +8,7 @@ export type TechnicalSkill = {
 };
 
 export type SoftSkill = {
+  id: string;
   title: string;
   projectIds: string[];
   sections: SkillContentSection[];
