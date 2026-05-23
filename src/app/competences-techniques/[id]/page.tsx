@@ -53,24 +53,23 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                     const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
                     const paragraphClass = `${keyLabel ? 'mt-1 mb-2' : numbered ? 'mt-1 mb-1' : ''}`.trim();
                     const textClass = keyLabel
-                      ? 'text-pink-400 font-semibold'
+                      ? 'font-semibold text-slate-100'
                       : numbered
-                        ? 'text-pink-400 font-medium'
+                        ? 'font-medium text-slate-100'
                         : '';
 
                     return (
-                    <p key={i} className={paragraphClass}>
-                      <span className="flex items-start gap-2.5">
-                        {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
-                        {keyLabel && !bullet ? <span className="mt-[0.35em] inline-block h-4 w-0.5 shrink-0 rounded bg-pink-500/55" aria-hidden /> : null}
-                        <span className={textClass}>
-                          <TextWithProjectLinks>
-                            {bullet ? normalizeListItemText(text) : text}
-                          </TextWithProjectLinks>
+                      <p key={i} className={paragraphClass}>
+                        <span className="flex items-start gap-2.5">
+                          {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
+                          <span className={textClass}>
+                            <TextWithProjectLinks excludeSkillIds={[skill.id]}>
+                              {bullet ? normalizeListItemText(text) : text}
+                            </TextWithProjectLinks>
+                          </span>
                         </span>
-                      </span>
-                    </p>
-                  );})}
+                      </p>
+                    );})}
                 </div>
               </article>
             ))}
