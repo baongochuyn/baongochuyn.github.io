@@ -89,7 +89,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Regard critique',
+        title: 'Mon point de vue',
         paragraphs: [
           `Avec plusieurs mois de recul, l’un des enseignements les plus marquants de ce projet concerne la différence entre un logiciel techniquement fonctionnel et un logiciel réellement fiable d’un point de vue métier.`,
           `Sur DiaPyl, certains traitements semblaient corrects lors des premiers tests, mais révélaient des incohérences uniquement dans des scénarios très spécifiques liés aux règles d’études de charge. Cette reality m’a appris à accorder beaucoup plus d’importance aux cas limites et aux comportements inhabituels lors des phases de validation.`,
@@ -127,7 +127,7 @@ export const projects: Project[] = [
         paragraphs: [
           `Avant d’intervenir directement dans le code, ma première étape a consisté à analyser le fonctionnement global de l’application. Je devais comprendre à la fois le besoin métier, les utilisateurs concernés et la structure technique déjà en place. Pour clarifier cette phase de découverte, je me suis appuyée sur un diagramme de cas d’utilisation, qui m’a permis d’identifier les principales interactions entre les techniciens, l’application et les fonctionnalités de diagnostic.`,
           `En parallèle, j’ai analysé les interactions du système à travers un diagramme de séquence, afin de comprendre le déroulement des échanges entre les différentes composantes de l’application.`,
-          `Une fois cette compréhension acquise, j’ai commencé à intervenir directement sur le développement de l’interface utilisateur. J’ai participé à la création et à l’évolution de several composants React destinés à simplifier la saisie des diagnostics électriques sur le terrain.`,
+          `Une fois cette compréhension acquise, j’ai commencé à intervenir directement sur le développement de l’interface utilisateur. J’ai participé à la création et à l’évolution de plusieurs composants React destinés à simplifier la saisie des diagnostics électriques sur le terrain.`,
           `Pour construire ces interfaces, j’ai utilisé Material UI afin de développer différents menus, formulaires dynamiques et éléments de navigation. Une attention particulière a été portée à l’ergonomie de l’application, car les techniciens devaient pouvoir accéder rapidement aux informations importantes tout en limitant le nombre de manipulations nécessaires durant leurs interventions.`,
           `J’ai également travaillé sur la gestion de l’état de l’application avec les hooks React comme useState et useContext. Cette partie du projet était particulièrement importante, car les diagnostics manipulaient un grand volume d’informations qui devaient rester cohérentes durant toute la navigation de l’utilisateur. Une mauvaise gestion des états pouvait rapidement provoquer des incohérences d’affichage ou des pertes de données pendant la saisie.`,
           `Au fil du projet, j’ai progressivement participé à l’amélioration de la structure globale du Front-end afin de rendre les composants plus réutilisables et plus simples à maintenir. Cette phase m’a permis de mieux comprendre l’importance de l’organisation du code dans une application amenée à évoluer régulièrement avec de nouvelles fonctionnalités.`,
@@ -169,7 +169,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Mon point de vue (Recul critique)',
+        title: 'Mon point de vue',
         paragraphs: [
           `Avec le recul, ce projet m’a surtout appris qu’intégrer une application déjà utilisée en production demande une approche très différente d’un projet développé entièrement depuis le début. J’ai compris qu’avant même d’ajouter de nouvelles fonctionnalités, il était essentiel de bien comprendre l’architecture existante, les contraintes métier et les habitudes des utilisateurs afin d’éviter d’introduire des comportements incohérents ou des régressions dans l’application.`,
           `Cette expérience m’a également permis de prendre conscience de l’importance de la structure d’un Front-end dans la maintenabilité d’un projet. Certains problèmes rencontrés durant le développement provenaient moins des fonctionnalités elles-mêmes que d’une mauvaise organisation des composants ou d’une gestion d’état insuffisamment maîtrisée. Cela m’a poussée à accorder davantage d’attention à la lisibilité du code, à la réutilisabilité des composants et à la cohérence globale de l’interface.`,
@@ -247,7 +247,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Mon point de vue (Recul critique)',
+        title: 'Mon point de vue',
         paragraphs: [
           `Ce projet a profondément changé ma perception de la performance dans les applications web modernes.`,
           `En travaillant sur CityBoard, j’ai réalisé qu’une interface peut être techniquement correcte tout en donnant une impression de lenteur ou d’instabilité si les échanges avec les services externes sont mal maîtrisés. Cette expérience m’a appris à considérer les performances comme une partie intégrante de l’expérience utilisateur et non comme une simple optimisation de fin de projet.`,
@@ -329,7 +329,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Mon point de vue (Recul critique)',
+        title: 'Mon point de vue',
         paragraphs: [
           `Avec le recul, BOOST m’a surtout appris que la maintenance d’un logiciel critique ne consiste pas simplement à corriger des anomalies au fil de l’eau.`,
           `Sur ce type de projet, chaque modification s’inscrit dans une architecture déjà vivante, utilisée quotidiennement par plusieurs équipes et façonnée par des années d’évolutions successives. Cette réalité impose une vigilance constante, car une correction mal maîtrisée peut parfois créer davantage de problèmes qu’elle n’en résout.`,
@@ -409,7 +409,7 @@ export const projects: Project[] = [
         ],
       },
       {
-        title: 'Mon point de vue (Recul critique)',
+        title: 'Mon point de vue',
         paragraphs: [
           `Ce projet a profondément changé ma vision du développement mobile.`,
           `Avant Kalicolis, je voyais surtout les applications mobiles comme des interfaces simplifiées par rapport aux applications web. Pourtant, travailler sur des fonctionnalités comme le temps réel, la géolocalisation ou les notifications m’a montré qu’un environnement mobile impose en réalité des contraintes très spécifiques en matière de fluidité, de synchronisation et de réactivité.`,
