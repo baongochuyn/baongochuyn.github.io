@@ -18,7 +18,7 @@ export default function SoftSkills() {
             <Link
               key={skill.id}
               id={`soft-${skill.id}`}
-              href={hrefWithBase(`/competences-humaines/${skill.id}`)}
+              href={`/competences-humaines/${skill.id}`}
               prefetch
               className="flex items-center gap-4 p-5 rounded-xl bg-slate-800 border border-slate-700 hover:border-pink-500/60 hover:bg-slate-700/80 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-slate-900 text-left scroll-mt-24"
             >

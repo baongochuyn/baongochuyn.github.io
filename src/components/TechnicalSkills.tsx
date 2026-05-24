@@ -18,7 +18,7 @@ export default function TechnicalSkills() {
             <Link
               key={skill.id}
               id={`skill-${skill.id}`}
-              href={hrefWithBase(`/competences-techniques/${skill.id}`)}
+              href={`/competences-techniques/${skill.id}`}
               prefetch
               className="flex flex-col items-center gap-3 p-6 rounded-xl bg-slate-800 border border-slate-700 hover:border-pink-500/60 hover:bg-slate-700/80 transition-all duration-200 cursor-pointer focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2 focus:ring-offset-slate-900 scroll-mt-24"
             >

@@ -54,8 +54,8 @@ const CODE_INNER_MAX = 'max-w-[26rem]';
 
 export default function Hero() {
   const router = useRouter();
-  const presentationHref = hrefWithBase('/presentation');
-  const parcoursHref = hrefWithBase('/presentation#timeline-parcours');
+  const presentationHref = '/presentation';
+  const parcoursHref = '/presentation#timeline-parcours';
 
   useEffect(() => {
     router.prefetch(presentationHref);

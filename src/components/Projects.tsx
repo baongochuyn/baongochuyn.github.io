@@ -82,7 +82,7 @@ export default function Projects() {
                           return skillId ? (
                             <span key={label + i}>
                               <Link
-                                href={hrefWithBase(`/competences-techniques/${skillId}`)}
+                                href={`/competences-techniques/${skillId}`}
                                 prefetch
                                 onClick={(e) => e.stopPropagation()}
                                 className="text-pink-400 hover:text-pink-300 hover:underline cursor-pointer font-medium"

@@ -1,4 +1,4 @@
-﻿export type SkillContentSection = { title: string; paragraphs: string[] };
+export type SkillContentSection = { title: string; paragraphs: string[] };
 
 export type TechnicalSkill = {
   id: string;
@@ -149,7 +149,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Qu\'est-ce qu\'un ORM',
         paragraphs: [
-          `**Un ORM (Object-Relational Mapping)** est une **couche d'abstraction** qui fait l'interface entre le monde objet (C#) et le monde relationnel (base de données). Il permet de manipuler les données via des objets du domaine, sans écrire manuellement la majorité des accès **SQL**.`,
+          `**Un ORM (Object-Relational Mapping)** est une **couche d'abstraction** qui fait l'interface entre le monde objet (C#) et le monde relationnel (base de données). Il permet de manipuler les données via des objets du domaine, sans écrire manuellement la majority des accès **SQL**.`,
           `Dans mes projets .NET, j'utilise **[Entity Framework Core](https://learn.microsoft.com/en-us/ef/core/)** : je définis la structure de la base de données via des classes C#, puis j'utilise les migrations pour faire évoluer le schéma de manière contrôlée.`,
         ],
       },
@@ -275,11 +275,11 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Mon expérience vécue',
         paragraphs: [
-          `J'ai commencé React sur le projet DiagElec, et au début ce n'était pas naturel du tout. Je venais d'une logique plus proche de **jQuery**, donc la logique **JSX**, les **composants** et **[la gestion d'état](https://react.dev/learn/managing-state)** demandaient un vrai changement de manière de penser.`,
+          `J'ai commencé React on the project DiagElec, et au début ce n'était pas naturel du tout. Je venais d'une logique plus proche de **jQuery**, donc la logique **JSX**, les **composants** et **[la gestion d'état](https://react.dev/learn/managing-state)** demandaient un vrai changement de manière de penser.`,
           `Très vite, j'ai compris que React m'obligeait à construire l'interface de façon plus propre : au lieu de tout manipuler à la main, je devais découper l'écran en blocs réutilisables et laisser l'état piloter l'affichage.`,
           `Sur DiagElec, j'ai travaillé sur plusieurs écrans concrets comme la connexion, les tableaux de bord et les formulaires interactifs. C'est là que j'ai commencé à utiliser **[useState](https://react.dev/reference/react/useState)**, **[useContext](https://react.dev/reference/react/useContext)** et **[Material UI](https://mui.com/)** pour avancer plus vite sans perdre en cohérence.`,
           `Ce projet m'a surtout appris à reconnaître les vrais problèmes du quotidien en React : re-renders inutiles, état mal partagé, logique trop imbriquée. C'est en les rencontrant sur un projet réel que j'ai vraiment compris comment progresser.`,
-          `Avec CityBoard, j'ai changé d'échelle. Je ne travaillais plus sur quelques écrans isolés, mais sur une interface de dashboard où plusieurs **widgets** devaient cohabiter, se charger dynamiquement et rester agréables à utiliser.`,
+          `Avec CityBoard, j'ai changé d'échelle. Je ne travaillais plus sur quelques écrans isolés, mais on an interface de dashboard où plusieurs **widgets** devaient cohabiter, se charger dynamiquement et rester agréables à utiliser.`,
           `Le vrai défi n'était pas seulement d'afficher les données, mais de garder l'application fluide malgré les mises à jour fréquentes et les interactions multiples. C'est là que j'ai commencé à être plus attentif aux re-renders, à la structure des composants et à la manière dont j'organisais les props et le state.`,
           `Ce projet m'a aussi appris à mieux gérer les **[appels asynchrones](https://react.dev/learn/synchronizing-with-effects)** et les **[états de chargement](https://react.dev/reference/react/Suspense)**. J'ai compris qu'un frontend React ne se résume pas à afficher des données : il faut aussi anticiper les temps d'attente, les erreurs et les changements d'état sans casser l'expérience utilisateur.`,
           `En pratique, j'y ai construit des composants réutilisables, des modales, des formulaires dynamiques et des écrans qui devaient rester lisibles même quand la logique métier devenait plus dense.`,
@@ -402,51 +402,39 @@ export const softSkills: SoftSkill[] = [
     projectIds: ['cityboard', 'kalicolis', 'diagelec', 'boost'],
     sections: [
       {
-        title: 'Qu\'est-ce que l\'autonomie pour moi',
+        title: 'Introduction',
         paragraphs: [
-          `L'autonomie est une **compétence essentielle** dans mon travail de développeuse. Elle se traduit par ma capacité à avancer seule sur une tâche, à prendre des décisions justifiées et à identifier mes limites pour solliciter de l'aide de manière intelligente.`,
-          `Ce n'est pas de l'isolement—c'est savoir quand demander et comment demander pour progresser.`,
+          `L’**autonomie** est une compétence comportementale essentielle dans le domaine du génie logiciel. Dans un secteur marqué par le renouvellement permanent des technologies, la capacité à prendre en main un sujet de manière indépendante permet de mener à bien des tâches complexes sans dépendre d’une supervision constante. Elle repose sur une démarche active de résolution de problèmes : **planifier ses actions**, structurer ses recherches, tester des hypothèses et s’autoformer pour lever ses blocages techniques.`,
+          `Pour une future ingénieure, être autonome ne signifie pas travailler seule dans son coin. Au contraire, cette compétence implique de savoir avancer par soi-même tout en identifiant ses limites pour solliciter une aide extérieure au bon moment. Le **[Job Characteristics Model de Hackman et Oldham](https://www.personio.com/hr-lexicon/hackman-and-oldham-model/)** met notamment en avant l’autonomie comme un facteur important de motivation et de responsabilisation au travail. Dans mon profil, cette compétence me permet d’assumer mes choix d’implémentation tout en restant alignée avec les attentes de l’équipe, les standards de l’entreprise et les besoins des utilisateurs.`,
         ],
       },
       {
-        title: 'Mes expériences concrètes',
+        title: 'Mon expérience vécue',
         paragraphs: [
-          `Sur le projet Kalicolis, j'ai dû implémenter des écrans mobiles **[Flutter](https://flutter.dev)** quasi de zéro avec des contraintes métier complexes. J'ai appliqué les principes de **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)** même sur mobile. J'avais peu de support initial—juste une description des besoins. J'ai dû : apprendre Flutter rapidement, concevoir l'architecture des écrans, faire des choix d'ergonomie et de navigation sans supervision constante, et valider mes choix avec **[l'équipe](https://en.wikipedia.org/wiki/Teamwork)**.`,
-          `Résultat : 4 écrans implémentés, validés et en production. Cette expérience m'a montré que je POUVAIS être entièrement autonome sur des tâches complexes.`,
-          `Sur CityBoard, j'ai dû concevoir le système de **widgets personnalisés** sans avoir jamais fait cela. J'ai pris le temps de bien comprendre les besoins, prototypé des solutions et itéré. Aucune dépendance à l'équipe pour les décisions techniques.`,
-          `Sur DiagElec et BOOST, quand j'ai rencontré une difficulté (bug bizarre, performance non optimale), j'ai d'abord cherché moi-même : documentation, Google, tests. J'ai résolu 80% de mes problèmes seule avant d'escalader quand c'était vraiment nécessaire.`,
+          `C’est au cours de mes missions chez Bluesoft que j’ai pu développer cette indépendance technique. Mon intégration sur le projet Kalicolis a représenté un moment important, car je devais participer à la construction d’une application mobile collaborative basée sur la **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**.`,
+          `À mon arrivée, je disposais de peu de support technique pour appréhender cet écosystème et ses problématiques spécifiques : géolocalisation, notifications en temps réel, messagerie instantanée et adaptation des interfaces aux contraintes mobiles. Pour respecter les échéances fixées, j’ai mis en place une démarche d’apprentissage rigoureuse. J’ai consulté la documentation, testé plusieurs approches et structuré progressivement ma compréhension du projet. En quelques semaines, j’ai réussi à poser une base solide et à développer des écrans centraux liés à la recherche de trajets et à la gestion des profils.`,
+          `Cette autonomie s’est aussi exprimée dans la structuration des données en C# (.NET) et SQL, afin de lier les utilisateurs, les trajets et les colis. Face à une anomalie de synchronisation des prix entre l’interface et le serveur, j’ai pris l’initiative d’analyser le scénario utilisateur dans sa globalité pour corriger le problème à la racine. En gérant mes tâches de manière indépendante sur Azure DevOps et Git, j’ai pu effectuer les ajustements nécessaires sans supervision constante, tout en validant mes choix avec l’équipe lorsque cela était nécessaire.`,
+          `Cette capacité à avancer seule s’est également confirmée sur CityBoard, où j’ai conçu un système de widgets personnalisés sans modèle existant. J’ai prototypé plusieurs solutions, comparé leurs limites, puis itéré jusqu à obtenir un fonctionnement cohérent avec les besoins du projet. Sur DiagElec et BOOST, face à des bugs complexes ou à des performances non optimales, j’ai également appris à chercher d’abord par moi-même dans les documentations officielles et à multiplier les tests avant d’envisager une escalade auprès de l’équipe.`,
         ],
       },
       {
-        title: 'Mon niveau et ma progression',
+        title: 'Mon niveau de compétence',
         paragraphs: [
-          `Je suis maintenant à un bon niveau d'autonomie sur des tâches estimées à 1-2 jours. Pour les tâches plus complexes ou sur technologies nouvelles, j'aime avoir un point de départ ou une validation rapide pour être sûre que je vais dans la bonne direction.`,
-          `Ce qui m'a vraiment fait gagner en autonomie : l'expérience dans des contextes variés, apprendre à lire de la documentation technique en anglais, et comprendre que "essayer et apprendre" est souvent plus rapide qu'attendre qu'on vous explique.`,
-          `Je suis aussi devenue meilleure pour identifier quand je suis sur un mauvais chemin et escalader rapidement plutôt que de perdre 2 heures sur une impasse.`,
+          `Aujourd’hui, je situe mon autonomie technique à un **niveau solide**. Je suis capable de planifier mes tâches, de rechercher des solutions, de tester différentes hypothèses et de prendre en charge un besoin métier complexe pour le traduire en une solution technique viable et documentée. Ma formation en cinquième année d’ingénierie du logiciel à l’ESIEA consolide cette compétence en me donnant des méthodes pour aborder les problèmes techniques de manière structurée.`,
         ],
       },
       {
-        title: 'Mon recul critique honête',
+        title: 'Mon recul critique et conseils',
         paragraphs: [
-          `Avec le recul, j'ai réalisé que mon autonomie s'accompagne d'une forme de prudence—j'aime vérifier mes décisions avant d'avancer. Certains diraient que c'est une faiblesse. Je pense que c'est une force.`,
-          `Pourquoi ? Parce que cette prudence me pousse à bien penser mes choix plutôt que de coder trop vite. Cela a sauvé plusieurs projets de décisions architecturales mauvaises.`,
-          `Mais je suis consciente que cela peut ralentir ma vélocité parfois. Mon défi : trouver l'équilibre entre bien réfléchir et avancer rapidement.`,
+          `Avec le recul, je pense qu’il ne faut pas confondre **autonomie** et **isolement**. Être autonome, c’est savoir chercher par soi-même, mais aussi s’imposer une limite de temps face à un blocage persistant avant de solliciter un collègue. Je conseille également de valider les choix d’architecture ou de modélisation importants avec un profil plus expérimenté, afin que l’indépendance technique reste cohérente avec les standards de l’entreprise.`,
+          `Je porte aussi un regard critique sur ma propre pratique. Ma volonté de résoudre un problème par moi-même m’a parfois poussée à prolonger mes recherches individuelles au détriment du partage d’information immédiat. Pour progresser, je communique désormais plus régulièrement sur l’avancement de mes investigations lors des rituels agiles, afin de rendre mes blocages éventuels plus visibles.`,
         ],
       },
       {
         title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `- Lire **[la documentation officielle](https://learn.microsoft.com/en-us/dotnet/)** en priorité (plutôt que des tutos aléatoires)`,
-          `- Pratiquer l'auto-documentation : expliquer à moi-même pourquoi je fais un choix`,
-          `- Apprendre des erreurs : chaque bug est une opportunité d'être plus autonome`,
-          `- Mentor pairing occasionnel : travailler avec quelqu'un de plus expérimenté 1-2 fois par an`,
-        ],
-      },
-      {
-        title: 'Mes objectifs futurs',
-        paragraphs: [
-          `Je souhaite continuer à développer une **autonomie plus AFFIRMÉE**—pas juste "capable de travailler seule" mais "capable de prendre des décisions percutantes et de les défendre".`,
-          `À long terme : être capable de porter entièrement des projets complexes (architecture, implémentation basée sur les principes de **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**, validation) de bout en bout.`,
+          `Pour développer cette compétence, je consacre régulièrement du temps à la lecture d’ouvrages techniques de référence et à la documentation officielle des technologies que j’utilise, notamment **[Microsoft Learn](https://learn.microsoft.com/en-us/training/)** pour consolider mes connaissances .NET et backend. Cette méthode me permet d’acquérir des bases solides de manière autonome, puis de les expérimenter directement dans mes projets.`,
+          `Je m’appuie également sur l’auto-documentation : lorsque je prends une décision technique, j’essaie d’en formaliser les raisons pour mieux comprendre mes propres choix. À moyen terme, mon objectif est de développer mon autonomie sur la phase de cadrage initial des projets, en participant davantage à la définition des architectures techniques avant le début du développement. À plus long terme, mon ambition est de devenir une ingénieure référente, capable de mener des projets de grande envergure de bout en bout et d’accompagner des profils plus juniors vers cette même indépendance professionnelle.`,
         ],
       },
     ],
@@ -457,55 +445,39 @@ export const softSkills: SoftSkill[] = [
     projectIds: ['diagelec', 'cityboard', 'kalicolis'],
     sections: [
       {
-        title: 'Pourquoi la curiosité est centrale pour moi',
+        title: 'Introduction',
         paragraphs: [
-          `La curiosité est une **qualité centrale** dans mon parcours de développeuse. Elle se traduit par une volonté CONSTANTE de comprendre en profondeur les technologies, d'aller au-delà des tâches demandées et de chercher "pourquoi ?" pas juste "comment ?".`,
-          `Sans curiosité, on applique des recettes sans jamais vraiment comprendre. Avec curiosité, on devient expert progressivement.`,
+          `La **curiosité** et l’**apprentissage continu** sont essentiels pour évoluer dans le domaine du développement logiciel. Les technologies, les frameworks et les pratiques changent rapidement ; il est donc nécessaire de rester en veille et de comprendre les outils au-delà d’une simple utilisation superficielle. Cette compétence repose sur une démarche active : chercher à comprendre pourquoi une technologie fonctionne d’une certaine manière, analyser ses limites et relier l’apprentissage à des cas concrets.`,
+          `Pour une future ingénieure, être curieuse ne signifie pas seulement accumuler des connaissances. Cela consiste surtout à transformer cette curiosité en valeur utile pour les projets : mieux comprendre les besoins, anticiper les problèmes et construire des solutions plus fiables. Les travaux présentés par **[Réseau Canopé sur la curiosité, l’apprentissage et le numérique](https://www.reseau-canope.fr/agence-des-usages/curiosite-apprentissage-et-numerique-que-dit-la-recherche.html)** montrent notamment que la recherche active d’information favorise la mémorisation et l’engagement dans l’apprentissage.`,
         ],
       },
       {
-        title: 'Mes exemples concrets',
+        title: 'Mon expérience vécue',
         paragraphs: [
-          `Lors de ma découverte de React sur DiagElec, j'aurais pu juste "appliquer useState et avancer". Au lieu de cela, j'ai :`,
-          `- Exploré **[la documentation React officielle](https://react.dev/)** en profondeur (pas seulement en survol)`,
-          `- Expérimenté avec **[différents hooks](https://react.dev/reference/react/hooks)** et cas d'usage`,
-          `- Analysé du code React produit pour comprendre les **[patterns](https://react.dev/learn)**`,
-          `- Lu des articles sur **[la performance React](https://react.dev/reference/react/useMemo)** et **[le rendering](https://react.dev/learn/render-and-commit)**`,
-          `Résultat : j'étais bien plus à l'aise que prévu et j'ai pu prendre des décisions architecturales pertinentes rapidement.`,
-          `Sur CityBoard, ma curiosité m'a poussée à comprendre non seulement l'api qu'on utilisait, mais aussi son backend, pourquoi c'était conçu comme ça, quels cas limites existaient. Cela m'a aidé à identifier des bugs avant qu'ils n'impactent l'utilisateur.`,
-          `Sur Kalicolis, j'ai voulu comprendre les performances mobiles—pas juste "ça marche sur mon téléphone". J'ai appris les outils de profiling Flutter, j'ai optimisé les frame rates et **[la consommation de batterie](https://flutter.dev/docs/perf/rendering/best-practices)**.`,
+          `Au cours de mon alternance chez Bluesoft, j’ai fait de cette curiosité technique un outil du quotidien. Mon intégration sur le projet DiagElec en est une illustration concrète, car j’ai dû prendre en main React alors que je connaissais encore peu cet environnement.`,
+          `Pour éviter une utilisation trop superficielle de la bibliothèque, j’ai choisi d’approfondir la **[documentation officielle de React](https://react.dev/learn)**. Je voulais comprendre la logique des composants, le cycle de rendu, les hooks et la gestion de l’état. Cette exploration m’a permis de manipuler plus efficacement Material UI pour concevoir des formulaires dynamiques destinés aux techniciens terrain. Face à des volumes de données importants, ma curiosité m’a aussi poussée à étudier plus sérieusement useState et useContext afin de mieux organiser les informations dans l’interface.`,
+          `Cette démarche m’a permis de restructurer certains composants pour les rendre plus réutilisables et limiter les pertes d’informations lors de la navigation. Une phase de découverte s’est donc transformée en livrables stables pour une application utilisée en production.`,
+          `Cette volonté d’aller au-delà de la tâche demandée s’est également manifestée sur CityBoard. Au lieu de me limiter à l’intégration brute des API nécessaires aux widgets, j’ai cherché à comprendre leur fonctionnement global, les formats de données, les cas limites et les impacts possibles sur l’expérience utilisateur. Cette investigation m’a aidée à anticiper certaines anomalies logiques avant qu’elles ne perturbent les utilisateurs finaux.`,
         ],
       },
       {
-        title: 'Mon niveau de curiosité',
+        title: 'Mon niveau de compétence',
         paragraphs: [
-          `Je suis à un **excellent niveau de curiosité** techniquement. J'aime apprendre et approfondir. Cependant, j'ai aussi appris à canaliser cette curiosité pour qu'elle ne me paralyse pas.`,
-          `Progression : auparavant, ma curiosité me menait souvent à la paralysie (trop de choses à apprendre, par où commencer ?). Maintenant, j'apprends de manière ciblée : à court terme (ce qui me rend meilleure demain), à moyen terme (ce qui renforce mon expertise), et à long terme (vision d'expert).`,
+          `Aujourd’hui, je situe ma curiosité technique à un **niveau solide**. J’aime explorer des sujets complexes, mais j’ai aussi appris à canaliser cette énergie pour préserver ma productivité. Grâce à ma formation en cinquième année d’ingénierie du logiciel à l’ESIEA et à mon expérience chez Bluesoft, j’organise ma veille selon trois horizons : le court terme pour répondre aux besoins immédiats de mes projets, le moyen terme pour consolider mon profil full stack, et le long terme pour construire une vision plus globale d’ingénieure.`,
         ],
       },
       {
-        title: 'Mon auto-critique honnête',
+        title: 'Mon recul critique et conseils',
         paragraphs: [
-          `Avec le recul, je réalise que cette curiosité peut parfois me mener à passer plus de temps que nécessaire sur un sujet. Je suis une **chercheuse dans l'âme**. "Juste un dernier article..." et soudain 2 heures ont passé.`,
-          `J'ai donc appris à mieux prioriser et à équilibrer exploration profonde avec **[efficacité](https://en.wikipedia.org/wiki/Efficiency)**. Pour chaque sujet, je me pose la question : "Quel est le ROI temps de comprendre ceci en profondeur maintenant ?"`,
-          `Maintenant, j'explore en profondeur les sujets HIGH ROI (architectures, performances, patterns). Sur les sujets lower ROI, je préfère "assez comprendre pour utiliser" puis approfondir plus tard si nécessaire.`,
+          `Avec l’expérience, je conseille de toujours relier la curiosité technique à une application pratique. Explorer une technologie uniquement de manière théorique peut rester abstrait, alors qu’un petit projet personnel ou un POC permet de comprendre rapidement ses contraintes réelles. Je recommande aussi de documenter ses découvertes, car expliquer un concept à quelqu’un d’autre oblige à clarifier sa propre compréhension.`,
+          `Avec le recul, je sais aussi que ma curiosité peut parfois me pousser à passer trop de temps sur un sujet par intérêt intellectuel. Pour éviter cela, j’évalue désormais le retour sur investissement de mes recherches. J’approfondis les sujets critiques comme l’architecture, la performance ou la sécurité, tandis que j’adopte une approche plus rapide sur les technologies secondaires.`,
         ],
       },
       {
-        title: 'Comment j\'entretiens la curiosité',
+        title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `- Lire des articles techniques (**[Medium](https://medium.com/)**, **[Dev.to](https://dev.to/)**, **[Hacker News](https://news.ycombinator.com/)**, **[CSS-Tricks](https://css-tricks.com/)**) 2 fois par semaine`,
-          `- Suivre des talks de conférences (YouTube, enregistrements de conférences)`,
-          `- Faire des projets personnels sur des technologies nouvelles`,
-          `- Participer à des discussions d'équipe sur les choix technologiques`,
-          `- Me poser la question "pourquoi ?" quand je ne comprends pas une décision`,
-        ],
-      },
-      {
-        title: 'Mes objectifs futurs sur la curiosité',
-        paragraphs: [
-          `Je veux continuer à nourrir cette curiosité mais de manière très **ciblée** vers : les architectures logicielles avancées (**[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**, CQRS, Event Sourcing), les performances et la scalabilité, les tendances émergentes dans **[l'écosystème backend/cloud](https://learn.microsoft.com/en-us/dotnet/architecture/)**.`,
-          `À long terme : être reconnue comme "quelqu'un qui comprend non seulement comment faire, mais pourquoi on le fait comme ça".`,
+          `Pour développer cette compétence, je consacre chaque semaine du temps à la lecture d’ouvrages techniques, à la documentation officielle et à la veille sur des plateformes comme **[Dev.to](https://dev.to/)** ou **[Hacker News](https://news.ycombinator.com/)**. Je complète cette veille par des expérimentations concrètes, afin de transformer mes recherches en réflexes utilisables dans mes projets.`,
+          `À moyen terme, je souhaite orienter cette curiosité vers des concepts d’architecture avancés comme le CQRS, l’Event Sourcing et les architectures distribuées. À plus long terme, mon ambition est de devenir une professionnelle capable non seulement de concevoir des solutions fiables, mais aussi d’expliquer clairement la pertinence de ses choix techniques auprès d’une équipe ou de parties prenantes non techniques.`,
         ],
       },
     ],
@@ -516,60 +488,39 @@ export const softSkills: SoftSkill[] = [
     projectIds: ['cityboard', 'diagelec', 'boost'],
     sections: [
       {
-        title: 'Pourquoi le travail en équipe est crucial',
+        title: 'Introduction',
         paragraphs: [
-          `Le travail en équipe est un **élément CENTRAL** de mes expériences professionnelles. Tous les meilleurs projets que j'ai vus l'ont été grâce à une équipe forte qui collaborait bien. Aucune personne n'est assez bonne seule.`,
-          `Pour moi, cela ne se limite pas à "partager les tâches". C'est une communication régulière, une écoute active, des feedbacks constructifs, et un vrai partage de vision.`,
+          `Le **travail en équipe** et la **collaboration** sont au cœur de la réussite d’un projet informatique. Dans le développement logiciel, aucune compétence individuelle ne suffit à couvrir seule l’ensemble des besoins d’une application moderne. La qualité d’un projet dépend donc de la capacité des membres de l’équipe à communiquer, partager leurs connaissances, confronter leurs idées et sécuriser collectivement les décisions techniques.`,
+          `Pour une future ingénieure, bien collaborer ne consiste pas seulement à répartir des tâches. Il s’agit de créer un dialogue constant entre les profils techniques, fonctionnels et métier afin de concevoir des outils fiables, maintenables et adaptés aux besoins réels des utilisateurs. GitLab rappelle dans ses ressources sur la **[collaboration des équipes logicielles](https://about.gitlab.com/topics/version-control/software-team-collaboration/)** que la communication, les retours rapides et les revues de code contribuent à réduire les silos et à améliorer la qualité du produit.`,
         ],
       },
       {
-        title: 'Mes expériences de collaboration',
+        title: 'Mon expérience vécue',
         paragraphs: [
-          `Sur CityBoard, j'ai travaillé avec **[4-5 autres développeurs](https://scrumguides.org/)** en sprint Scrum. Nous avions des daily stand-ups (15 min), des code reviews, et des rétrospectives.`,
-          `Concrètement : j'avais ma tâche (widgets personnalisés), mon collègue avait la sienne (API backend), et un autre avait les tests. On se passait les dépendances, on se donnait des retours sur le code.`,
-          `Un exemple : quand j'ai implémenté les widgets, mon collègue backend a review mon code, a trouvé un bug de race condition, et on a discuté de la **[meilleure façon de le fixer](https://react.dev/learn/render-and-commit)**. Je n'aurais JAMAIS trouvé ce bug seule. Les code reviews sauvent des vies (de projets).`,
-          `Sur DiagElec, j'ai travaillé avec **[2 développeurs et 1 UX designer](https://www.nngroup.com/articles/ux-design-ux-designer/)**. Les discussions avec le designer m'ont appris à ÉCOUTER les besoins UX, pas juste implémenter ce qu'on me dit.`,
-          `Sur BOOST, le chef de projet était très impliqué. Quand j'avais une question métier, je l'appelais. Quand je trouvais un bug, je le rapportais immédiatement. Cela a créé une boucle de feedback très rapide et un projet de meilleure qualité.`,
+          `C’est au cours de mes missions chez Bluesoft que j’ai développé ma pratique du travail d’équipe. Mon arrivée sur DiagElec a été une expérience importante, car j’ai rejoint une équipe déjà engagée dans le développement d’une application de diagnostics terrain.`,
+          `Pour m’approprier l’architecture React et Material UI du projet, je me suis appuyée sur la documentation interne, mais aussi sur les échanges avec les autres développeurs. Cette phase d’alignement m’a permis de mieux comprendre la circulation des états complexes dans l’application et de valider progressivement ma compréhension de l’implémentation existante. La collaboration ne s’est pas limitée au code : pour répondre aux contraintes des techniciens terrain, j’ai dû intégrer des enjeux d’ergonomie et d’expérience utilisateur en échangeant avec les personnes en lien avec les besoins fonctionnels.`,
+          `Plus tard, ma contribution s’est élargie à la qualité backend avec la mise en place de tests NUnit. Cette double implication m’a obligée à adapter ma communication avec l’équipe, aussi bien sur l’affichage des composants que sur la conformité des traitements critiques.`,
+          `Cette collaboration s’est également manifestée sur BOOST. Travailler sur un logiciel C# et Entity Framework Core déjà utilisé en production imposait de sécuriser chaque livraison pour éviter les régressions. Lors de la résolution d’une anomalie qui semblait être un simple défaut d’affichage en JavaScript/jQuery, j’ai découvert que le problème venait en réalité d’un enchaînement entre plusieurs traitements métier et la base de données. Avant toute correction, j’ai collaboré avec le chef de projet pour reproduire le cas, analyser les causes racines et confirmer le comportement attendu. Cette expérience m’a montré qu’en maintenance applicative, la confrontation rapide entre solution technique et réalité métier est indispensable.`,
         ],
       },
       {
-        title: 'Comment je collabore',
+        title: 'Mon niveau de compétence',
         paragraphs: [
-          `- Communication régulière : daily standups, messages Slack, retours écrits`,
-          `- Code reviews sérieuses : je prends le temps de review le code et de donner des retours constructifs (avec des suggestions, pas juste des critiques)`,
-          `- Capacité à écouter : quand quelqu'un me fait un retour, j'écoute, je réfléchis, je discute`,
-          `- Proactivité : si je vois un problème, je le remonte immédiatement plutôt que de l'ignorer`,
-          `- Humilité : reconnaître quand quelqu'un a une meilleure idée que moi`,
+          `Aujourd’hui, je situe ma capacité de collaboration à un **bon niveau**. Je participe activement aux rituels de l’équipe, aux revues de code et aux échanges techniques. Ma formation à l’ESIEA m’a apporté un socle méthodologique sur les pratiques agiles, tandis que mon expérience chez Bluesoft m’a appris que la collaboration est souvent le moyen le plus efficace pour lever rapidement les blocages techniques.`,
         ],
       },
       {
-        title: 'Mon évolution sur la collaboration',
+        title: 'Mon recul critique et conseils',
         paragraphs: [
-          `Au début des projets, j'avais tendance à rester un peu prudente—je ne voulais pas "déranger" avec mes questions. Progressivement, j'ai réalisé que poser des questions n'était PAS déranger—c'était contribuer.`,
-          `Maintenant, je suis bien plus confiante pour exprimer mes idées en réunion. Je participe activement aux discussions techniques. Et j'ai appris à donner des retours respectueux mais honnêtes sur le code des autres.`,
+          `Avec l’expérience, je conseille de ne jamais s’isoler face à une anomalie complexe. Le pair programming ou les échanges rapides avec un collègue permettent souvent de confronter deux raisonnements et de trouver une solution plus robuste. Les revues de code sont également essentielles, car elles ne servent pas seulement à corriger des erreurs, mais aussi à diffuser les bonnes pratiques dans l’équipe.`,
+          `Avec le recul, je sais que je suis plus performante dans un collectif où les idées circulent librement. Cependant, j’ai parfois confondu collaboration et recherche permanente du consensus, ce qui peut ralentir certaines décisions. J’apprends donc à mieux assumer mes choix techniques tout en restant ouverte aux critiques constructives.`,
         ],
       },
       {
-        title: 'Mon recul honnête',
+        title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `Avec le recul, j'ai réalisé que j'avais BESOIN du travail en équipe pour vraiment progresser. Les projets où j'ai appris le plus étaient ceux avec une équipe forte qui se donnait des retours.`,
-          `La solitude n'est pas mon amie. Je suis meilleure entourée de gens avec **[qui je peux discuter](https://en.wikipedia.org/wiki/Collaboration)**, échanger, challenger mes idées.`,
-        ],
-      },
-      {
-        title: 'Comment j\'entretiens les relations d\'équipe',
-        paragraphs: [
-          `- Déjeuners réguliers avec **[l'équipe](https://en.wikipedia.org/wiki/Team_building)** (social + team building)`,
-          `- Pair programming occasionnel (apprendre de quelqu'un d'expérimenté)`,
-          `- Documentations partagées pour que nous puissions tous contribuer`,
-          `- Meetings réguliers pour aligner la vision et les priorités`,
-        ],
-      },
-      {
-        title: 'Mes objectifs futurs',
-        paragraphs: [
-          `Je souhaite continuer à développer mon impact en équipe—non seulement "participer" mais "contribuer aux décisions + mentorer des juniors potentiellement".`,
-          `À long terme : être quelqu'un avec qui les autres aiment travailler—pas juste techniquement bonne, mais en tant que personne et collaboratrice.`,
+          `Pour développer cette compétence, je m’appuie sur les rituels agiles, les revues de code, la documentation partagée et les échanges informels avec l’équipe. Je souhaite aussi renforcer ma compréhension des dynamiques collectives en m’autoformant sur la communication interpersonnelle et les pratiques de leadership technique.`,
+          `À moyen terme, mon objectif est de contribuer davantage aux décisions collectives, notamment sur les choix d’architecture et d’organisation du code. À plus long terme, mon ambition est de devenir une leader technique capable d’animer des ateliers, de guider des profils plus juniors et de favoriser une collaboration saine dans des projets de grande envergure.`,
         ],
       },
     ],
@@ -577,55 +528,41 @@ export const softSkills: SoftSkill[] = [
   {
     id: 'flexibilite',
     title: 'Flexibilité et Adaptabilité',
-    projectIds: ['diagelec', 'cityboard', 'boost'],
+    projectIds: ['diagelec', 'cityboard', 'boost', 'kalicolis'],
     sections: [
       {
-        title: 'Flexibilité : une nécessité en dev',
+        title: 'Introduction',
         paragraphs: [
-          `En développement, les besoins changent constamment. Les spécifications se redéfinissent. Les technologies évoluent. Les priorités pivotent.`,
-          `La flexibilité n'est pas un **"nice to have"**—c'est une compétence ESSENTIELLE. Et j'ai appris à l'être à travers les projets.`,
+          `La **flexibilité** et l’**adaptabilité** sont des compétences comportementales fondamentales dans le domaine du génie logiciel. Dans un environnement où les outils évoluent rapidement, où les spécifications changent et où les priorités peuvent être redéfinies selon les besoins utilisateurs, savoir s’ajuster devient une condition essentielle de réussite.`,
+          `Être adaptable ne consiste pas à subir les changements, mas à adopter une posture constructive face à l’imprévu. Pour une future ingénieure, cette compétence permet de rester efficace dans des contextes variés, de comprendre rapidement de nouveaux environnements et de transformer les contraintes en opportunités d’apprentissage. **[ORSYS souligne d’ailleurs, dans son article sur les soft skills dans la Tech](https://www.orsys.fr/orsys-lemag/en/top-soft-skills-it-for-success-in-tech/)**, que les compétences comportementales comme la communication, la collaboration, le leadership et la résolution de problèmes sont devenues déterminantes dans les métiers techniques.`,
         ],
       },
       {
-        title: 'Mes expériences de changement et d\'adaptation',
+        title: 'Mon expérience vécue',
         paragraphs: [
-          `Sur DiagElec, à mi-projet, les besoins UX ont changé radicalement. On a dû refactorer 30 % du code pour s'adapter à la nouvelle vision. J'aurais pu me plaindre ( 😉 ), mais j'ai juste... refondu le code. Résultat : projet livré à la deadline, qualité maintenue.`,
-          `Sur CityBoard, les APIs qu'on utilisait ont changé leur format. Au lieu de "c'est cassé, désolé", j'ai adapté mon code en quelques heures pour supporter les deux formats—backward compatible.`,
-          `Sur BOOST, j'ai dû switcher entre le **[C# et jQuery](https://jquery.com/)** en quelques jours (un projet legacy avait besoin d'aide). Au lieu de dire "je ne connais pas jQuery", j'ai appris sur le tas et je suis devenue productive en 1-2 jours.`,
-          `Personnellement : j'ai changé mon parcours 3 fois (langues → informatique, Vietnam → France → entreprise française). Chaque changement m'a forcée à m'adapter.`,
+          `Mon parcours personnel m’a très tôt confrontée à l’adaptation. En me réorientant des langues vers le génie logiciel, puis en quittant le Vietnam pour étudier et travailler en France, j’ai dû m’adapter simultanément à une nouvelle culture, à une nouvelle langue, à de nouvelles méthodes de travail et à un domaine technique exigeant.`,
+          `Cette expérience m’a aidée à comprendre que les mécanismes d’adaptation sont proches entre l’apprentissage d’une langue et l’apprentissage d’un framework. Dans les deux cas, il faut observer les règles existantes, accepter de sortir de sa zone de confort et pratiquer sans craindre l’erreur.`,
+          `Cette flexibilité s’est ensuite confirmée chez Bluesoft. Sur DiagElec, j’ai dû m’adapter à une application React déjà structurée et utilisée en production. Sur CityBoard, j’ai dû intégrer plusieurs API externes dont les formats et les comportements pouvaient varier. Sur BOOST, j’ai été amenée à intervenir sur un projet legacy en C# et jQuery, ce qui m’a demandé de changer rapidement de logique technique. Dans chacun de ces contextes, j’ai appris à ne pas bloquer face à la nouveauté, mais à analyser calmement les contraintes pour redevenir productive rapidement.`,
         ],
       },
       {
-        title: 'Comment je suis flexible',
+        title: 'Mon niveau de compétence',
         paragraphs: [
-          `- Mentalité "c'est possible"—plutôt que d'assumer que c'est infaisable, je pense "comment je fais ?"`,
-          `- Apprendre vite : nouvelle technologie ? 1-2 jours et je suis productive`,
-          `- Prendre du recul : quand un changement arrive, je prends le temps de bien l'analyser plutôt que de bloquer`,
-          `- Proposer des alternatives : plutôt que "on ne peut pas", je dis "on peut faire A ou B, voici les compromis"`,
+          `Aujourd’hui, je situe ma capacité d’adaptation à un **niveau satisfaisant**. J’ai acquis la faculté de ne pas craindre l’inconnu et de rester productive lorsque mon environnement change. Cette compétence reste toutefois en construction permanente, car les méthodes de travail, les technologies et les cultures d’équipe peuvent varier fortement d’un projet à l’autre.`,
         ],
       },
       {
-        title: 'Mon recul honnête sur la flexibilité',
+        title: 'Mon recul critique et conseils',
         paragraphs: [
-          `Les changements rapides peuvent sembler chaotiques. J'ai dû apprendre à rester calme quand les priorités changent du jour au lendemain.`,
-          `Ma stratégie : bien structurer mon travail pour que les changements ne cassent pas tout. Si mon code est modulaire et découplé, un changement de spécification est facile à adapter.`,
-          `Mais je reconnais aussi : trop de changements = stress. Donc j'aime aussi avoir une **[certaine stabilité](https://en.wikipedia.org/wiki/Agile_software_development)** et de la clarté sur les priorités à long terme.`,
+          `Avec l’expérience, je conseille de considérer les changements comme des occasions d’apprendre plutôt que comme des interruptions. Les imprévus techniques permettent souvent d’identifier les fragilités d’une architecture ou d’une organisation. Pour progresser, il est utile de documenter les décisions, de garder une structure de travail claire et de ne pas attendre que tout soit parfaitement stable pour avancer.`,
+          `Avec le recul, je sais aussi que l’adaptabilité demande de l’énergie. Trop de changements simultanés peuvent créer du stress ou de la dispersion. J’essaie donc de conserver des repères stables : prioriser les tâches, clarifier les attentes et découper les problèmes pour garder une progression maîtrisée.`,
         ],
       },
       {
-        title: 'Mes pratiques d\'adaptabilité',
+        title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `- Lire les retours d'équipe régulièrement (Slack, rétrospectives)`,
-          `- Documenter les décisions pour que les changements aient du contexte`,
-          `- Faire du pair dev avec **[d'autres](https://en.wikipedia.org/wiki/Pair_programming)** si je dois apprendre une nouvelle technologie`,
-          `- Accepter l'échec et apprendre rapidement plutôt que de bloquer`,
-        ],
-      },
-      {
-        title: 'Mes objectifs futurs',
-        paragraphs: [
-          `Je veux rester flexible mais aussi influencer la direction—plutôt que de simplement réagir aux changements, je veux aider à PRENDRE les bonnes décisions pour éviter les changements inutiles.`,
-          `À long terme : être une leader technique qui guide les décisions et reste flexible pour adapter les plans selon la réalité.`,
+          `Pour développer cette compétence, je m’appuie d’abord sur l’apprentissage par l’expérience en acceptant de sortir régulièrement de ma zone de confort. Je complète cette pratique par des lectures et formations ciblées sur l’agilité, la gestion du changement et les architectures évolutives. La formation ORSYS **[Développer sa flexibilité comportementale](https://www.orsys.fr/formation/fle)** constitue une ressource intéressante pour structurer cette progression, car elle aborde l’adaptation dans un contexte de changement professionnel.`,
+          `À moyen terme, je souhaite être capable d’accompagner une équipe lors de transitions technologiques, par exemple lors de l’adoption d’un nouveau framework ou d’une évolution d’architecture. À plus long terme, mon ambition est de devenir une professionnelle capable d’anticiper les mutations du secteur tech et de guider les choix stratégiques d’un projet avec clarté et sérénité.`,
         ],
       },
     ],
@@ -633,65 +570,42 @@ export const softSkills: SoftSkill[] = [
   {
     id: 'communication',
     title: 'Communication Professionnelle',
-    projectIds: ['cityboard', 'boost', 'diagelec'],
+    projectIds: ['kalicolis', 'cityboard', 'boost', 'diagelec'],
     sections: [
       {
-        title: 'Pourquoi la communication est une compétence technique',
+        title: 'Introduction',
         paragraphs: [
-          `La communication est UNE COMPÉTENCE TECHNIQUE. Je mets un point d'honneur là-dessus parce que j'ai vu trop de projets échouer à cause d'une mauvaise communication, pas à cause d'un mauvais code.`,
-          `En tech, on oublie souvent que "j'ai implémenté X" ne vaut rien si personne ne sait que c'est fait ou ne comprend pourquoi.`,
+          `La **communication professionnelle** représente une compétence fondamentale dans les interactions en entreprise. Dans le contexte de l’ingénierie logicielle, elle est particulièrement importante, car elle permet de transmettre des informations techniques complexes de manière claire, concise et adaptée aux interlocuteurs.`,
+          `Une bonne communication contribue directement à la qualité d’un projet. Elle permet d’éviter les malentendus, de clarifier les besoins, de sécuriser les décisions techniques et d’aligner l’équipe autour d’objectifs communs. Pour une future ingénieure, communiquer efficacement signifie être capable d’écouter, de reformuler, de vulgariser, de documenter et de formuler des retours constructifs. **[ORSYS rappelle également, dans son article sur les soft skills dans la Tech](https://www.orsys.fr/orsys-lemag/en/top-soft-skills-it-for-success-in-tech/)**, que la communication et la collaboration sont devenues des compétences clés pour réussir dans les métiers techniques.`,
         ],
       },
       {
-        title: 'Mes expériences de communication',
+        title: 'Mon expérience vécue',
         paragraphs: [
-          `Sur BOOST, mon chef de projet m'avait demandé : "Comment ça va ta tâche ?" Plutôt que de dire simplement "OK", j'ai expliqué : "J'ai terminé le volet 1, voici les résultats des tests. Le volet 2 va prendre 2 jours. Voici les risques identifiés."`,
-          `Résultat ? Il pouvait replanifier complètement et **[rassurer les stakeholders](https://en.wikipedia.org/wiki/Project_management)**. Sans cette communication, les stakeholders auraient paniqué en voyant que nous n'étions pas à 50 % d'avancement à mi-sprint.`,
-          `Sur CityBoard, j'ai proposé une **[architecture en 3 couches](https://en.wikipedia.org/wiki/Multitier_architecture)** à l'équipe. Plutôt que de dire juste "c'est mieux", j'ai expliqué le POURQUOI : comment cela rend le code plus testable, plus maintenable à long terme. Avec des exemples concrets.`,
-          `Résultat : l'équipe a compris, a adhéré, et nous avons implémenter cela ensemble. Si j'avais juste imposé, cela aurait été un conflit.`,
-          `Sur les code reviews : j'aime donner des retours, mais je les formule de manière constructive. Pas "ce code est mauvais", mais "voici pourquoi ce pattern est plus maintenable, voici comment je ferais".`,
+          `Même si la communication est présente dans l’ensemble de mes missions chez Bluesoft, c’est sur le projet Kalicolis que j’ai particulièrement progressé sur ce point. Au début de mon parcours, ma réserve naturelle m’incitait à rester silencieuse en réunion. Lorsque j’avais une idée, je n’osais pas toujours la formuler, pensant qu’en tant qu’alternante, ma proposition n’aurait pas forcément de poids.`,
+          `Le déclic est arrivé lorsqu’un collègue a exprimé à voix haute une idée très proche de celle que je gardais pour moi, et que l’équipe y a immédiatement adhéré. J’ai alors compris que, quel que soit notre statut, exprimer ses idées est essentiel pour faire avancer le produit et collaborer efficacement.`,
+          `À partir de ce moment, j’ai progressivement transformé ma posture. Lors des rituels agiles, j’ai commencé à partager plus clairement mes propositions, mes points de blocage et mes hypothèses. Grâce à mes recherches personnelles en UX/UI, j’ai proposé des améliorations concrètes d’interface et de parcours. En me plaçant dans la position de l’utilisateur final, j’ai utilisé la communication pour sensibiliser l’équipe à l’expérience client et contribuer à concevoir une application plus utile.`,
+          `Cette progression s’est aussi traduite dans mes points d’avancement. J’ai appris à structurer mes messages en indiquant ce qui était terminé, ce qui restait à faire, les risques identifiés et les délais estimés. En revue de code, j’ai également appris à formuler des retours bienveillants, précis et orientés vers la maintenabilité du projet.`,
         ],
       },
       {
-        title: 'Comment je communique',
+        title: 'Mon niveau de compétence',
         paragraphs: [
-          `- Daily stand-ups : statut court + bloqueurs clairs`,
-          `- Slack : messages concis mais complets (contexte + question/fait)`,
-          `- Code reviews : retours détaillés avec suggestions (pas juste des critiques)`,
-          `- Réunions : écouter d'abord, proposer ensuite`,
-          `- Documentation : écrire pour être COMPRISE, pas juste pour avoir du documentaire`,
-          `- Vulgarisation : expliquer des **[sujets techniques](https://en.wikipedia.org/wiki/Technical_communication)** à des non-développeurs de manière claire`,
+          `Aujourd’hui, je situe ma communication professionnelle à un **niveau satisfaisant**. Je considère désormais cette compétence comme un levier stratégique qui me permet de mieux comprendre les problématiques techniques, d’éviter les incompréhensions et d’accélérer la résolution des blocages. Lorsqu’une zone d’ombre apparaît, je n’hésite plus à solliciter les membres de mon équipe, les testeurs, la QA ou le chef de projet afin de clarifier le besoin avant de développer sur une intuition incertaine.`,
         ],
       },
       {
-        title: 'Mon évolution communicationnelle',
+        title: 'Mon recul critique et conseils',
         paragraphs: [
-          `Au début, j'étais trop réservée. Je pouvais avoir une bonne idée mais rester silencieuse en réunion par peur de déranger.`,
-          `Progressivement, j'ai compris que c'était un mauvais service rendu à l'équipe. Maintenant, je prends la parole activement pour exprimer mes idées, poser des questions, challenger poliment si je pense qu'il y a une meilleure façon de faire.`,
-          `J'ai aussi appris à mieux **[ÉCOUTER](https://en.wikipedia.org/wiki/Active_listening)**—voir d'abord ce que les autres ont à dire avant de proposer ma vision.`,
+          `Avec l’expérience, je conseille de prendre la parole même lorsque l’on doute de la pertinence de son idée. Une proposition peut ouvrir une discussion utile, même si elle n’est pas retenue telle quelle. Je conseille aussi de structurer ses messages : contexte, problème, hypothèse, besoin attendu. Cette méthode permet aux autres de comprendre rapidement la situation et d’apporter une aide efficace.`,
+          `Avec le recul, je sais que la communication ne repose pas seulement sur l’expression de ses idées. Elle demande aussi une vraie qualité d’écoute. Avant de défendre une solution technique, il faut comprendre les attentes de l’autre, son niveau de connaissance et ses contraintes.`,
         ],
       },
       {
-        title: 'Mon recul sur la communication',
+        title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `La meilleure communication est HONNÊTE mais BIENVEILLANTE. Je ne crois pas que mentir aide. Mais je crois aussi qu'on peut dire les choses difficiles avec **[respect](https://en.wikipedia.org/wiki/Nonviolent_Communication)**.`,
-          `Exemple : plutôt que de dire "ce code est un désastre", je dis "j'ai trouvé quelques points d'amélioration que l'on pourrait adresser pour la maintenabilité à long terme. À discuter ensemble ?"`,
-        ],
-      },
-      {
-        title: 'Mes pratiques de communication continue',
-        paragraphs: [
-          `- Talks en équipe : je propose des présentations sur des technologies que j'apprends`,
-          `- Mentoring : j'aide les juniors en expliquant les décisions et les patterns`,
-          `- Documentation : j'écris des guides pour que les gens puissent apprendre de mon **[code](https://en.wikipedia.org/wiki/Documentation_generator)** (pas juste le lire)`,
-          `- Meetings one-on-one : je demande régulièrement du feedback sur ma communication`,
-        ],
-      },
-      {
-        title: 'Mes objectifs de communication futurs',
-        paragraphs: [
-          `Je veux améliorer ma communication écrite (documentation technique, articles). C'est une faiblesse relative—je suis meilleure à l'oral qu'à l'écrit.`,
-          `À long terme : être capable de présenter une **[vision technique complexe](https://en.wikipedia.org/wiki/Strategic_communication)** à des stakeholders non-tech de manière claire et inspirante.`,
+          `Dans mon travail chez Bluesoft, je veille à maintenir cette dynamique au quotidien lors des rituels agiles, des revues de code, des échanges avec les chefs de projet et de la rédaction de documentation. Pour structurer ma progression, j’ai planifié de suivre la formation M2i **[Mieux communiquer pour faire passer ses messages](https://www.m2iformation.fr/formation-mieux-communiquer-pour-faire-passer-ses-messages/COMM-8953320/)**, afin d’adapter plus finement mon discours à mes différents interlocuteurs, qu’ils soient techniques ou non techniques.`,
+          `En parallèle, je m’autoforme avec la lecture de l’ouvrage **[Radical Candor](https://www.radicalcandor.com/the-book/)** de Kim Scott, qui m’aide à mieux comprendre comment formuler des retours honnêtes, utiles et bienveillants dans un cadre professionnel. À moyen terme, je souhaite renforcer ma capacité à vulgariser des sujets techniques complexes à l’écrit comme à l’oral. À plus long terme, mon ambition est de devenir une leader technique capable de présenter des visions logicielles complexes à des décideurs non techniques de manière claire, structurée et convaincante.`,
         ],
       },
     ],

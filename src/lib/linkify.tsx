@@ -628,7 +628,7 @@ export function TextWithSkillLinks({
   excludeSkillIds?: string[];
 }) {
   const excludedHrefs = new Set(
-    excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`))
+    excludeSkillIds.map((id) => `/competences-techniques/${id}`)
   );
   return <>{renderRichText(children, 'skill', excludedHrefs)}</>;
 }
@@ -641,7 +641,7 @@ export function TextWithProjectLinks({
   excludeSkillIds?: string[];
 }) {
   const excludedHrefs = new Set(
-    excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`))
+    excludeSkillIds.map((id) => `/competences-techniques/${id}`)
   );
   return <>{renderRichText(children, 'project', excludedHrefs)}</>;
 }

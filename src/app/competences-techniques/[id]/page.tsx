@@ -28,7 +28,7 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
       <Header />
       <main className="flex-1 max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 md:py-14 pb-16 md:pb-20">
         <div>
-          <BackLink href={hrefWithBase('/#competences-techniques')} label="Retour aux compétences techniques" />
+          <BackLink href="/#competences-techniques" label="Retour aux compétences techniques" />
 
           <header className="mb-10">
             <div className="flex items-center gap-3 mb-3">
@@ -84,7 +84,7 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                       <span key={projectId}>
                         {index > 0 ? ' · ' : ''}
                         <Link
-                          href={hrefWithBase(`/realisations/${projectId}`)}
+                          href={`/realisations/${projectId}`}
                           className="text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium"
                         >
                           {title}

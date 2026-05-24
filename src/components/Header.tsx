@@ -141,7 +141,7 @@ export default function Header() {
     <header className="sticky top-0 z-40 bg-slate-900/95 backdrop-blur border-b border-slate-700 supports-[padding:env(safe-area-inset-top)]:pt-[env(safe-area-inset-top)]">
       <nav className="max-w-5xl mx-auto px-3 sm:px-4 py-2.5 md:py-3 flex flex-wrap items-center justify-between gap-y-2 gap-x-4 md:gap-x-6">
         <Link
-          href={hrefWithBase('/#accueil')}
+          href="/#accueil"
           className="text-sm sm:text-base md:text-lg font-semibold text-neutral-200 hover:text-pink-400 transition-colors cursor-pointer truncate max-w-[min(100%,14rem)] sm:max-w-none tracking-tight"
           onClick={() => {
             setOpen(false);
@@ -171,7 +171,7 @@ export default function Header() {
           {links.map(({ key, href, label }) => (
             <li key={label} className="shrink-0">
               <Link
-                href={hrefWithBase(href)}
+                href={href}
                 className={`block py-2 md:py-1.5 px-2 md:px-2.5 rounded-lg transition-colors text-xs sm:text-sm font-medium cursor-pointer whitespace-nowrap ${
                   activeKey === key
                     ? 'text-pink-400 bg-slate-800/80'
@@ -193,4 +193,5 @@ export default function Header() {
     </header>
   );
 }
+
 

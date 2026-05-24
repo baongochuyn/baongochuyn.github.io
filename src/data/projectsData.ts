@@ -56,12 +56,13 @@ export const projects: Project[] = [
       {
         title: 'Les résultats',
         paragraphs: [
+          `**Pour moi**`,
           `Ce projet a profondément changé ma manière d’aborder les problématiques liées à la qualité logicielle.`,
           `Avant cette expérience, j’associais principalement les tests à une simple vérification du fonctionnement technique du code. En travaillant sur DiaPyl, j’ai découvert une dimension beaucoup plus large de la validation applicative, où l’objectif consiste surtout à garantir la cohérence fonctionnelle d’un système manipulant des données sensibles.`,
           `Le travail réalisé autour des API REST et des opérations CRUD m’a également permis de mieux comprendre les interactions entre les différentes couches d’une application .NET. En analysant les échanges entre les services applicatifs et la base SQL, j’ai appris à identifier plus rapidement certaines anomalies liées aux données ou aux traitements métier.`,
           `Ce projet m’a aussi obligée à développer davantage de rigueur dans la préparation des scénarios de validation et dans la construction des jeux de données de test. Certains comportements inattendus n’apparaissaient que dans des cas très spécifiques, ce qui demandait une analyse plus approfondie avant de pouvoir reproduire et corriger les anomalies rencontrées.`,
           `Enfin, les échanges réguliers avec les développeurs et le chef de projet ont renforcé ma capacité à expliquer clairement les problèmes identifiés et à prioriser les corrections en fonction des impacts métier observés.`,
-          `Pour l’entreprise`,
+          `**Pour l’entreprise**`,
           `Le travail réalisé autour des campagnes de validation a contribué à améliorer progressivement la stabilité et la fiabilité globale de l’application.`,
           `Les scénarios de tests automatisés ont permis de détecter plusieurs anomalies critiques avant leur mise en production, réduisant ainsi les risques de régression lors des évolutions fonctionnelles.`,
           `La sécurisation des échanges entre les API REST et la base SQL a également renforcé la cohérence des données utilisées dans les études de charge. Les ingénieurs disposent désormais d’un outil plus fiable et plus simple à exploiter que l’ancien système basé sur Excel.`,
@@ -91,7 +92,7 @@ export const projects: Project[] = [
         title: 'Regard critique',
         paragraphs: [
           `Avec plusieurs mois de recul, l’un des enseignements les plus marquants de ce projet concerne la différence entre un logiciel techniquement fonctionnel et un logiciel réellement fiable d’un point de vue métier.`,
-          `Sur DiaPyl, certains traitements semblaient corrects lors des premiers tests, mais révélaient des incohérences uniquement dans des scénarios très spécifiques liés aux règles d’études de charge. Cette réalité m’a appris à accorder beaucoup plus d’importance aux cas limites et aux comportements inhabituels lors des phases de validation.`,
+          `Sur DiaPyl, certains traitements semblaient corrects lors des premiers tests, mais révélaient des incohérences uniquement dans des scénarios très spécifiques liés aux règles d’études de charge. Cette reality m’a appris à accorder beaucoup plus d’importance aux cas limites et aux comportements inhabituels lors des phases de validation.`,
           `Le projet m’a également montré qu’une bonne compréhension fonctionnelle est souvent indispensable pour construire des tests réellement pertinents. Plusieurs anomalies rencontrées provenaient moins d’erreurs de développement que d’une interprétation incomplète des besoins métier ou d’un manque de précision dans certains cas d’usage.`,
           `Enfin, travailler sur une application utilisée dans un contexte aussi sensible m’a fait prendre conscience du niveau de responsabilité associé à la qualité logicielle. Derrière chaque anomalie détectée ou chaque traitement validé se trouvait un impact concret sur les analyses réalisées par les ingénieurs et sur les décisions techniques prises autour des infrastructures de TDF.`,
         ],
@@ -137,12 +138,13 @@ export const projects: Project[] = [
       {
         title: 'Les résultats',
         paragraphs: [
+          `**Pour moi**`,
           `Ce projet a représenté une étape importante dans ma montée en compétence technique, notamment sur le développement Front-end avec React.`,
           `Au début du projet, la découverte d’une application déjà structurée et utilisée en production représentait un véritable défi pour moi. J’ai dû apprendre à comprendre rapidement une architecture existante, à identifier les interactions entre les composants et à intervenir progressivement sur des parties sensibles du projet sans perturber le fonctionnement global de l’application.`,
           `Cette expérience m’a permis de développer une approche plus méthodique dans ma manière d’aborder un nouveau framework. Avant de modifier ou d’ajouter une fonctionnalité, j’ai appris à mieux analyser les impacts possibles sur les autres parties du système afin d’éviter les régressions ou les incohérences d’interface.`,
           `Le projet m’a également sensibilisée à l’importance de l’expérience utilisateur dans les applications métiers. J’ai compris qu’une interface efficace ne dépend pas uniquement de son aspect visuel, mais surtout de sa capacité à accompagner les utilisateurs dans leurs tâches quotidiennes de manière simple et intuitive.`,
           `Enfin, le fait de participer également aux tests Backend m’a permis d’élargir ma compréhension du cycle complet de développement d’une application et de mieux percevoir les interactions entre les différentes couches techniques du projet.`,
-          `Pour l’entreprise`,
+          `**Pour l’entreprise**`,
           `Les évolutions réalisées durant le projet ont contribué à améliorer progressivement la stabilité et l’ergonomie de l’application utilisée par les techniciens terrain.`,
           `L’interface plus structurée et plus fluide a permis de réduire certaines erreurs de manipulation lors de la saisie des diagnostics électriques. Les formulaires et les composants développés facilitent désormais la collecte des données et limitent les risques d’informations incohérentes ou incomplètes.`,
           `La centralisation des diagnostics permet également à TDF de disposer de données plus homogènes et plus facilement exploitables pour le suivi énergétique de ses infrastructures. Cette amélioration contribue à accélérer certaines prises de décision opérationnelles et à renforcer le suivi des équipements électriques sur les différents sites.`,
@@ -214,12 +216,13 @@ export const projects: Project[] = [
       {
         title: 'Les résultats',
         paragraphs: [
+          `**Pour moi**`,
           `CityBoard a été l’un des premiers projets où j’ai réellement ressenti l’impact concret des choix d’architecture sur l’expérience utilisateur.`,
           `Avant cette expérience, j’associais surtout les performances à des optimisations techniques ponctuelles. Pourtant, travailler avec plusieurs API externes m’a montré qu’une application peut rapidement devenir désagréable à utiliser si les échanges de données ne sont pas pensés intelligemment dès le départ.`,
           `Le travail réalisé autour du cache mémoire m’a particulièrement marquée, car j’ai pu observer directement l’effet d’une optimisation Backend sur la fluidité ressentie côté utilisateur. Cela a profondément changé ma manière d’aborder les problématiques de performance.`,
           `Ce projet m’a également permis de gagner en maturité sur le développement Front-end. Maintenir une interface cohérente dans une application composée de nombreux widgets dynamiques m’a appris à mieux structurer mes composants React et à réfléchir davantage à leur réutilisabilité avant de développer de nouvelles fonctionnalités.`,
           `Enfin, évoluer au sein d’une équipe de plusieurs développeurs m’a aidée à améliorer ma façon de collaborer sur un projet fullstack. J’ai appris à mieux communiquer sur les problèmes techniques rencontrés, à partager plus rapidement mes blocages et à prendre davantage en compte les impacts de mes choix sur le reste du projet.`,
-          `Pour l’entreprise`,
+          `**Pour l’entreprise**`,
           `Les optimisations mises en place ont permis d’améliorer significativement la réactivité de la plateforme et de réduire les ralentissements liés aux appels vers les services externes.`,
           `Grâce au système de cache mémoire, les données les plus consultées pouvaient être réutilisées sans solliciter constamment les API partenaires, ce qui a diminué les temps de chargement tout en limitant la consommation de ressources serveur.`,
           `L’amélioration de l’ergonomie et de la personnalisation des widgets a également renforcé l’intérêt fonctionnel de la plateforme en offrant une expérience plus flexible et plus adaptée aux usages quotidiens des utilisateurs.`,
@@ -294,12 +297,13 @@ export const projects: Project[] = [
       {
         title: 'Les résultats',
         paragraphs: [
+          `**Pour moi**`,
           `BOOST a été l’un des projets qui m’a le plus sensibilisée aux réalités de la maintenance applicative en environnement de production.`,
           `Avant cette expérience, j’avais tendance à voir les corrections de bugs comme des interventions relativement isolées. Pourtant, travailler sur un logiciel aussi central m’a montré qu’une anomalie visible peut parfois être la conséquence de dépendances beaucoup plus profondes dans l’architecture de l’application.`,
           `Ce projet m’a également appris à intervenir avec davantage de recul sur un code que je n’avais pas conçu moi-même. Lire, comprendre puis faire évoluer une architecture existante sans fragiliser les fonctionnalités déjà utilisées demande une forme de rigueur très différente du développement de nouvelles fonctionnalités sur un projet récent.`,
           `Les nombreux échanges avec les techniciens et les logisticiens ont aussi profondément changé ma manière d’aborder les anomalies fonctionnelles. En discutant directement avec les utilisateurs, j’ai compris qu’un bug n’est jamais seulement un problème technique : il reflète souvent une difficulté concrète rencontrée dans leur travail quotidien.`,
           `Enfin, travailler sur BOOST m’a permis de développer une approche plus structurée de la maintenance logicielle, notamment dans la documentation des correctifs et dans l’analyse des impacts potentiels avant chaque mise en production.`,
-          `Pour l’entreprise`,
+          `**Pour l’entreprise**`,
           `Les corrections et évolutions réalisées durant le projet ont permis d’améliorer progressivement la stabilité globale de l’application.`,
           `La réduction de certaines anomalies récurrentes a facilité le travail quotidien des équipes opérationnelles et limité les interruptions liées à des dysfonctionnements bloquants.`,
           `Les évolutions fonctionnelles développées ont également permis d’adapter le logiciel à de nouveaux besoins métier tout en conservant la cohérence des traitements existants.`,
@@ -373,12 +377,13 @@ export const projects: Project[] = [
       {
         title: 'Les résultats',
         paragraphs: [
+          `**Pour moi**`,
           `Kalicolis a marqué une étape importante dans ma découverte du développement mobile moderne.`,
           `Le projet m’a obligée à sortir rapidement de mes habitudes techniques pour apprendre Flutter tout en développant des fonctionnalités déjà proches d’un usage réel. Cette montée en compétence progressive m’a appris à être beaucoup plus autonome dans ma manière d’explorer une nouvelle technologie.`,
           `Travailler sur une application mobile collaborative m’a aussi sensibilisée à des problématiques que je connaissais peu auparavant, notamment la gestion des interactions temps réel, les contraintes liées à la navigation mobile et l’importance de la fluidité des parcours utilisateurs.`,
           `L’intégration des fonctionnalités de géolocalisation et de messagerie m’a également permis de mieux comprendre les enjeux techniques liés aux applications connectées où plusieurs utilisateurs interagissent simultanément.`,
           `Enfin, le projet m’a fait prendre conscience que le développement mobile demande une attention particulière à l’expérience utilisateur. Sur smartphone, les utilisateurs tolèrent beaucoup moins les lenteurs, les écrans confus ou les manipulations inutiles. Cette réalité m’a poussée à réfléchir davantage à la simplicité des parcours et à la réactivité globale de l’application.`,
-          `Pour l’entreprise`,
+          `**Pour l’entreprise**`,
           `Grâce au travail réalisé par l’équipe, Kalicolis dispose aujourd’hui d’une base applicative solide permettant de gérer les principaux flux liés aux livraisons collaboratives.`,
           `Les interfaces développées rendent l’utilisation de l’application plus intuitive pour les utilisateurs, tandis que les fonctionnalités temps réel améliorent la fluidité des échanges entre expéditeurs et transporteurs.`,
           `La structuration des données et les traitements mis en place autour des trajets et des colis permettent également de garantir une meilleure cohérence des informations manipulées par la plateforme.`,
@@ -414,4 +419,3 @@ export const projects: Project[] = [
     ],
   },
 ].sort((left, right) => REALISATION_ORDER_INDEX[left.id] - REALISATION_ORDER_INDEX[right.id]);
-

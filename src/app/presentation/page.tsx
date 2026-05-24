@@ -21,7 +21,7 @@ export default function PresentationPage() {
       <Header />
       <ScrollToHash />
       <main className="flex-1 max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 md:py-14 pb-16 md:pb-20">
-        <BackLink href={hrefWithBase('/')} label="Retour à l’accueil" />
+        <BackLink href="/" label="Retour à l’accueil" />
         <header className="mb-12 rounded-2xl border border-slate-700/80 bg-slate-800/40 overflow-hidden">
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 p-6 md:p-8">
             <div className="flex justify-center sm:justify-start shrink-0">

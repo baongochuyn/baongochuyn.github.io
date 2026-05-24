@@ -195,7 +195,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
       <Header />
       <main className="flex-1 max-w-3xl mx-auto w-full px-3 sm:px-4 py-8 sm:py-10 md:py-14 pb-16 md:pb-20">
         <div>
-          <BackLink href={hrefWithBase('/#realisations')} label="Retour aux réalisations" />
+          <BackLink href="/#realisations" label="Retour aux réalisations" />
 
           <header className="mb-10">
             <div className="flex items-center gap-3 mb-3">
@@ -279,7 +279,7 @@ export default async function ProjectDetailPage({ params }: PageProps) {
                     <span key={`${label}-${index}`}>
                       {index > 0 ? ' · ' : ''}
                       <Link
-                        href={hrefWithBase(`/competences-techniques/${finalSkillId}`)}
+                        href={`/competences-techniques/${finalSkillId}`}
                         className="text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium"
                       >
                         {label}
