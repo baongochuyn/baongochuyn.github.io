@@ -1,4 +1,4 @@
-export type SkillContentSection = { title: string; paragraphs: string[] };
+﻿export type SkillContentSection = { title: string; paragraphs: string[] };
 
 export type TechnicalSkill = {
   id: string;
@@ -56,7 +56,7 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Mon regard critique et conseils',
         paragraphs: [
           `Avec le recul, je pense que beaucoup de développeurs débutants veulent utiliser des solutions trop complexes dès le départ. Personnellement, j'essaie maintenant de privilégier des solutions **simples**, **lisibles** et **faciles à maintenir**.`,
-          `Si je devais donner un conseil à quelqu'un qui apprend C#, je lui recommanderais surtout de réaliser des projets concrets. C'est dans les projets réels que l'on apprend vraiment à organiser une application et à réfléchir comme un développeur. Lire de la documentation et regarder des tutoriels, c'est utile, mas cela ne remplace pas l'expérience. Avec le temps, vous allez comprendre pourquoi on structure le code d'une certaine manière, et ça deviendra une seconde nature.`,
+          `Si je devais donner un conseil à quelqu'un qui apprend C#, je lui recommanderais surtout de réaliser des projets concrets. C'est dans les projets réels que l'on apprend vraiment à organiser une application et à réfléchir comme un développeur. Lire de la documentation et regarder des tutoriels, c'est utile, mais cela ne remplace pas l'expérience. Avec le temps, vous allez comprendre pourquoi on structure le code d'une certaine manière, et ça deviendra une seconde nature.`,
           `Contextuellement, ma maîtrise de C# est vraiment forte pour : les **APIs REST** bien structurées et performantes, la manipulation de **données complexes** avec **Entity Framework**, les **logiques métier** structurées et maintenables, les **services backend** orientés qualité et testabilité.`,
           `Mais je suis encore en progression sur : les architectures distribuées et les microservices, l'optimisation très fine des performances pour les très gros volumes (100M+ records), les systèmes cloud-native et l'intégration complète avec l'écosystème Azure.`,
         ],
@@ -268,7 +268,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Introduction',
         paragraphs: [
-          `React est une **[bibliothèque JavaScript](https://react.dev/)** développée par Facebook, qui est rapidement devenue pour moi le point d'entrée vers un frontend plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mas une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
+          `React est une **[bibliothèque JavaScript](https://react.dev/)** développée par Facebook, qui est rapidement devenue pour moi le point d'entrée vers un frontend plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mais une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
           `C'est cette approche qui m'a permis de mieux organiser mes écrans, de séparer les responsabilités et de faire évoluer une interface sans devoir tout réécrire à chaque changement.`,
         ],
       },
@@ -279,8 +279,8 @@ export const technicalSkills: TechnicalSkill[] = [
           `Très vite, j'ai compris que React m'obligeait à construire l'interface de façon plus propre : au lieu de tout manipuler à la main, je devais découper l'écran en blocs réutilisables et laisser l'état piloter l'affichage.`,
           `Sur DiagElec, j'ai travaillé sur plusieurs écrans concrets comme la connexion, les tableaux de bord et les formulaires interactifs. C'est là que j'ai commencé à utiliser **[useState](https://react.dev/reference/react/useState)**, **[useContext](https://react.dev/reference/react/useContext)** et **[Material UI](https://mui.com/)** pour avancer plus vite sans perdre en cohérence.`,
           `Ce projet m'a surtout appris à reconnaître les vrais problèmes du quotidien en React : re-renders inutiles, état mal partagé, logique trop imbriquée. C'est en les rencontrant sur un projet réel que j'ai vraiment compris comment progresser.`,
-          `Avec CityBoard, j'ai changé d'échelle. Je ne travaillais plus sur quelques écrans isolés, mas sur une interface de dashboard où plusieurs **widgets** devaient cohabiter, se charger dynamiquement et rester agréables à utiliser.`,
-          `Le vrai défi n'était pas seulement d'afficher les données, mas de garder l'application fluide malgré les mises à jour fréquentes et les interactions multiples. C'est là que j'ai commencé à être plus attentif aux re-renders, à la structure des composants et à la manière dont j'organisais les props et le state.`,
+          `Avec CityBoard, j'ai changé d'échelle. Je ne travaillais plus sur quelques écrans isolés, mais sur une interface de dashboard où plusieurs **widgets** devaient cohabiter, se charger dynamiquement et rester agréables à utiliser.`,
+          `Le vrai défi n'était pas seulement d'afficher les données, mais de garder l'application fluide malgré les mises à jour fréquentes et les interactions multiples. C'est là que j'ai commencé à être plus attentif aux re-renders, à la structure des composants et à la manière dont j'organisais les props et le state.`,
           `Ce projet m'a aussi appris à mieux gérer les **[appels asynchrones](https://react.dev/learn/synchronizing-with-effects)** et les **[états de chargement](https://react.dev/reference/react/Suspense)**. J'ai compris qu'un frontend React ne se résume pas à afficher des données : il faut aussi anticiper les temps d'attente, les erreurs et les changements d'état sans casser l'expérience utilisateur.`,
           `En pratique, j'y ai construit des composants réutilisables, des modales, des formulaires dynamiques et des écrans qui devaient rester lisibles même quand la logique métier devenait plus dense.`,
         ],
