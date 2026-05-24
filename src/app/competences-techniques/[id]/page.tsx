@@ -53,9 +53,9 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                     const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
                     const paragraphClass = `${keyLabel ? 'mt-1 mb-2' : numbered ? 'mt-1 mb-1' : ''}`.trim();
                     const textClass = keyLabel
-                      ? 'font-semibold text-neutral-200'
+                      ? 'text-neutral-200 font-bold'
                       : numbered
-                        ? 'font-medium text-neutral-200'
+                        ? 'text-neutral-200 font-bold'
                         : '';
 
                     return (

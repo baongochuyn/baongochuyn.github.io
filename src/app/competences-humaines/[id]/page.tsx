@@ -53,9 +53,9 @@ export default async function SoftSkillDetailPage({ params }: PageProps) {
                     const keyLabel = isKeyLabelLine(section.paragraphs[i] ?? '');
                     const paragraphClass = `${keyLabel ? 'mt-1 mb-2' : numbered ? 'mt-1 mb-1' : ''}`.trim();
                     const textClass = keyLabel
-                      ? 'text-pink-400 font-semibold'
+                      ? 'text-neutral-200 font-bold'
                       : numbered
-                        ? 'text-pink-400 font-medium'
+                        ? 'text-neutral-200 font-bold'
                         : '';
 
                     return (

@@ -601,7 +601,7 @@ function renderRichText(
   return splitBoldSegments(text).flatMap<React.ReactNode>((segment, segmentIndex) => {
     if (segment.type === 'strong') {
       return (
-        <strong key={`${keyPrefix}-strong-${segmentIndex}`} className="font-semibold text-pink-400">
+        <strong key={`${keyPrefix}-strong-${segmentIndex}`} className="font-bold text-neutral-200">
           {renderPlainRichText(segment.value, `${keyPrefix}-strong-${segmentIndex}`, excludedHrefs)}
         </strong>
       );
@@ -617,8 +617,8 @@ function renderRichText(
 
 const linkClass =
   'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
-const disabledLinkClass = 'text-pink-400 font-medium';
-const highlightClass = 'text-pink-400 font-semibold';
+const disabledLinkClass = 'text-neutral-200 font-bold';
+const highlightClass = 'text-neutral-200 font-bold';
 
 export function TextWithSkillLinks({
   children,

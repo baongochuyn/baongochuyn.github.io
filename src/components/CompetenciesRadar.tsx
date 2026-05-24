@@ -36,7 +36,6 @@ export default function CompetenciesRadar() {
       <div className="max-w-4xl mx-auto">
         <h2 className="text-2xl md:text-3xl font-bold text-neutral-200 text-center mb-2">Synthèse des compétences</h2>
         <p className="text-gray-400 text-center text-sm mb-10 max-w-2xl mx-auto">
-          Auto-évaluation sur une échelle de 1 à 5 — six compétences techniques et cinq compétences humaines.
         </p>
         <div className="flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16">
           <svg

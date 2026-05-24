@@ -12,7 +12,7 @@ export const competencyRadarAxes: RadarAxis[] = [
   { id: 'autonomie', label: 'Autonomie', value: 4.0, kind: 'soft' },
   { id: 'curiosite', label: 'Curiosité', value: 4.3, kind: 'soft' },
   { id: 'travail-equipe', label: 'Travail en équipe', value: 4, kind: 'soft' },
-  { id: 'flexibilite', label: 'Adaptabilité', value: 4.2, kind: 'soft' },
-  { id: 'communication', label: 'Rigueur', value: 4.4, kind: 'soft' },
+  { id: 'flexibilite', label: 'Flexibilité et Adaptabilité', value: 4.2, kind: 'soft' },
+  { id: 'communication', label: 'Communication', value: 4.4, kind: 'soft' },
 ];
 
