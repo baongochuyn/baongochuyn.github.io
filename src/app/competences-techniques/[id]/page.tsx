@@ -63,7 +63,7 @@ export default async function TechnicalSkillDetailPage({ params }: PageProps) {
                         <span className="flex items-start gap-2.5">
                           {bullet ? <span className="mt-[0.62em] inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-pink-400" aria-hidden /> : null}
                           <span className={textClass}>
-                            <TextWithProjectLinks excludeSkillIds={[skill.id]}>
+                            <TextWithProjectLinks>
                               {bullet ? normalizeListItemText(text) : text}
                             </TextWithProjectLinks>
                           </span>

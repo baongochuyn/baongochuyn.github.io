@@ -457,18 +457,23 @@ function renderPlainRichText(
   return splitMarkdownLinkSegments(text).flatMap<React.ReactNode>((markdownSeg, markdownIndex) => {
     if (markdownSeg.type === 'link' && markdownSeg.href) {
       const href = markdownSeg.href;
+      const key = `${keyPrefix}-md-${markdownIndex}`;
+      if (excludedHrefs.has(href)) {
+        return renderDisabledLink(key, markdownSeg.value);
+      }
+
       const isInternal = href.startsWith('/') || href.startsWith('#');
       const externalProps = isInternal ? {} : { target: '_blank', rel: 'noreferrer noopener' };
 
       if (isInternal) {
         return (
-          <Link key={`${keyPrefix}-md-${markdownIndex}`} href={href} className={linkClass}>
+          <Link key={key} href={href} className={linkClass}>
             {markdownSeg.value}
           </Link>
         );
       }
       return (
-        <a key={`${keyPrefix}-md-${markdownIndex}`} href={href} className={linkClass} {...externalProps}>
+        <a key={key} href={href} className={linkClass} {...externalProps}>
           {markdownSeg.value}
         </a>
       );
@@ -478,27 +483,23 @@ function renderPlainRichText(
       (labeledSeg, labeledIndex) => {
         if (labeledSeg.type === 'link' && labeledSeg.href) {
           const href = labeledSeg.href;
+          const key = `${keyPrefix}-label-${markdownIndex}-${labeledIndex}`;
+          if (excludedHrefs.has(href)) {
+            return renderDisabledLink(key, labeledSeg.value);
+          }
+
           const isInternal = href.startsWith('/') || href.startsWith('#');
           const externalProps = isInternal ? {} : { target: '_blank', rel: 'noreferrer noopener' };
 
           if (isInternal) {
             return [
-              <Link
-                key={`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`}
-                href={href}
-                className={linkClass}
-              >
+              <Link key={key} href={href} className={linkClass}>
                 {labeledSeg.value}
               </Link>,
             ];
           }
           return [
-            <a
-              key={`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`}
-              href={href}
-              className={linkClass}
-              {...externalProps}
-            >
+            <a key={key} href={href} className={linkClass} {...externalProps}>
               {labeledSeg.value}
             </a>,
           ];
@@ -506,10 +507,16 @@ function renderPlainRichText(
 
         return splitUrlSegments(labeledSeg.value).flatMap<React.ReactNode>((seg, index) => {
           if (seg.type === 'url' && seg.href) {
+            const href = seg.href;
+            const key = `${keyPrefix}-url-${markdownIndex}-${labeledIndex}-${index}`;
+            if (excludedHrefs.has(href)) {
+              return renderDisabledLink(key, seg.value);
+            }
+
             return [
               <a
-                key={`${keyPrefix}-url-${markdownIndex}-${labeledIndex}-${index}`}
-                href={seg.href}
+                key={key}
+                href={href}
                 target="_blank"
                 rel="noreferrer noopener"
                 className={linkClass}
@@ -533,16 +540,17 @@ function renderPlainRichText(
           return splitReferenceSegments(seg.value).flatMap<React.ReactNode>(
             (referenceSeg, referenceIndex) => {
               if (referenceSeg.type === 'link' && referenceSeg.href) {
-                const isInternal =
-                  referenceSeg.href.startsWith('/') || referenceSeg.href.startsWith('#');
+                const href = referenceSeg.href;
+                const key = `${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`;
+                if (excludedHrefs.has(href)) {
+                  return renderDisabledLink(key, referenceSeg.value);
+                }
+
+                const isInternal = href.startsWith('/') || href.startsWith('#');
 
                 if (isInternal) {
                   return [
-                    <Link
-                      key={`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`}
-                      href={referenceSeg.href}
-                      className={linkClass}
-                    >
+                    <Link key={key} href={href} className={linkClass}>
                       {referenceSeg.value}
                     </Link>,
                   ];
@@ -550,8 +558,8 @@ function renderPlainRichText(
 
                 return [
                   <a
-                    key={`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`}
-                    href={referenceSeg.href}
+                    key={key}
+                    href={href}
                     className={linkClass}
                     target="_blank"
                     rel="noreferrer noopener"

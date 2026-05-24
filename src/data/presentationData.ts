@@ -1,4 +1,4 @@
-/ Page Présentation + base du parcours type CV */
+/* Page Présentation + base du parcours type CV */
 
 export const presentationIntro = {
   title: 'Présentation',
@@ -18,14 +18,14 @@ export const presentationSections = [
     id: 'pourquoi',
     title: 'Pourquoi l’informatique',
     paragraphs: [
-      `J'ai choisi l'informatique parce que c'est un domaine où les **idées deviennent rapidement concrètes**. Une application, une interface ou une API peut simplifier une tâche, faire gagner du temps ou rendre un service plus accessible. C'est cette dimension très directe qui m'a attirée : on peut voir l'**impact de son travail** dans l'usage quotidien des personnes.`,
-      `Ce qui me motive dans le développement, c'est le chemin entre un besoin parfois flou et une **solution qui fonctionne vraiment**. Il faut écouter, reformuler, comprendre les contraintes, puis imaginer une réponse technique adaptée. J'aime ce mélange entre **analyse, créativité et rigueur**.`,
-      `Chaque projet me donne aussi l'occasion d'apprendre quelque chose de nouveau. C'est un domaine qui oblige à rester **curieuse**, à accepter de ne pas tout savoir au départ et à progresser en construisant. Cette dynamique correspond beaucoup à ma manière d'avancer.`,
+      `Mon intérêt pour l'informatique est né progressivement, au moment où j'ai compris que la technologie pouvait transformer une idée abstraite en outil concret. Après un parcours initial en langues et cultures coréennes, j'ai retrouvé dans le développement une autre forme de logique : comprendre un système, analyser un problème, puis construire une solution utilisable par d'autres.`,
+      `Ce qui me motive particulièrement dans ce domaine, c'est le lien entre le besoin métier et la solution technique. J'aime partir d'une difficulté réelle, la décomposer, puis chercher une réponse claire, maintenable et adaptée aux utilisateurs. Cette approche correspond bien à mon parcours, car elle combine rigueur, curiosité et capacité d'adaptation.`,
+      `Au fil de mes projets, notamment chez Bluesoft, j'ai compris que le développement ne consiste pas seulement à écrire du code. Il s'agit aussi de comprendre un contexte, d'échanger avec une équipe, de faire des choix techniques responsables et d'améliorer progressivement des processus existants. C'est cette dimension concrète et évolutive qui me donne envie de continuer dans l'ingénierie logicielle.`,
     ],
   },
   {
     id: 'parcours-texte',
-    title: 'Parcours',
+    title: 'Mon parcours personnel et académique',
     paragraphs: [
       `Mon parcours n'a pas commencé directement par l'informatique. Avant le code, il y a eu les **langues**, les **cultures** et l'envie de comprendre des manières différentes de penser. J'ai étudié le coréen au Vietnam, puis j'ai obtenu une bourse qui m'a permis de partir un an en Corée du Sud. En 2020, je suis arrivée en France pour poursuivre mes études dans un nouveau contexte.`,
       `Le vrai tournant a été mon choix de me réorienter vers l'informatique. J'ai dû repartir de zéro, apprendre une nouvelle logique, de nouveaux outils et une nouvelle façon de résoudre les problèmes. Ce passage des langues au code a été exigeant, mais il m'a appris à travailler avec **méthode** et à ne pas avoir peur des débuts difficiles.`,
@@ -45,8 +45,8 @@ export const presentationSections = [
     id: 'centres-interet',
     title: 'Centres d’intérêt',
     paragraphs: [
-      `En dehors du code, les **langues** et les **cultures asiatiques** occupent une place importante dans ma vie. Elles ont été mon premier domaine d'étude et restent une source de curiosité, d'ouverture et d'inspiration. J'aime comprendre comment une langue influence la manière de penser, de communiquer et de voir le monde.`,
-      `J'aime aussi **transmettre ce que j'apprends**. Expliquer une idée, partager une méthode ou aider quelqu'un à comprendre un sujet me donne l'impression de rendre mes connaissances plus utiles. Ces centres d'intérêt nourrissent ma **discipline**, ma régularité et ma capacité à rester ouverte, même quand les projets deviennent plus exigeants.`,
+      `En dehors du développement, je m'intéresse particulièrement aux langues, aux cultures asiatiques et à la transmission des connaissances. Mon parcours en coréen et mon expérience d'adaptation entre le Vietnam, la Corée du Sud et la France m'ont appris à observer les différences de contexte, à écouter avant de juger et à communiquer avec précision.`,
+      `Ces centres d'intérêt nourrissent directement ma manière de travailler. Ils renforcent ma curiosité, ma patience et ma capacité à m'adapter à des environnements nouveaux. Dans un métier technique, cette ouverture m'aide à mieux comprendre les besoins des utilisateurs et à collaborer avec des profils variés.`,
     ],
   },
   {
@@ -70,9 +70,9 @@ export const presentationSections = [
     id: 'objectifs',
     title: 'Positionnement actuel et objectifs',
     paragraphs: [
-      `Aujourd'hui, je me positionne comme une développeuse full stack en progression, avec une **base technique solide** et une bonne capacité d'adaptation. Mon objectif à court terme est de renforcer mes compétences sur C# et .NET afin de produire un backend plus robuste, mieux structuré et plus facile à maintenir.`,
-      `Je souhaite aussi continuer à progresser en React et en développement frontend moderne pour concevoir des interfaces plus fluides, plus lisibles et plus proches des besoins utilisateurs. En parallèle, je veux approfondir SQL pour mieux modéliser les données, sécuriser les requêtes et améliorer les performances.`,
-      `Mon évolution passe également par une meilleure maîtrise de l'architecture logicielle, des tests automatisés et des bonnes pratiques de développement comme la CI/CD et la qualité du code. À long terme, je veux devenir une développeuse capable de concevoir des **solutions complètes, robustes et évolutives**, depuis le besoin métier jusqu'à la mise en production. Je souhaite prendre davantage de responsabilités sur les choix techniques et apporter une **valeur concrète** aux utilisateurs comme aux équipes avec lesquelles je travaille.`,
+      `Aujourd'hui, je me positionne comme une développeuse full stack en progression, avec une base solide en C#, .NET, React et SQL. Mon alternance me permet de relier ces compétences à des situations professionnelles concrètes : développement d'API, création d'interfaces, gestion de données, tests et amélioration continue du code.`,
+      `À court terme, je souhaite consolider ma maîtrise du développement backend avec .NET, tout en continuant à progresser sur le frontend moderne avec React. Je veux également renforcer mes compétences en bases de données, car elles occupent une place importante dans la fiabilité et la performance des applications que je développe.`,
+      `À moyen et long terme, mon objectif est de devenir une développeuse capable de concevoir des solutions complètes, robustes et évolutives. Je souhaite progresser sur l'architecture logicielle, les tests automatisés, la qualité du code et les pratiques CI/CD afin d'apporter une réelle valeur technique et métier aux projets auxquels je participe.`,
     ],
   },
 ] as const;
@@ -89,7 +89,7 @@ export type ParcoursStep = {
   vision: string;
 };
 
-/ Frise anti-chronologique : du plus récent au plus ancien (exigence ESIEA). */
+/* Frise anti-chronologique : du plus récent au plus ancien (exigence ESIEA). */
 export const parcoursTimeline: ParcoursStep[] = [
   {
     period: '2021 – présent',
@@ -182,5 +182,3 @@ export const parcoursTimeline: ParcoursStep[] = [
       'Ce socle m’apporte une ouverture utile pour comprendre des contextes variés et collaborer avec des profils différents.',
   },
 ];
-
-
