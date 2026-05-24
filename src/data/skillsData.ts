@@ -247,7 +247,7 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Ma formation en cours',
         paragraphs: [
           `Je continue à me former avec **[SQL Performance Explained](https://www.sql-performance-explained.com/)**, parce qu'il m'aide à mieux comprendre les mécanismes de performance au-delà de la simple syntaxe.`,
-          `Je m'appuie aussi sur la pratique directe en production, ainsi que sur **[la documentation PostgreSQL](https://www.postgresql.org/docs/current/performance.html)**, notamment la partie performance, pour relier les concepts à des cas concrets.`,
+          `Je m'appuie aussi sur la pratique directe en production, ainsi que sur **[la documentation PostgreSQL](https://www.postgresql.org/docs/current/performance-tips.html)**, notamment la partie performance, pour relier les concepts à des cas concrets.`,
           `En parallèle, je fais une veille ciblée sur **[la query optimization](https://www.postgresql.org/docs/current/sql.html)** et **[les index strategies](https://www.postgresql.org/docs/current/sql-createindex.html)**, car ce sont des sujets qui ont un impact très visible sur les temps de réponse.`,
         ],
       },
@@ -379,7 +379,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Ma formation en cours',
         paragraphs: [
-          `Je continue à me former avec le cours **[JavaScript Performance](https://frontendmasters.com/courses/javascript-performance/)** sur Frontend Masters, parce qu'il m'aide à mieux comprendre l'impact réel des choix de code sur les performances.`,
+          `Je continue à me former avec le cours **[JavaScript Performance](https://frontendmasters.com/courses/web-performance/)** sur Frontend Masters, parce qu'il m'aide à mieux comprendre l'impact réel des choix de code sur les performances.`,
           `Je complète cela avec le livre **[You Don't Know JS Yet](https://github.com/getify/You-Dont-Know-JS)** et la documentation MDN, afin d'avoir à la fois une base théorique solide et des repères fiables au quotidien.`,
           `J'explore aussi la performance d'une application React et les évolutions d'ES2024 et des Web APIs, parce que ces sujets me servent directement dans les interfaces que je construis.`,
         ],
