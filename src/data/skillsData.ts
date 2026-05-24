@@ -23,7 +23,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Le langage',
         paragraphs: [
-          `**[C#](https://learn.microsoft.com/en-us/dotnet/csharp/)** est un langage de programmation développé par Microsoft et utilisé principalement avec l'environnement .NET. Il permet de développer des applications web, des API backend, des logiciels desktop ou encore des services cloud. Aujourd'hui, il est très présent dans le monde professionnel grâce à sa stabilité et à la qualité de son écosystème.`,
+          `**[C#](https://learn.microsoft.com/en-us/dotnet/csharp/)** est un langage de programmation développé par Microsoft et utilisé principalement avec l'environnement .NET. Il permet de développer des applications web, des API back-end, des logiciels desktop ou encore des services cloud. Aujourd'hui, il est très présent dans le monde professionnel grâce à sa stabilité et à la qualité de son écosystème.`,
           `J'ai commencé à apprendre C# lorsque je voulais développer des applications plus propres et mieux organisées que les petits projets que je faisais auparavant. Très rapidement, j'ai apprécié la manière dont ce langage pousse à structurer le code et à réfléchir à l'organisation globale d'une application.`,
         ],
       },
@@ -31,14 +31,14 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Mes débuts',
         paragraphs: [
           `Au début, je voyais surtout C# comme un langage orienté objet classique. Je faisais des classes, des méthodes et des héritages sans forcément comprendre l'intérêt réel derrière certaines bonnes pratiques.`,
-          `C'est surtout pendant mes projets backend que j'ai commencé à progresser. Je me souviens notamment du projet CityBoard : je devais gérer plusieurs routes API et une base de données. Dans les premières versions, tout était mélangé dans les mêmes contrôleurs. Le projet fonctionnait, mais dès que je voulais modifier une fonctionnalité, cela créait souvent de nouveaux problèmes—des dépendances cachées, du code dupliqué, une logique métier liée directement aux requêtes HTTP.`,
+          `C'est surtout pendant mes projets back-end que j'ai commencé à progresser. Je me souviens notamment du projet CityBoard : je devais gérer plusieurs routes API et une base de données. Dans les premières versions, tout était mélangé dans les mêmes contrôleurs. Le projet fonctionnait, mais dès que je voulais modifier une fonctionnalité, cela créait souvent de nouveaux problèmes—des dépendances cachées, du code dupliqué, une logique métier liée directement aux requêtes HTTP.`,
           `Petit à petit, j'ai appris à mieux organiser mon application en séparant les différentes responsabilités. J'ai commencé à créer des couches distinctes : une couche métier (Services), une couche d'accès aux données (Repositories), et une couche de présentation (Contrôleurs). Cette expérience m'a fait comprendre qu'un projet ne doit pas seulement fonctionner, il doit aussi rester lisible et maintenable dans le temps. Cette expérience m'a fait comprendre qu'un code mal structuré devient rapidement difficile à reprendre, surtout lorsqu'un autre développeur doit intervenir dessus plus tard. Donc dès ce moment-là, j'ai choisi de privilégier l'organisation.`,
         ],
       },
       {
         title: 'Ce que j\'utilise aujourd\'hui',
         paragraphs: [
-          `Aujourd'hui, j'utilise principalement C# pour du **développement backend** et la création d'**API**. J'ai également appris à maîtriser plusieurs outils et concepts associés comme **[ASP.NET](https://learn.microsoft.com/en-us/aspnet/core/)**, **Entity Framework**, **[LINQ](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)** ou encore la **[programmation asynchrone](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)**.`,
+          `Aujourd'hui, j'utilise principalement C# pour du **développement back-end** et la création d'**API**. J'ai également appris à maîtriser plusieurs outils et concepts associés comme **[ASP.NET](https://learn.microsoft.com/en-us/aspnet/core/)**, **Entity Framework**, **[LINQ](https://learn.microsoft.com/en-us/dotnet/csharp/linq/)** ou encore la **[programmation asynchrone](https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/)**.`,
           `Sur le projet BOOST en particulier, j'ai vraiment progressé sur **Entity Framework**. J'ai dû optimiser des requêtes **N+1**—c'est-à-dire que je faisais une requête à la base de données pour chaque élément d'une liste. Résultat ? L'application était lente pour les gros volumes. J'ai appris à utiliser **Include()**, **Select()** et les techniques de requête optimisées. Cela a réduit le nombre de requêtes de façon drastique (**100+** à **2-3 requêtes**) et amélioré significativement les **performances** (temps de réponse divisé par **50**).`,
           `Avec le temps, je fais aussi plus attention à la **qualité du code**. Au début, mon objectif était surtout de terminer rapidement une fonctionnalité. Maintenant, j'essaie davantage de réfléchir à la **structure globale** du projet et à la manière dont le code pourra évoluer plus tard. Sur DiaPyl notamment, en écrivant **45+ tests unitaires** avec **NUnit**, j'ai dû repenser ma façon de coder pour rendre les fonctions testables. Ce qui m'a forcée à découpler les responsabilités et à créer de meilleures abstractions. Résultat : couverture de tests augmentée significativement et bugs en production réduits.`,
           `J'ai aussi compris qu'on ne développe pas de la même manière selon le contexte. Sur un petit projet personnel, je vais chercher quelque chose de **simple et rapide**. Sur un projet plus important ou en entreprise, je vais davantage penser à l'**organisation du code**, aux **performances**, à la **sécurité** et à la **maintenabilité**.`,
@@ -57,7 +57,7 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `Avec le recul, je pense que beaucoup de développeurs débutants veulent utiliser des solutions trop complexes dès le départ. Personnellement, j'essaie maintenant de privilégier des solutions **simples**, **lisibles** et **faciles à maintenir**.`,
           `Si je devais donner un conseil à quelqu'un qui apprend C#, je lui recommanderais surtout de réaliser des projets concrets. C'est dans les projets réels que l'on apprend vraiment à organiser une application et à réfléchir comme un développeur. Lire de la documentation et regarder des tutoriels, c'est utile, mais cela ne remplace pas l'expérience. Avec le temps, vous allez comprendre pourquoi on structure le code d'une certaine manière, et ça deviendra une seconde nature.`,
-          `Contextuellement, ma maîtrise de C# est vraiment forte pour : les **APIs REST** bien structurées et performantes, la manipulation de **données complexes** avec **Entity Framework**, les **logiques métier** structurées et maintenables, les **services backend** orientés qualité et testabilité.`,
+          `Contextuellement, ma maîtrise de C# est vraiment forte pour : les **APIs REST** bien structurées et performantes, la manipulation de **données complexes** avec **Entity Framework**, les **logiques métier** structurées et maintenables, les **services back-end** orientés qualité et testabilité.`,
           `Mais je suis encore en progression sur : les architectures distribuées et les microservices, l'optimisation très fine des performances pour les très gros volumes (100M+ records), les systèmes cloud-native et l'intégration complète avec l'écosystème Azure.`,
         ],
       },
@@ -65,16 +65,16 @@ export const technicalSkills: TechnicalSkill[] = [
         title: 'Ma formation en cours',
         paragraphs: [
           `En ce moment, je reste sur une formation volontairement simple et concrète : je lis **[.NET Architecture](https://learn.microsoft.com/en-us/dotnet/architecture/)** et le livre **[Clean Code](https://www.oreilly.com/library/view/clean-code-a/9780136083238/)** de Robert C. Martin. L'idée est surtout de mieux structurer mes idées et de garder un code plus lisible au quotidien.`,
-          `Je complète ça avec une veille légère sur YouTube, par exemple la chaîne de **[Nick Chapsas](https://www.youtube.com/@nickchapsas)**, qui est une référence connue sur les sujets .NET et les bonnes pratiques backend.`,
+          `Je complète ça avec une veille légère sur YouTube, par exemple la chaîne de **[Nick Chapsas](https://www.youtube.com/@nickchapsas)**, qui est une référence connue sur les sujets .NET et les bonnes pratiques back-end.`,
           `Je garde aussi une practice régulière sur mes projets personnels, parce que c'est surtout en codeant que je consolide vraiment ce que je lis.`,
         ],
       },
       {
         title: 'Mes objectifs à moyen terme',
         paragraphs: [
-          `C# occupe une place centrale dans mon projet d'Expert en Ingénierie Logicielle, spécialisée dans le développement backend.`,
-          `À moyen terme, je souhaite atteindre un niveau d'expertise avancé en approfondissant : les architectures logicielles avancées (Clean Architecture, CQRS, Event Sourcing), les microservices et les systèmes distribués, l'optimisation des performances backend et la scalabilité, l'écosystème cloud autour de .NET (Azure, Kubernetes).`,
-          `Mon objectif est de concevoir des solutions backend robustes, évolutives et prêtes pour la production dans des contextes d'entreprise complexes.`,
+          `C# occupe une place centrale dans mon projet d'Expert en Ingénierie Logicielle, spécialisée dans le développement back-end.`,
+          `À moyen terme, je souhaite atteindre un niveau d'expertise avancé en approfondissant : les architectures logicielles avancées (Clean Architecture, CQRS, Event Sourcing), les microservices et les systèmes distribués, l'optimisation des performances back-end et la scalabilité, l'écosystème cloud autour de .NET (Azure, Kubernetes).`,
+          `Mon objectif est de concevoir des solutions back-end robustes, évolutives et prêtes pour la production dans des contextes d'entreprise complexes.`,
         ],
       },
     ],
@@ -87,7 +87,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Qu\'est-ce que .NET',
         paragraphs: [
-          `**.NET** est une **[plateforme de développement](https://dotnet.microsoft.com/)** développée par Microsoft, permettant de concevoir des applications web, des services backend (APIs) et des logiciels métiers. Elle offre un cadre structuré pour **organiser le code**, **gérer les dépendances** et construire des applications **robustes**, **performantes** et **évolutives**.`,
+          `**.NET** est une **[plateforme de développement](https://dotnet.microsoft.com/)** développée par Microsoft, permettant de concevoir des applications web, des services back-end (APIs) et des logiciels métiers. Elle offre un cadre structuré pour **organiser le code**, **gérer les dépendances** et construire des applications **robustes**, **performantes** et **évolutives**.`,
         ],
       },
       {
@@ -95,14 +95,14 @@ export const technicalSkills: TechnicalSkill[] = [
         paragraphs: [
           `J'ai découvert .NET lors de mes premiers projets en alternance chez Bluesoft. C'était une plateforme nouvelle pour moi, mais rapidement j'ai apprécié son approche structurée et la richesse de son écosystème.`,
           `Sur CityBoard, j'ai créé des **endpoints API** pour récupérer et traiter des données externes (APIs de transport, météo). J'ai implémenté la **logique métier** pour la gestion des widgets personnalisés et mis en place un système de cache mémoire avec **[ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/)** pour limiter les appels API. Résultat : amélioration des performances, réduction de **40%** du nombre d'appels API externes et meilleure expérience utilisateur.`,
-          `Sur Kalicolis, j'ai contribué au backend de l'application mobile, notamment sur les échanges entre l'application Flutter, les services .NET et la base de données. Impact : application fonctionnelle et communication fiable.`,
+          `Sur Kalicolis, j'ai contribué au back-end de l'application mobile, notamment sur les échanges entre l'application Flutter, les services .NET et la base de données. Impact : application fonctionnelle et communication fiable.`,
           `Sur BOOST, j'ai réalisé des évolutions et correctifs sur une architecture MVC en .NET existante, ajoutant de nouvelles fonctionnalités pour le métier.`,
         ],
       },
       {
         title: 'Mon niveau de maîtrise',
         paragraphs: [
-          `Je me situe à un niveau **confirmé-avancé** en .NET. Je suis capable de structurer une application en couches (architecture claire), développer des **APIs backend robustes et performantes**, gérer les interactions avec une base de données, intégrer des services externes et mettre en place une **CI/CD basique**.`,
+          `Je me situe à un niveau **confirmé-avancé** en .NET. Je suis capable de structurer une application en couches (architecture claire), développer des **APIs back-end robustes et performantes**, gérer les interactions avec une base de données, intégrer des services externes et mettre en place une **CI/CD basique**.`,
           `Ce que je maîtrise bien aujourd'hui concerne surtout la conception d'architectures en couches, la gestion des dépendances avec **[l'injection de dépendances](https://learn.microsoft.com/en-us/dotnet/core/extensions/dependency-injection)**, l'intégration de frameworks tiers et la mise en place de tests d'intégration.`,
           `Ce où je suis en progression : architectures avancées (microservices, CQRS), scalabilité à très large échelle, optimisation fine des performances sur gros volumes.`,
         ],
@@ -129,14 +129,14 @@ export const technicalSkills: TechnicalSkill[] = [
           `J'ai choisi la formation **[Microsoft Learn "Design Microservices Architecture on Azure"](https://learn.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)** parce qu'elle m'aide à comprendre comment structurer des systèmes plus grands que les projets que je faisais au début. Je ne la suis pas pour accumuler des notions théoriques, mais pour apprendre à concevoir des architectures plus robustes et à mieux anticiper les contraintes de production.`,
           `Je complète cela avec **[la documentation officielle .NET](https://learn.microsoft.com/en-us/dotnet/)**, que je consulte régulièrement pour suivre les évolutions du framework et revoir les bonnes pratiques. Cette approche me convient bien parce qu'elle me permet d'apprendre au fil de mes besoins réels, sans déconnecter la théorie du travail concret.`,
           `Dans mes projets personnels, je réutilise ensuite ce que j'apprends en essayant d'appliquer une logique proche de **[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)** avec .NET 8. C'est là que la formation prend vraiment du sens pour moi : elle me donne des repères, puis le projet me permet de vérifier ce qui fonctionne, ce qui reste fragile et ce que je dois encore améliorer.`,
-          `À moyen terme, mon objectif est de préparer la certification AZ-204, mais surtout de devenir plus solide sur les architectures backend et l'écosystème Azure.`,
+          `À moyen terme, mon objectif est de préparer la certification AZ-204, mais surtout de devenir plus solide sur les architectures back-end et l'écosystème Azure.`,
         ],
       },
       {
         title: 'Mes objectifs à moyen terme',
         paragraphs: [
           `Je souhaite approfondir les architectures avancées (**[Clean Architecture](https://blog.cleancoder.com/uncle-bob/2012/08/13/the-clean-architecture.html)**, CQRS, Event Sourcing), la mise en place de pipelines CI/CD robustes, l'optimisation des performances pour gros volumes et la scalabilité cloud.`,
-          `Mon objectif est de concevoir des applications backend robustes, évolutives et prêtes pour la production dans tous les contextes.`,
+          `Mon objectif est de concevoir des applications back-end robustes, évolutives et prêtes pour la production dans tous les contextes.`,
         ],
       },
     ],
@@ -159,14 +159,14 @@ export const technicalSkills: TechnicalSkill[] = [
           `Sur Kalicolis, j'ai dû faire évoluer la gestion des statuts de livraison avec une approche **[Code First](https://learn.microsoft.com/fr-fr/ef/ef6/modeling/code-first/workflows/new-database)**. J'ai utilisé les **[migrations EF Core](https://learn.microsoft.com/en-us/ef/core/managing-schemas/migrations/)** pour faire évoluer le schéma sans perte de données. La **[Fluent API](https://learn.microsoft.com/en-us/ef/core/modeling/)** m'a permis de configurer les relations correctement et **Include()** pour éviter les problèmes **N+1**.`,
           `J'ai configuré DeleteBehavior.Restrict pour prévenir les suppressions incohérentes et protéger l'intégrité référentielle. Résultat : cycle de développement fluide, schéma versionné avec le code et meilleure fiabilité entre environnements.`,
           `Sur BOOST, j'ai manipulé des données complexes via des entités C#, LINQ et des relations entre entités pour stabiliser un logiciel métier en production. Impact : code plus lisible, règles métier mieux protégées et accès aux données cohérent.`,
-          `Sur CityBoard, j'ai géré les préférences utilisateurs et la persistance des widgets avec PostgreSQL via EF Core. Impact : cohérence des données, simplification de la gestion backend et maintenance facilitée.`,
+          `Sur CityBoard, j'ai géré les préférences utilisateurs et la persistance des widgets avec PostgreSQL via EF Core. Impact : cohérence des données, simplification de la gestion back-end et maintenance facilitée.`,
         ],
       },
       {
         title: 'Mon niveau de maîtrise',
         paragraphs: [
           `Je possède un niveau **intermédiaire-avancé** sur la logique ORM. Ma maîtrise préalable du **SQL** et du **C#** m'a permis de progresser rapidement vers des sujets avancés : **relations complexes**, **tracking**, **migrations** et **optimisation**.`,
-          `Je suis capable de : modéliser et manipuler les données complexes via LINQ, configurer finement les entités et leurs relations (Fluent API), gérer le cycle de vie complet des données (CRUD), piloter l'évolution du schéma via migrations, intégrer et configurer un ORM dans une architecture backend existante.`,
+          `Je suis capable de : modéliser et manipuler les données complexes via LINQ, configurer finement les entités et leurs relations (Fluent API), gérer le cycle de vie complet des données (CRUD), piloter l'évolution du schéma via migrations, intégrer et configurer un ORM dans une architecture back-end existante.`,
         ],
       },
       {
@@ -268,7 +268,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Introduction',
         paragraphs: [
-          `React est une **[bibliothèque JavaScript](https://react.dev/)** développée par Facebook, qui est rapidement devenue pour moi le point d'entrée vers un frontend plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mais une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
+          `React est une **[bibliothèque JavaScript](https://react.dev/)** développée par Facebook, qui est rapidement devenue pour moi le point d'entrée vers un front-end plus structuré. Ce que j'y ai trouvé en premier, ce n'est pas seulement une bibliothèque, mais une manière de penser l'interface par **composants**, avec des règles claires et une logique beaucoup plus lisible qu'une manipulation directe du DOM.`,
           `C'est cette approche qui m'a permis de mieux organiser mes écrans, de séparer les responsabilités et de faire évoluer une interface sans devoir tout réécrire à chaque changement.`,
         ],
       },
@@ -281,30 +281,30 @@ export const technicalSkills: TechnicalSkill[] = [
           `Ce projet m'a surtout appris à reconnaître les vrais problèmes du quotidien en React : re-renders inutiles, état mal partagé, logique trop imbriquée. C'est en les rencontrant sur un projet réel que j'ai vraiment compris comment progresser.`,
           `Avec CityBoard, j'ai changé d'échelle. Je ne travaillais plus sur quelques écrans isolés, mais on an interface de dashboard où plusieurs **widgets** devaient cohabiter, se charger dynamiquement et rester agréables à utiliser.`,
           `Le vrai défi n'était pas seulement d'afficher les données, mais de garder l'application fluide malgré les mises à jour fréquentes et les interactions multiples. C'est là que j'ai commencé à être plus attentif aux re-renders, à la structure des composants et à la manière dont j'organisais les props et le state.`,
-          `Ce projet m'a aussi appris à mieux gérer les **[appels asynchrones](https://react.dev/learn/synchronizing-with-effects)** et les **[états de chargement](https://react.dev/reference/react/Suspense)**. J'ai compris qu'un frontend React ne se résume pas à afficher des données : il faut aussi anticiper les temps d'attente, les erreurs et les changements d'état sans casser l'expérience utilisateur.`,
+          `Ce projet m'a aussi appris à mieux gérer les **[appels asynchrones](https://react.dev/learn/synchronizing-with-effects)** et les **[états de chargement](https://react.dev/reference/react/Suspense)**. J'ai compris qu'un front-end React ne se résume pas à afficher des données : il faut aussi anticiper les temps d'attente, les erreurs et les changements d'état sans casser l'expérience utilisateur.`,
           `En pratique, j'y ai construit des composants réutilisables, des modales, des formulaires dynamiques et des écrans qui devaient rester lisibles même quand la logique métier devenait plus dense.`,
         ],
       },
       {
         title: 'Mon niveau de compétence',
         paragraphs: [
-          `Aujourd'hui, je me situe à un niveau **confirmé-intermédiaire** sur React. Je suis capable de construire une **interface modulaire**, de partager l'**état** proprement entre composants, et de connecter un frontend à des APIs backend comme **[ASP.NET](https://learn.microsoft.com/en-us/aspnet/core/)** ou **[Express](https://expressjs.com/)**.`,
+          `Aujourd'hui, je me situe à un niveau **confirmé-intermédiaire** sur React. Je suis capable de construire une **interface modulaire**, de partager l'**état** proprement entre composants, et de connecter un front-end à des APIs back-end comme **[ASP.NET](https://learn.microsoft.com/en-us/aspnet/core/)** ou **[Express](https://expressjs.com/)**.`,
           `Je suis à l'aise sur les **composants réutilisables**, la **gestion d'état** avec **[useState](https://react.dev/reference/react/useState)** et **[useContext](https://react.dev/reference/react/useContext)**, ainsi que sur l'intégration de bibliothèques de composants comme **[Material UI](https://mui.com/)**.`,
-          `Je progresse encore sur les architectures frontend plus avancées, la gestion d'état à grande échelle avec **[Redux](https://redux.js.org/)** ou **[Zustand](https://github.com/pmndrs/zustand)**, et les optimisations plus fines comme le **[code splitting](https://react.dev/reference/react/lazy)** ou le **[lazy loading](https://react.dev/reference/react/lazy)**.`,
+          `Je progresse encore sur les architectures front-end plus avancées, la gestion d'état à grande échelle avec **[Redux](https://redux.js.org/)** ou **[Zustand](https://github.com/pmndrs/zustand)**, et les optimisations plus fines comme le **[code splitting](https://react.dev/reference/react/lazy)** ou le **[lazy loading](https://react.dev/reference/react/lazy)**.`,
           `J'ai appris React en le pratiquant sur de vrais projets, pas seulement en le lisant. DiagElec m'a donné les bases, CityBoard m'a obligée à monter en maturité, et les deux m'ont appris à penser l'interface avant de penser la syntaxe.`,
           `Ce qui m'a fait progresser, ce sont les bugs subtils, les re-renders trop nombreux, les **[états mal synchronisés](https://react.dev/learn/sharing-state-between-components)** et les moments où il fallait revenir au code existant pour comprendre comment mieux structurer le mien.`,
           `Avec le recul, je vois React comme un cadre très efficace, mais qui demande de la rigueur dès le départ. Quand l'architecture est claire, tout devient plus simple à faire évoluer.`,
           `Avec React, j'ai compris qu'une architecture de composants approximative finit toujours par coûter cher. Plus l'application grossit, plus les mauvais choix de départ deviennent visibles.`,
           `Mon réflexe aujourd'hui est donc simple : garder des composants lisibles, limiter la logique inutile dans l'interface et séparer au maximum ce qui relève de l'affichage et ce qui relève du comportement.`,
           `Si je devais résumer mon conseil, ce serait celui-ci : ne pas chercher à faire "vite et compact", mais plutôt à faire "clair et durable". Sur React, c'est souvent ce qui fait la différence entre un projet stable et un projet pénible à maintenir.`,
-          `Dans mon profil de développeuse full stack, React reste une compétence importante car elle me permet de relier les contraintes techniques du backend aux besoins concrets des utilisateurs dans l'interface.`,
+          `Dans mon profil de développeuse full stack, React reste une compétence importante car elle me permet de relier les contraintes techniques du back-end aux besoins concrets des utilisateurs dans l'interface.`,
         ],
       },
       {
         title: 'Ma formation en cours',
         paragraphs: [
           `Je continue à approfondir React avec **[la documentation officielle](https://react.dev/learn)** et des ressources ciblées sur les hooks, la performance et les patterns de composants.`,
-          `Je m'intéresse aussi à Next.js pour mieux comprendre comment React s'intègre dans des architectures plus complètes côté frontend.`,
+          `Je m'intéresse aussi à Next.js pour mieux comprendre comment React s'intègre dans des architectures plus complètes côté front-end.`,
           `L'idée est surtout de renforcer ma maîtrise des bonnes pratiques pour pouvoir construire des interfaces plus robustes, plus évolutives et plus simples à maintenir.`,
         ],
       },
@@ -324,10 +324,10 @@ export const technicalSkills: TechnicalSkill[] = [
     projectIds: ['cityboard', 'diagelec', 'boost'],
     sections: [
       {
-        title: 'JavaScript : le cœur du frontend',
+        title: 'JavaScript : le cœur du front-end',
         paragraphs: [
           `**JavaScript** ([documentation MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/)) est un **langage de programmation** utilisé pour rendre les applications web interactives, en permettant de **manipuler le contenu** d'une page, gérer les **[événements](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events)** et communiquer avec des services externes.`,
-          `C'est un élément incontournable du développement frontend moderne, notamment avec l'émergence de frameworks comme **[React](https://react.dev/)** qui structurent le code JavaScript autour de composants réutilisables.`,
+          `C'est un élément incontournable du développement front-end moderne, notamment avec l'émergence de frameworks comme **[React](https://react.dev/)** qui structurent le code JavaScript autour de composants réutilisables.`,
         ],
       },
       {
@@ -351,7 +351,7 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Mon niveau de maîtrise',
         paragraphs: [
-          `Je me situe à un niveau **confirmé** en JavaScript. Je suis capable de : manipuler le DOM et les événements, gérer des appels API (**[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)**, Axios), maîtriser l'asynchronisme (Promises, async/await), structurer la logique d'une application frontend, utiliser efficacement les frameworks modernes.`,
+          `Je me situe à un niveau **confirmé** en JavaScript. Je suis capable de : manipuler le DOM et les événements, gérer des appels API (**[fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)**, Axios), maîtriser l'asynchronisme (Promises, async/await), structurer la logique d'une application front-end, utiliser efficacement les frameworks modernes.`,
           `Ce que je maîtrise bien aujourd'hui concerne surtout les concepts fondamentaux (variables, fonctions, objets), l'asynchronisme (Promises, async/await), la manipulation du DOM et l'intégration d'APIs.`,
           `Ce où je suis en progression : les patterns JavaScript complexes (higher-order functions, currying), la gestion optimale de la mémoire dans les gros projets et les performances avancées (Tree shaking, Code splitting).`,
         ],
@@ -387,8 +387,8 @@ export const technicalSkills: TechnicalSkill[] = [
       {
         title: 'Mes objectifs à moyen terme',
         paragraphs: [
-          `À moyen terme, je veux approfondir les patterns avancés, les bonnes pratiques modernes, l'optimisation des performances front-end, les tests unitaires et d'intégration, ainsi que l'architecture frontend évolutive et maintenable.`,
-          `Mon objectif est d'atteindre une expertise solide en JavaScript pour concevoir des applications frontend robustes et performantes, tout en restant capable d'adopter rapidement les nouveaux frameworks et paradigmes.`,
+          `À moyen terme, je veux approfondir les patterns avancés, les bonnes pratiques modernes, l'optimisation des performances front-end, les tests unitaires et d'intégration, ainsi que l'architecture front-end évolutive et maintenable.`,
+          `Mon objectif est d'atteindre une expertise solide en JavaScript pour concevoir des applications front-end robustes et performantes, tout en restant capable d'adopter rapidement les nouveaux frameworks et paradigmes.`,
         ],
       },
     ],
@@ -433,7 +433,7 @@ export const softSkills: SoftSkill[] = [
       {
         title: 'Ma formation et mes pratiques',
         paragraphs: [
-          `Pour développer cette compétence, je consacre régulièrement du temps à la lecture d’ouvrages techniques de référence et à la documentation officielle des technologies que j’utilise, notamment **[Microsoft Learn](https://learn.microsoft.com/en-us/training/)** pour consolider mes connaissances .NET et backend. Cette méthode me permet d’acquérir des bases solides de manière autonome, puis de les expérimenter directement dans mes projets.`,
+          `Pour développer cette compétence, je consacre régulièrement du temps à la lecture d’ouvrages techniques de référence et à la documentation officielle des technologies que j’utilise, notamment **[Microsoft Learn](https://learn.microsoft.com/en-us/training/)** pour consolider mes connaissances .NET et back-end. Cette méthode me permet d’acquérir des bases solides de manière autonome, puis de les expérimenter directement dans mes projets.`,
           `Je m’appuie également sur l’auto-documentation : lorsque je prends une décision technique, j’essaie d’en formaliser les raisons pour mieux comprendre mes propres choix. À moyen terme, mon objectif est de développer mon autonomie sur la phase de cadrage initial des projets, en participant davantage à la définition des architectures techniques avant le début du développement. À plus long terme, mon ambition est de devenir une ingénieure référente, capable de mener des projets de grande envergure de bout en bout et d’accompagner des profils plus juniors vers cette même indépendance professionnelle.`,
         ],
       },
@@ -499,7 +499,7 @@ export const softSkills: SoftSkill[] = [
         paragraphs: [
           `C’est au cours de mes missions chez Bluesoft que j’ai développé ma pratique du travail d’équipe. Mon arrivée sur DiagElec a été une expérience importante, car j’ai rejoint une équipe déjà engagée dans le développement d’une application de diagnostics terrain.`,
           `Pour m’approprier l’architecture React et Material UI du projet, je me suis appuyée sur la documentation interne, mais aussi sur les échanges avec les autres développeurs. Cette phase d’alignement m’a permis de mieux comprendre la circulation des états complexes dans l’application et de valider progressivement ma compréhension de l’implémentation existante. La collaboration ne s’est pas limitée au code : pour répondre aux contraintes des techniciens terrain, j’ai dû intégrer des enjeux d’ergonomie et d’expérience utilisateur en échangeant avec les personnes en lien avec les besoins fonctionnels.`,
-          `Plus tard, ma contribution s’est élargie à la qualité backend avec la mise en place de tests NUnit. Cette double implication m’a obligée à adapter ma communication avec l’équipe, aussi bien sur l’affichage des composants que sur la conformité des traitements critiques.`,
+          `Plus tard, ma contribution s’est élargie à la qualité back-end avec la mise en place de tests NUnit. Cette double implication m’a obligée à adapter ma communication avec l’équipe, aussi bien sur l’affichage des composants que sur la conformité des traitements critiques.`,
           `Cette collaboration s’est également manifestée sur BOOST. Travailler sur un logiciel C# et Entity Framework Core déjà utilisé en production imposait de sécuriser chaque livraison pour éviter les régressions. Lors de la résolution d’une anomalie qui semblait être un simple défaut d’affichage en JavaScript/jQuery, j’ai découvert que le problème venait en réalité d’un enchaînement entre plusieurs traitements métier et la base de données. Avant toute correction, j’ai collaboré avec le chef de projet pour reproduire le cas, analyser les causes racines et confirmer le comportement attendu. Cette expérience m’a montré qu’en maintenance applicative, la confrontation rapide entre solution technique et réalité métier est indispensable.`,
         ],
       },

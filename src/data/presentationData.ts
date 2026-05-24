@@ -11,7 +11,7 @@ export const presentationSections = [
     title: 'Profil',
     paragraphs: [
       `Je suis actuellement étudiante en cinquième année d'ingénierie du logiciel à l'ESIEA et **développeuse full stack** en alternance chez Bluesoft. Cette double expérience me permet d'avancer avec un pied dans la formation d'ingénieure et l'autre dans des **projets réels**, avec leurs contraintes, leurs utilisateurs et leurs exigences de qualité.`,
-      `Chez Bluesoft, j'interviens sur des sujets concrets pour des clients comme TDF ou la Banque Alimentaire. J'y mobilise à la fois le backend, le frontend et les tests, mais ce qui m'intéresse le plus est de comprendre le **besoin derrière la fonctionnalité**. Je ne vois pas le code comme une fin en soi : pour moi, il sert à construire des outils **utiles, fiables et compréhensibles** pour les personnes qui vont les utiliser.`,
+      `Chez Bluesoft, j'interviens sur des sujets concrets pour des clients comme TDF ou la Banque Alimentaire. J'y mobilise à la fois le back-end, le front-end et les tests, mais ce qui m'intéresse le plus est de comprendre le **besoin derrière la fonctionnalité**. Je ne vois pas le code comme une fin en soi : pour moi, il sert à construire des outils **utiles, fiables et compréhensibles** pour les personnes qui vont les utiliser.`,
     ],
   },
   {
@@ -71,7 +71,7 @@ export const presentationSections = [
     title: 'Positionnement actuel et objectifs',
     paragraphs: [
       `Aujourd'hui, je me positionne comme une développeuse full stack en progression, avec une base solide en C#, .NET, React et SQL. Mon alternance me permet de relier ces compétences à des situations professionnelles concrètes : développement d'API, création d'interfaces, gestion de données, tests et amélioration continue du code.`,
-      `À court terme, je souhaite consolider ma maîtrise du développement backend avec .NET, tout en continuant à progresser sur le frontend moderne avec React. Je veux également renforcer mes compétences en bases de données, car elles occupent une place importante dans la fiabilité et la performance des applications que je développe.`,
+      `À court terme, je souhaite consolider ma maîtrise du développement back-end avec .NET, tout en continuant à progresser sur le front-end moderne avec React. Je veux également renforcer mes compétences en bases de données, car elles occupent une place importante dans la fiabilité et la performance des applications que je développe.`,
       `À moyen et long terme, mon objectif est de devenir une développeuse capable de concevoir des solutions complètes, robustes et évolutives. Je souhaite progresser sur l'architecture logicielle, les tests automatisés, la qualité du code et les pratiques CI/CD afin d'apporter une réelle valeur technique et métier aux projets auxquels je participe.`,
     ],
   },
@@ -99,7 +99,7 @@ export const parcoursTimeline: ParcoursStep[] = [
     organizationUrl: 'https://www.bluesoft-group.com/',
     logoUrl: 'https://www.google.com/s2/favicons?domain=bluesoft-group.com&sz=64',
     responsibilities: [
-      'Concevoir et développer des fonctionnalités backend et frontend en contexte client.',
+      'Concevoir et développer des fonctionnalités back-end et front-end en contexte client.',
       'Contribuer à la qualité logicielle avec des tests unitaires et d’intégration.',
     ],
     missions: [
