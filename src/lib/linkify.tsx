@@ -10,7 +10,12 @@ const SKILL_LINKS: LinkDef[] = [
   { pattern: /\bORM\b/g, id: 'skill-entity-framework' },
   { pattern: /\bEntity Framework Core\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bEntity Framework\b/gi, id: 'skill-entity-framework' },
-  { pattern: /\bEF\b/g, id: 'skill-entity-framework' },
+  { pattern: /\bEF Core\b/gi, id: 'skill-entity-framework' },
+  { pattern: /\bEF\b/gi, id: 'skill-entity-framework' },
+  { pattern: /\bCode First\b/gi, id: 'skill-entity-framework' },
+  { pattern: /\bMigrations\b/gi, id: 'skill-entity-framework' },
+  { pattern: /\bFluent API\b/gi, id: 'skill-entity-framework' },
+  { pattern: /\bInclude\(\)/gi, id: 'skill-entity-framework' },
   { pattern: /\bASP\.NET\b/gi, id: 'skill-dotnet' },
   { pattern: /\bASP\.NET Core\b/gi, id: 'skill-dotnet' },
   { pattern: /\.NET Core 8\b/gi, id: 'skill-dotnet' },
@@ -38,8 +43,14 @@ const PROJECT_LINKS: LinkDef[] = [
 
 const REFERENCE_LINKS: RefLinkDef[] = [
   { pattern: /\bMaterial UI\b/gi, href: 'https://mui.com/' },
-  ...SKILL_LINKS.map(({ pattern, id }) => ({ pattern, href: hrefWithBase(`/competences-techniques/${id.replace(/^skill-/, '')}`) })),
-  ...PROJECT_LINKS.map(({ pattern, id }) => ({ pattern, href: hrefWithBase(`/realisations/${id.replace(/^project-/, '')}`) })),
+  ...SKILL_LINKS.map(({ pattern, id }) => ({
+    pattern,
+    href: hrefWithBase(`/competences-techniques/${id.replace(/^skill-/, '')}`),
+  })),
+  ...PROJECT_LINKS.map(({ pattern, id }) => ({
+    pattern,
+    href: hrefWithBase(`/realisations/${id.replace(/^project-/, '')}`),
+  })),
 ];
 
 const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
@@ -61,7 +72,12 @@ const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
   { pattern: /\bPostgreSQL\b/gi },
   { pattern: /\bEntity Framework Core\b/gi },
   { pattern: /\bEntity Framework\b/gi },
-  { pattern: /\bEF\b/g },
+  { pattern: /\bEF Core\b/gi },
+  { pattern: /\bEF\b/gi },
+  { pattern: /\bCode First\b/gi },
+  { pattern: /\bMigrations\b/gi },
+  { pattern: /\bFluent API\b/gi },
+  { pattern: /\bInclude\(\)/gi },
   { pattern: /\bNUnit\b/gi },
   { pattern: /\bMaterial UI\b/gi },
 ];
@@ -109,47 +125,39 @@ interface BoldSegment {
 
 const URL_PATTERN = /https?:\/\/[^\s<>"']+/gi;
 const MARKDOWN_LINK_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g;
-const LABELLED_URL_PATTERN = /([A-Za-z0-9À-ỹ#.+/'"_-]+(?: [A-Za-z0-9À-ỹ#.+/'"_-]+){0,7})\s*(?:\(\s*|:\s*)(https?:\/\/[^)\s]+)\)?/gi;
+const LABELLED_URL_PATTERN =
+  /([A-Za-z0-9À-ỹ#.+/'"-]+(: [A-Za-z0-9À-ỹ#.+/'"-]+){0,7})\s*:\s*(https?:\/\/[^)\s]+)/gi;
 const COMMON_CONNECTOR_WORDS = new Set([
-  'de', 'du', 'des', 'la', 'le', 'les', 'un', 'une', 'et', 'en', 'pour', 'par', 'avec', 'dans',
-  'sur', 'via', 'vers', 'au', 'aux', 'ou', 'of', 'the', 'a', 'an', 'to', 'from', 'd', 'l', 'maniere',
+  'de',
+  'du',
+  'des',
+  'la',
+  'le',
+  'les',
+  'un',
+  'une',
+  'et',
+  'en',
+  'pour',
+  'par',
+  'avec',
+  'dans',
+  'sur',
+  'via',
+  'vers',
+  'au',
+  'aux',
+  'ou',
+  'of',
+  'the',
+  'a',
+  'an',
+  'to',
+  'from',
+  'd',
+  'l',
+  'maniere',
 ]);
-
-function linkifyText(text: string, links: LinkDef[]): Segment[] {
-  if (links.length === 0) return [{ type: 'text', value: text }];
-
-  const matches: { index: number; length: number; id: string; value: string }[] = [];
-  for (const { pattern, id } of links) {
-    const re = new RegExp(pattern.source, pattern.flags);
-    let m: RegExpExecArray | null;
-    while ((m = re.exec(text)) !== null) {
-      matches.push({ index: m.index, length: m[0].length, id, value: m[0] });
-    }
-  }
-  matches.sort((a, b) => a.index - b.index);
-  for (let i = 0; i < matches.length; i++) {
-    const curr = matches[i];
-    const next = matches[i + 1];
-    if (next && curr.index + curr.length > next.index) {
-      matches.splice(i + 1, 1);
-      i--;
-    }
-  }
-
-  const segments: Segment[] = [];
-  let last = 0;
-  for (const m of matches) {
-    if (m.index > last) {
-      segments.push({ type: 'text', value: text.slice(last, m.index) });
-    }
-    segments.push({ type: 'link', value: m.value, href: `#${m.id}` });
-    last = m.index + m.length;
-  }
-  if (last < text.length) {
-    segments.push({ type: 'text', value: text.slice(last) });
-  }
-  return segments.length ? segments : [{ type: 'text', value: text }];
-}
 
 function highlightText(text: string, highlights: HighlightDef[]): HighlightSegment[] {
   if (highlights.length === 0) return [{ type: 'text', value: text }];
@@ -190,7 +198,8 @@ function highlightText(text: string, highlights: HighlightDef[]): HighlightSegme
 }
 
 function splitUrlSegments(text: string): UrlSegment[] {
-  const matches: { index: number; length: number; href: string; value: string; trailing: string }[] = [];
+  const matches: { index: number; length: number; href: string; value: string; trailing: string }[] =
+    [];
 
   const re = new RegExp(URL_PATTERN.source, URL_PATTERN.flags);
   let match: RegExpExecArray | null;
@@ -352,13 +361,10 @@ function compactLinkLabel(label: string): string {
   return source.slice(-2).join(' ');
 }
 
-function splitReferenceSegments(text: string, excludedHrefs: Set<string> = new Set()): ReferenceSegment[] {
+function splitReferenceSegments(text: string): ReferenceSegment[] {
   const matches: { index: number; length: number; href: string; value: string }[] = [];
 
   for (const { pattern, href } of REFERENCE_LINKS) {
-    if (excludedHrefs.has(href)) {
-      continue;
-    }
     const re = new RegExp(pattern.source, pattern.flags);
     let match: RegExpExecArray | null;
     while ((match = re.exec(text)) !== null) {
@@ -366,31 +372,16 @@ function splitReferenceSegments(text: string, excludedHrefs: Set<string> = new S
     }
   }
 
-  return buildReferenceSegments(text, matches);
-}
-
-function renderDisabledLink(key: string, value: string): React.ReactNode {
-  return (
-    <span key={key} className={disabledLinkClass} aria-current="true">
-      {value}
-    </span>
-  );
-}
-
-function buildReferenceSegments(
-  text: string,
-  referenceMatches: { index: number; length: number; href: string; value: string }[]
-): ReferenceSegment[] {
-  if (referenceMatches.length === 0) {
+  if (matches.length === 0) {
     return [{ type: 'text', value: text }];
   }
 
-  referenceMatches.sort((left, right) => left.index - right.index);
-  for (let i = 0; i < referenceMatches.length; i++) {
-    const current = referenceMatches[i];
-    const next = referenceMatches[i + 1];
+  matches.sort((left, right) => left.index - right.index);
+  for (let i = 0; i < matches.length; i++) {
+    const current = matches[i];
+    const next = matches[i + 1];
     if (next && current.index + current.length > next.index) {
-      referenceMatches.splice(i + 1, 1);
+      matches.splice(i + 1, 1);
       i--;
     }
   }
@@ -398,7 +389,7 @@ function buildReferenceSegments(
   const segments: ReferenceSegment[] = [];
   let last = 0;
 
-  for (const item of referenceMatches) {
+  for (const item of matches) {
     if (item.index > last) {
       segments.push({ type: 'text', value: text.slice(last, item.index) });
     }
@@ -412,6 +403,14 @@ function buildReferenceSegments(
   }
 
   return segments;
+}
+
+function renderDisabledLink(key: string, value: string): React.ReactNode {
+  return (
+    <span key={key} className={disabledLinkClass} aria-current="true">
+      {value}
+    </span>
+  );
 }
 
 function splitBoldSegments(text: string): BoldSegment[] {
@@ -450,15 +449,24 @@ function splitBoldSegments(text: string): BoldSegment[] {
   return segments.length ? segments : [{ type: 'text', value: text }];
 }
 
-function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set<string> = new Set()): React.ReactNode {
+function renderPlainRichText(
+  text: string,
+  keyPrefix: string,
+  excludedHrefs: Set<string> = new Set()
+): React.ReactNode {
   return splitMarkdownLinkSegments(text).flatMap<React.ReactNode>((markdownSeg, markdownIndex) => {
     if (markdownSeg.type === 'link' && markdownSeg.href) {
-      const internalHref = resolveInternalReferenceHref(markdownSeg.value);
-      if (internalHref && excludedHrefs.has(internalHref)) {
-        return [renderDisabledLink(`${keyPrefix}-md-${markdownIndex}`, markdownSeg.value)];
+      const href = markdownSeg.href;
+      const isInternal = href.startsWith('/') || href.startsWith('#');
+      const externalProps = isInternal ? {} : { target: '_blank', rel: 'noreferrer noopener' };
+
+      if (isInternal) {
+        return (
+          <Link key={`${keyPrefix}-md-${markdownIndex}`} href={href} className={linkClass}>
+            {markdownSeg.value}
+          </Link>
+        );
       }
-      const href = internalHref ?? markdownSeg.href;
-      const externalProps = internalHref ? {} : { target: '_blank', rel: 'noreferrer noopener' };
       return (
         <a key={`${keyPrefix}-md-${markdownIndex}`} href={href} className={linkClass} {...externalProps}>
           {markdownSeg.value}
@@ -466,84 +474,143 @@ function renderPlainRichText(text: string, keyPrefix: string, excludedHrefs: Set
       );
     }
 
-    return splitLabeledUrlSegments(markdownSeg.value).flatMap<React.ReactNode>((labeledSeg, labeledIndex) => {
-      if (labeledSeg.type === 'link' && labeledSeg.href) {
-        const internalHref = resolveInternalReferenceHref(labeledSeg.value);
-        if (internalHref && excludedHrefs.has(internalHref)) {
-          return [renderDisabledLink(`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`, labeledSeg.value)];
-        }
-        const href = internalHref ?? labeledSeg.href;
-        const externalProps = internalHref ? {} : { target: '_blank', rel: 'noreferrer noopener' };
-        return [
-          <a key={`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`} href={href} className={linkClass} {...externalProps}>
-            {labeledSeg.value}
-          </a>,
-        ];
-      }
+    return splitLabeledUrlSegments(markdownSeg.value).flatMap<React.ReactNode>(
+      (labeledSeg, labeledIndex) => {
+        if (labeledSeg.type === 'link' && labeledSeg.href) {
+          const href = labeledSeg.href;
+          const isInternal = href.startsWith('/') || href.startsWith('#');
+          const externalProps = isInternal ? {} : { target: '_blank', rel: 'noreferrer noopener' };
 
-      return splitUrlSegments(labeledSeg.value).flatMap<React.ReactNode>((seg, index) => {
-        if (seg.type === 'url' && seg.href) {
+          if (isInternal) {
+            return [
+              <Link
+                key={`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`}
+                href={href}
+                className={linkClass}
+              >
+                {labeledSeg.value}
+              </Link>,
+            ];
+          }
           return [
-            <a key={`${keyPrefix}-url-${markdownIndex}-${labeledIndex}-${index}`} href={seg.href} target="_blank" rel="noreferrer noopener" className={linkClass}>
-              {seg.value}
+            <a
+              key={`${keyPrefix}-label-${markdownIndex}-${labeledIndex}`}
+              href={href}
+              className={linkClass}
+              {...externalProps}
+            >
+              {labeledSeg.value}
             </a>,
-            ...(seg.trailing ? [<React.Fragment key={`${keyPrefix}-url-trail-${markdownIndex}-${labeledIndex}-${index}`}>{seg.trailing}</React.Fragment>] : []),
           ];
         }
 
-        return splitReferenceSegments(seg.value, excludedHrefs).flatMap<React.ReactNode>((referenceSeg, referenceIndex) => {
-          if (referenceSeg.type === 'link' && referenceSeg.href) {
-            if (excludedHrefs.has(referenceSeg.href)) {
-              return [renderDisabledLink(`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`, referenceSeg.value)];
-            }
+        return splitUrlSegments(labeledSeg.value).flatMap<React.ReactNode>((seg, index) => {
+          if (seg.type === 'url' && seg.href) {
             return [
-              <a key={`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`} href={referenceSeg.href} className={linkClass}>
-                {referenceSeg.value}
+              <a
+                key={`${keyPrefix}-url-${markdownIndex}-${labeledIndex}-${index}`}
+                href={seg.href}
+                target="_blank"
+                rel="noreferrer noopener"
+                className={linkClass}
+              >
+                {seg.value}
               </a>,
+              ...(seg.trailing ? (
+                [
+                  <React.Fragment
+                    key={`${keyPrefix}-url-trail-${markdownIndex}-${labeledIndex}-${index}`}
+                  >
+                    {seg.trailing}
+                  </React.Fragment>,
+                ]
+              ) : (
+                []
+              )),
             ];
           }
 
-          return highlightText(referenceSeg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
-            item.type === 'highlight' ? (
-              <span key={`${keyPrefix}-h-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}-${idx}`} className={highlightClass}>
-                {item.value}
-              </span>
-            ) : (
-              <React.Fragment key={`${keyPrefix}-t-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}-${idx}`}>{item.value}</React.Fragment>
-            )
+          return splitReferenceSegments(seg.value).flatMap<React.ReactNode>(
+            (referenceSeg, referenceIndex) => {
+              if (referenceSeg.type === 'link' && referenceSeg.href) {
+                const isInternal =
+                  referenceSeg.href.startsWith('/') || referenceSeg.href.startsWith('#');
+
+                if (isInternal) {
+                  return [
+                    <Link
+                      key={`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`}
+                      href={referenceSeg.href}
+                      className={linkClass}
+                    >
+                      {referenceSeg.value}
+                    </Link>,
+                  ];
+                }
+
+                return [
+                  <a
+                    key={`${keyPrefix}-ref-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}`}
+                    href={referenceSeg.href}
+                    className={linkClass}
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    {referenceSeg.value}
+                  </a>,
+                ];
+              }
+
+              return highlightText(referenceSeg.value, KEYWORD_HIGHLIGHTS).map((item, idx) =>
+                item.type === 'highlight' ? (
+                  <span
+                    key={`${keyPrefix}-h-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}-${idx}`}
+                    className={highlightClass}
+                  >
+                    {item.value}
+                  </span>
+                ) : (
+                  <React.Fragment
+                    key={`${keyPrefix}-t-${markdownIndex}-${labeledIndex}-${index}-${referenceIndex}-${idx}`}
+                  >
+                    {item.value}
+                  </React.Fragment>
+                )
+              );
+            }
           );
         });
-      });
-    });
+      }
+    );
   });
 }
 
-function renderRichText(text: string, keyPrefix: string, excludedHrefs: Set<string> = new Set()): React.ReactNode {
+function renderRichText(
+  text: string,
+  keyPrefix: string,
+  excludedHrefs: Set<string> = new Set()
+): React.ReactNode {
   return splitBoldSegments(text).flatMap<React.ReactNode>((segment, segmentIndex) => {
     if (segment.type === 'strong') {
-      return [
+      return (
         <strong key={`${keyPrefix}-strong-${segmentIndex}`} className="font-semibold text-pink-400">
           {renderPlainRichText(segment.value, `${keyPrefix}-strong-${segmentIndex}`, excludedHrefs)}
-        </strong>,
-      ];
+        </strong>
+      );
     }
 
-    return [<React.Fragment key={`${keyPrefix}-text-${segmentIndex}`}>{renderPlainRichText(segment.value, `${keyPrefix}-plain-${segmentIndex}`, excludedHrefs)}</React.Fragment>];
+    return (
+      <React.Fragment key={`${keyPrefix}-text-${segmentIndex}`}>
+        {renderPlainRichText(segment.value, `${keyPrefix}-plain-${segmentIndex}`, excludedHrefs)}
+      </React.Fragment>
+    );
   });
 }
 
-const linkClass = 'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
+const linkClass =
+  'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
 const disabledLinkClass = 'text-pink-400 font-medium';
 const highlightClass = 'text-pink-400 font-semibold';
-
-function toRouteHref(href: string, kind: 'skill' | 'project'): string {
-  if (kind === 'skill') {
-    const id = href.replace(/^#skill-/, '');
-    return hrefWithBase(`/competences-techniques/${id}`);
-  }
-  const id = href.replace(/^#?project-/, '');
-  return hrefWithBase(`/realisations/${id}`);
-}
 
 export function TextWithSkillLinks({
   children,
@@ -552,21 +619,10 @@ export function TextWithSkillLinks({
   children: string;
   excludeSkillIds?: string[];
 }) {
-  const segments = linkifyText(children, SKILL_LINKS);
-  const excludedHrefs = new Set(excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`)));
-  return (
-    <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'skill')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>{renderRichText(seg.value, `skill-${i}`, excludedHrefs)}</React.Fragment>
-        )
-      )}
-    </>
+  const excludedHrefs = new Set(
+    excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`))
   );
+  return <>{renderRichText(children, 'skill', excludedHrefs)}</>;
 }
 
 export function TextWithProjectLinks({
@@ -576,41 +632,13 @@ export function TextWithProjectLinks({
   children: string;
   excludeSkillIds?: string[];
 }) {
-  const segments = linkifyText(children, PROJECT_LINKS);
-  const excludedHrefs = new Set(excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`)));
-  return (
-    <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>{renderRichText(seg.value, `project-${i}`, excludedHrefs)}</React.Fragment>
-        )
-      )}
-    </>
+  const excludedHrefs = new Set(
+    excludeSkillIds.map((id) => hrefWithBase(`/competences-techniques/${id}`))
   );
+  return <>{renderRichText(children, 'project', excludedHrefs)}</>;
 }
 
-export function TextWithHighlights({
-  children,
-}: {
-  children: string;
-}) {
-  const segments = linkifyText(children, PROJECT_LINKS);
-  return (
-    <>
-      {segments.map((seg, i) =>
-        seg.type === 'link' && seg.href ? (
-          <Link key={i} href={toRouteHref(seg.href, 'project')} prefetch className={linkClass}>
-            {seg.value}
-          </Link>
-        ) : (
-          <React.Fragment key={i}>{renderRichText(seg.value, `highlight-${i}`)}</React.Fragment>
-        )
-      )}
-    </>
-  );
+export function TextWithHighlights({ children }: { children: string }) {
+  return <>{renderRichText(children, 'highlight')}</>;
 }
 
