@@ -8,9 +8,6 @@ type RefLinkDef = { pattern: RegExp; href: string };
 
 const SKILL_LINKS: LinkDef[] = [
   { pattern: /\bORM\b/g, id: 'skill-entity-framework' },
-  { pattern: /\bEntity Framework Core\b/gi, id: 'skill-entity-framework' },
-  { pattern: /\bEntity Framework\b/gi, id: 'skill-entity-framework' },
-  { pattern: /\bEF Core\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bEF\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bCode First\b/gi, id: 'skill-entity-framework' },
   { pattern: /\bMigrations\b/gi, id: 'skill-entity-framework' },
@@ -70,10 +67,6 @@ const KEYWORD_HIGHLIGHTS: HighlightDef[] = [
   { pattern: /\bjQuery\b/gi },
   { pattern: /\bSQL\b/g },
   { pattern: /\bPostgreSQL\b/gi },
-  { pattern: /\bEntity Framework Core\b/gi },
-  { pattern: /\bEntity Framework\b/gi },
-  { pattern: /\bEF Core\b/gi },
-  { pattern: /\bEF\b/gi },
   { pattern: /\bCode First\b/gi },
   { pattern: /\bMigrations\b/gi },
   { pattern: /\bFluent API\b/gi },
@@ -600,8 +593,12 @@ function renderRichText(
 ): React.ReactNode {
   return splitBoldSegments(text).flatMap<React.ReactNode>((segment, segmentIndex) => {
     if (segment.type === 'strong') {
+      const isSpecialPink = segment.value.trim().match(/^Pour (moi|l[’']entreprise)$/i);
       return (
-        <strong key={`${keyPrefix}-strong-${segmentIndex}`} className="font-bold text-neutral-200">
+        <strong
+          key={`${keyPrefix}-strong-${segmentIndex}`}
+          className={`font-bold ${isSpecialPink ? 'text-pink-400' : 'text-white'}`}
+        >
           {renderPlainRichText(segment.value, `${keyPrefix}-strong-${segmentIndex}`, excludedHrefs)}
         </strong>
       );
@@ -617,8 +614,8 @@ function renderRichText(
 
 const linkClass =
   'text-pink-400 underline decoration-pink-400/50 hover:text-pink-300 font-medium scroll-smooth cursor-pointer';
-const disabledLinkClass = 'text-neutral-200 font-bold';
-const highlightClass = 'text-neutral-200 font-bold';
+const disabledLinkClass = 'text-white font-bold';
+const highlightClass = 'text-white font-bold';
 
 export function TextWithSkillLinks({
   children,
